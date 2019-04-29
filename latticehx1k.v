@@ -31,7 +31,7 @@
 // uncomment this define if you want to target hardware
 // otherwise, this file will be configured for the simulator
 //
-`define HW
+// `define HW
 
 //
 // Revision History : 0.0
@@ -110,10 +110,10 @@ module latticehx1k(
 		   ,output [6:0] L3_segment4
 
 		   ,input 	tb_sim_rst
-		   ,input [7:0]	L3_tx_data     // alarm status data
-		   ,input 	L3_tx_data_rdy // alarm status data rdy
-		   ,output [7:0] ut_tx_data
-		   ,output ut_tx_data_rdy
+		   ,input [7:0]	tb_rx_data     // alarm status data
+		   ,input 	tb_rx_data_rdy // alarm status data rdy
+		   ,output [7:0] L3_tx_data
+		   ,output L3_tx_data_rdy
 
 		   //
 		   // raw outputs (for debug purposes)
@@ -276,7 +276,7 @@ module latticehx1k(
    
 
    wire [4:0] 	    L3_led;
-   assign led[3:0] = L3_led[4:0];
+   assign led[4:0] = L3_led[4:0];
    
 
    wire 	    L3_tx_data_rdy;   // alarm data to print
