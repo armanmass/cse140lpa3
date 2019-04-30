@@ -52,59 +52,25 @@ module bcd2segment (
 		  input wire enable          // if 1, drive display, else blank
 		  );
 
-   reg 		       zero;
-   reg 		       one;
-   reg 		       two; 
-   reg 		       three;
-   reg 		       four;
-   reg 		       five;
-   reg 		       six;
-   reg 		       seven;
-   reg 		       eight;
-   reg 		       nine;
-   reg 		       ten;
-   reg 		       eleven;
-   reg 		       twelve;
-   reg 		       thirteen;
-   reg 		       fourteen;
-   reg 		       fifteen;
 
-   always @(num[3:0]) begin
-      zero     = 1'b0;
-      one      = 1'b0;
-      two      = 1'b0;
-      three    = 1'b0;
-      four     = 1'b0;
-      five     = 1'b0;
-      six      = 1'b0;
-      seven    = 1'b0;
-      eight    = 1'b0;
-      nine     = 1'b0;
-      ten      = 1'b0;
-      eleven   = 1'b0;
-      twelve   = 1'b0;
-      thirteen = 1'b0;
-      fourteen = 1'b0;
-      fifteen  = 1'b0;
-      case (num[3:0])
-	4'b0000 : zero     = 1;        // 0
-	4'b0001 : one      = 1;        // 1
-	4'b0010 : two      = 1;        // 2
-	4'b0011 : three    = 1;        // 3
-	4'b0100 : four     = 1;        // 4
-	4'b0101 : five     = 1;        // 5 
-	4'b0110 : six      = 1;        // 6
-	4'b0111 : seven    = 1;        // 7
-	4'b1000 : eight    = 1;        // 8
-	4'b1001 : nine     = 1;        // 9
-	4'b1010 : ten      = 1;        // A
-	4'b1011 : eleven   = 1;        // b
-	4'b1100 : twelve   = 1;        // C
-	4'b1101 : thirteen = 1;        // d
-	4'b1110 : fourteen = 1;        // E
-	4'b1111 : fifteen  = 1;        // F
-      endcase // case (num[3:0])
-   end
+   wire    zero = (~|num);
+   wire	   one = (~|(num[3:0]^4'b0001));
+   wire	   two = (~|(num[3:0]^4'b0010)); 
+   wire	   three = (~|(num[3:0]^4'b0011));
+   wire	   four = (~|(num[3:0]^4'b0100));
+   wire	   five = (~|(num[3:0]^4'b0101));
+   wire	   six = (~|(num[3:0]^4'b0110));
+   wire	   seven = (~|(num[3:0]^4'b0111));
+   wire    eight = (~|(num[3:0]^4'b1000));
+   wire	   nine = (~|(num[3:0]^4'b1001));
+   wire	   ten = (~|(num[3:0]^4'b1010));
+   wire	   eleven = (~|(num[3:0]^4'b1011));
+   wire    twelve = (~|(num[3:0]^4'b1100));
+   wire	   thirteen = (~|(num[3:0]^4'b1101));
+   wire    fourteen = (~|(num[3:0]^4'b1110));
+   wire	   fifteen = (~|(num[3:0]^4'b1111));
+
+
 
    wire [6:0] segmentUQ;
    
