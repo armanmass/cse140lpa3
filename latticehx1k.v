@@ -279,9 +279,10 @@ module latticehx1k(
    assign led[4:0] = L3_led[4:0];
    
 
+`ifdef HW
    wire 	    L3_tx_data_rdy;   // alarm data to print
    wire [7:0] 	    L3_tx_data;
- 	    
+`endif   
    
    //
    // instantiate assignment 3 DUT
