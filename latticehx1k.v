@@ -235,7 +235,8 @@ module latticehx1k(
    // with 12 MHz clock, 115600 baud, 8, N, 1
    buart buart (
 		.clk (clk),
-		.resetq(1'b1),
+//		.resetq(1'b1),
+		.resetq(~rst),
 		.rx(uart_RXD),
 		.tx(o_serial_data),
 		.rd(1'b1),                // read strobe
