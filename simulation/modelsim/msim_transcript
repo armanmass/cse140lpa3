@@ -1,0 +1,285 @@
+# Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do Lab3_140L_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/Arman/Desktop/Lab3 {C:/Users/Arman/Desktop/Lab3/Lab3_140L.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:57:16 on May 17,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Arman/Desktop/Lab3" C:/Users/Arman/Desktop/Lab3/Lab3_140L.v 
+# -- Compiling module Lab3_140L
+# -- Compiling module didp
+# -- Compiling module dictrl
+# 
+# Top level modules:
+# 	Lab3_140L
+# 	dictrl
+# End time: 00:57:16 on May 17,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Arman/Desktop/Lab3 {C:/Users/Arman/Desktop/Lab3/countrce.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:57:16 on May 17,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Arman/Desktop/Lab3" C:/Users/Arman/Desktop/Lab3/countrce.v 
+# -- Compiling module countrce
+# 
+# Top level modules:
+# 	countrce
+# End time: 00:57:16 on May 17,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vlog -reportprogress 300 -work work C:/Users/Arman/Desktop/Lab3/bcd2segment.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:57:32 on May 17,2019
+# vlog -reportprogress 300 -work work C:/Users/Arman/Desktop/Lab3/bcd2segment.v 
+# -- Compiling module bcd2segment
+# 
+# Top level modules:
+# 	bcd2segment
+# End time: 00:57:33 on May 17,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/Arman/Desktop/Lab3/buart.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:57:33 on May 17,2019
+# vlog -reportprogress 300 -work work C:/Users/Arman/Desktop/Lab3/buart.v 
+# -- Compiling module baudgen
+# -- Compiling module baudgen2
+# -- Compiling module uart
+# -- Compiling module rxuart
+# -- Compiling module buart
+# 
+# Top level modules:
+# 	buart
+# End time: 00:57:33 on May 17,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/Arman/Desktop/Lab3/countrce.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:57:33 on May 17,2019
+# vlog -reportprogress 300 -work work C:/Users/Arman/Desktop/Lab3/countrce.v 
+# -- Compiling module countrce
+# 
+# Top level modules:
+# 	countrce
+# End time: 00:57:33 on May 17,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/Arman/Desktop/Lab3/decodeKeys.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:57:33 on May 17,2019
+# vlog -reportprogress 300 -work work C:/Users/Arman/Desktop/Lab3/decodeKeys.v 
+# -- Compiling module decodeKeys
+# 
+# Top level modules:
+# 	decodeKeys
+# End time: 00:57:33 on May 17,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/Arman/Desktop/Lab3/dispString.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:57:33 on May 17,2019
+# vlog -reportprogress 300 -work work C:/Users/Arman/Desktop/Lab3/dispString.v 
+# -- Compiling module dispString
+# 
+# Top level modules:
+# 	dispString
+# End time: 00:57:33 on May 17,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/Arman/Desktop/Lab3/fake_buart.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:57:33 on May 17,2019
+# vlog -reportprogress 300 -work work C:/Users/Arman/Desktop/Lab3/fake_buart.v 
+# -- Compiling module fake_buart
+# 
+# Top level modules:
+# 	fake_buart
+# End time: 00:57:33 on May 17,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/Arman/Desktop/Lab3/fake_pll.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:57:33 on May 17,2019
+# vlog -reportprogress 300 -work work C:/Users/Arman/Desktop/Lab3/fake_pll.v 
+# -- Compiling module fake_pll
+# 
+# Top level modules:
+# 	fake_pll
+# End time: 00:57:33 on May 17,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/Arman/Desktop/Lab3/Half_Sec_Pulse_Every_Sec.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:57:33 on May 17,2019
+# vlog -reportprogress 300 -work work C:/Users/Arman/Desktop/Lab3/Half_Sec_Pulse_Every_Sec.v 
+# -- Compiling module Half_Sec_Pulse_Per_Sec
+# 
+# Top level modules:
+# 	Half_Sec_Pulse_Per_Sec
+# End time: 00:57:33 on May 17,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/Arman/Desktop/Lab3/Lab3_140L.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:57:33 on May 17,2019
+# vlog -reportprogress 300 -work work C:/Users/Arman/Desktop/Lab3/Lab3_140L.v 
+# -- Compiling module Lab3_140L
+# -- Compiling module didp
+# -- Compiling module dictrl
+# 
+# Top level modules:
+# 	Lab3_140L
+# 	dictrl
+# End time: 00:57:33 on May 17,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/Arman/Desktop/Lab3/latticehx1k.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:57:33 on May 17,2019
+# vlog -reportprogress 300 -work work C:/Users/Arman/Desktop/Lab3/latticehx1k.v 
+# -- Compiling module resetGen
+# -- Compiling module latticehx1k
+# 
+# Top level modules:
+# 	latticehx1k
+# End time: 00:57:34 on May 17,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vlog -reportprogress 30 -work work C:/Users/Arman/Desktop/Lab3/NBitCounter.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:57:34 on May 17,2019
+# vlog -reportprogress 30 -work work C:/Users/Arman/Desktop/Lab3/NBitCounter.v 
+# -- Compiling module N_bit_counter
+# 
+# Top level modules:
+# 	N_bit_counter
+# End time: 00:57:34 on May 17,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 30 -work work C:/Users/Arman/Desktop/Lab3/regrce.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:57:34 on May 17,2019
+# vlog -reportprogress 30 -work work C:/Users/Arman/Desktop/Lab3/regrce.v 
+# -- Compiling module regrce
+# 
+# Top level modules:
+# 	regrce
+# End time: 00:57:34 on May 17,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 30 -work work C:/Users/Arman/Desktop/Lab3/tb_sft.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:57:34 on May 17,2019
+# vlog -reportprogress 30 -work work C:/Users/Arman/Desktop/Lab3/tb_sft.v 
+# -- Compiling module tb_sft
+# 
+# Top level modules:
+# 	tb_sft
+# End time: 00:57:34 on May 17,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 30 -work work C:/Users/Arman/Desktop/Lab3/top_sft.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:57:34 on May 17,2019
+# vlog -reportprogress 30 -work work C:/Users/Arman/Desktop/Lab3/top_sft.v 
+# -- Compiling module top_sft
+# 
+# Top level modules:
+# 	top_sft
+# End time: 00:57:34 on May 17,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 30 -work work C:/Users/Arman/Desktop/Lab3/vbuf.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:57:34 on May 17,2019
+# vlog -reportprogress 30 -work work C:/Users/Arman/Desktop/Lab3/vbuf.v 
+# -- Compiling module vbuf
+# -- Compiling module latticeDulPortRam512x8
+# 
+# Top level modules:
+# 	vbuf
+# End time: 00:57:34 on May 17,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.top_sft
+# vsim work.top_sft 
+# Start time: 00:57:44 on May 17,2019
+# Loading work.top_sft
+# Loading work.latticehx1k
+# Loading work.fake_pll
+# Loading work.fake_buart
+# Loading work.resetGen
+# Loading work.N_bit_counter
+# Loading work.Lab3_140L
+# Loading work.didp
+# Loading work.countrce
+# Loading work.tb_sft
+# ** Warning: (vsim-3015) C:/Users/Arman/Desktop/Lab3/Lab3_140L.v(52): [PCDPC] - Port size (1) does not match connection size (32) for port 'dicLdMtens'. The port definition is at: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v(82).
+#    Time: 0 ps  Iteration: 0  Instance: /top_sft/latticehx1k/Lab_UT/didp File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v
+# ** Warning: (vsim-3015) C:/Users/Arman/Desktop/Lab3/Lab3_140L.v(52): [PCDPC] - Port size (1) does not match connection size (32) for port 'dicLdMones'. The port definition is at: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v(83).
+#    Time: 0 ps  Iteration: 0  Instance: /top_sft/latticehx1k/Lab_UT/didp File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v
+# ** Warning: (vsim-3015) C:/Users/Arman/Desktop/Lab3/Lab3_140L.v(52): [PCDPC] - Port size (1) does not match connection size (32) for port 'dicLdStens'. The port definition is at: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v(84).
+#    Time: 0 ps  Iteration: 0  Instance: /top_sft/latticehx1k/Lab_UT/didp File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v
+# ** Warning: (vsim-3015) C:/Users/Arman/Desktop/Lab3/Lab3_140L.v(52): [PCDPC] - Port size (1) does not match connection size (32) for port 'dicLdSones'. The port definition is at: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v(85).
+#    Time: 0 ps  Iteration: 0  Instance: /top_sft/latticehx1k/Lab_UT/didp File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v
+# ** Warning: (vsim-3015) C:/Users/Arman/Desktop/Lab3/Lab3_140L.v(52): [PCDPC] - Port size (1) does not match connection size (32) for port 'dicLdAMtens'. The port definition is at: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v(87).
+#    Time: 0 ps  Iteration: 0  Instance: /top_sft/latticehx1k/Lab_UT/didp File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v
+# ** Warning: (vsim-3015) C:/Users/Arman/Desktop/Lab3/Lab3_140L.v(52): [PCDPC] - Port size (1) does not match connection size (32) for port 'dicLdAMones'. The port definition is at: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v(88).
+#    Time: 0 ps  Iteration: 0  Instance: /top_sft/latticehx1k/Lab_UT/didp File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v
+# ** Warning: (vsim-3015) C:/Users/Arman/Desktop/Lab3/Lab3_140L.v(52): [PCDPC] - Port size (1) does not match connection size (32) for port 'dicLdAStens'. The port definition is at: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v(89).
+#    Time: 0 ps  Iteration: 0  Instance: /top_sft/latticehx1k/Lab_UT/didp File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v
+# ** Warning: (vsim-3015) C:/Users/Arman/Desktop/Lab3/Lab3_140L.v(52): [PCDPC] - Port size (1) does not match connection size (32) for port 'dicLdASones'. The port definition is at: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v(90).
+#    Time: 0 ps  Iteration: 0  Instance: /top_sft/latticehx1k/Lab_UT/didp File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v
+# ** Warning: (vsim-3015) C:/Users/Arman/Desktop/Lab3/Lab3_140L.v(99): [PCDPC] - Port size (4) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/Arman/Desktop/Lab3/countrce.v(36).
+#    Time: 0 ps  Iteration: 0  Instance: /top_sft/latticehx1k/Lab_UT/didp/countrce1 File: C:/Users/Arman/Desktop/Lab3/countrce.v
+# ** Warning: (vsim-3015) C:/Users/Arman/Desktop/Lab3/Lab3_140L.v(99): [PCDPC] - Port size (1) does not match connection size (32) for port 'ce'. The port definition is at: C:/Users/Arman/Desktop/Lab3/countrce.v(38).
+#    Time: 0 ps  Iteration: 0  Instance: /top_sft/latticehx1k/Lab_UT/didp/countrce1 File: C:/Users/Arman/Desktop/Lab3/countrce.v
+# ** Warning: (vsim-3015) C:/Users/Arman/Desktop/Lab3/Lab3_140L.v(100): [PCDPC] - Port size (4) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/Arman/Desktop/Lab3/countrce.v(36).
+#    Time: 0 ps  Iteration: 0  Instance: /top_sft/latticehx1k/Lab_UT/didp/countrce2 File: C:/Users/Arman/Desktop/Lab3/countrce.v
+# ** Warning: (vsim-3015) C:/Users/Arman/Desktop/Lab3/Lab3_140L.v(100): [PCDPC] - Port size (1) does not match connection size (32) for port 'ce'. The port definition is at: C:/Users/Arman/Desktop/Lab3/countrce.v(38).
+#    Time: 0 ps  Iteration: 0  Instance: /top_sft/latticehx1k/Lab_UT/didp/countrce2 File: C:/Users/Arman/Desktop/Lab3/countrce.v
+# ** Warning: (vsim-3015) C:/Users/Arman/Desktop/Lab3/Lab3_140L.v(101): [PCDPC] - Port size (4) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/Arman/Desktop/Lab3/countrce.v(36).
+#    Time: 0 ps  Iteration: 0  Instance: /top_sft/latticehx1k/Lab_UT/didp/countrce3 File: C:/Users/Arman/Desktop/Lab3/countrce.v
+# ** Warning: (vsim-3015) C:/Users/Arman/Desktop/Lab3/Lab3_140L.v(101): [PCDPC] - Port size (1) does not match connection size (32) for port 'ce'. The port definition is at: C:/Users/Arman/Desktop/Lab3/countrce.v(38).
+#    Time: 0 ps  Iteration: 0  Instance: /top_sft/latticehx1k/Lab_UT/didp/countrce3 File: C:/Users/Arman/Desktop/Lab3/countrce.v
+# ** Warning: (vsim-3015) C:/Users/Arman/Desktop/Lab3/Lab3_140L.v(102): [PCDPC] - Port size (4) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/Arman/Desktop/Lab3/countrce.v(36).
+#    Time: 0 ps  Iteration: 0  Instance: /top_sft/latticehx1k/Lab_UT/didp/countrce4 File: C:/Users/Arman/Desktop/Lab3/countrce.v
+# ** Warning: (vsim-3015) C:/Users/Arman/Desktop/Lab3/Lab3_140L.v(102): [PCDPC] - Port size (1) does not match connection size (32) for port 'ce'. The port definition is at: C:/Users/Arman/Desktop/Lab3/countrce.v(38).
+#    Time: 0 ps  Iteration: 0  Instance: /top_sft/latticehx1k/Lab_UT/didp/countrce4 File: C:/Users/Arman/Desktop/Lab3/countrce.v
+add wave -position insertpoint sim:/top_sft/tb_sft/*
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run -all
+# ** Note: $finish    : C:/Users/Arman/Desktop/Lab3/tb_sft.v(450)
+#    Time: 8840 ps  Iteration: 1  Instance: /top_sft/tb_sft
+# 1
+# Break in Module tb_sft at C:/Users/Arman/Desktop/Lab3/tb_sft.v line 450
+# End time: 00:58:43 on May 17,2019, Elapsed time: 0:00:59
+# Errors: 0, Warnings: 16

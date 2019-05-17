@@ -47,14 +47,13 @@ module Lab3_140L (
 		  output [3:0] 	    di_ASones
 		  );
 		  wire alarmMatch;
-		  wire loadtime;
-		  wire loadalarm;
+		  reg loadtime;
+		  reg loadalarm;
 			didp didp(.di_Mtens(di_Mtens), .di_Mones(di_Mones), .di_Stens(di_Stens), .di_Sones(di_Sones),
-		 	.di_AMtens(di_AMtens), .di_AMones(di_AMones),.di_AStens(di_AStens), .di_ASones(di_ASones), 
-			.did_alarmMatch(alarmMatch), .L3_led(L3_led), .bu_rx_data(bu_rx_data), 
-			.dicLdMtens(0), .dicLdMones(0), .dicLdStens(0), .dicLdSones(0), 
-			.dicLdAMtens(0), .dicLdAMones(0), .dicLdAStens(0), .dicLdASones(0), 
-			.dicRun(clk), .oneSecStrb(oneSecStrb), .rst(rst), .clk(clk));
+		 	 .di_AMtens(di_AMtens), .di_AMones(di_AMones),.di_AStens(di_AStens), di_ASones(di_ASones), .did_alarmMatch(alarmMatch), .L3_led(L3_led),
+			  .bu_rx_data(bu_rx_data), .dicLdMtens(loadtime), .dicLdMones(loadtime), .dicLdStens(loadtime),
+				.dicLdSones(loadtime), .dicLdAMtens(loadalarm), .dicLdAMones(loadalarm), .dicLdAStens(loadalarm),
+				.dicLdASones(loadalarm), .dicRun(1), .oneSecStrb(oneSecStrb), .rst(rst), .clk(clk));
 
 endmodule // Lab3_140L
 
@@ -94,17 +93,8 @@ module didp (
 	     input 	  clk 	  
 	     );
 
-		 wire [3:0] reset;
 		 
-	   countrce countrce1(.q(di_Sones), .d(0), .ld(dicLdSones), .ce(1), .rst(reset[0]), .clk(clk));
-		 countrce countrce2(.q(di_Stens), .d(0), .ld(dicLdStens), .ce(1), .rst(reset[1]), .clk(clk));
-		 countrce countrce3(.q(di_Mones), .d(0), .ld(dicLdMones), .ce(1), .rst(reset[2]), .clk(clk));
-		 countrce countrce4(.q(di_Mtens), .d(0), .ld(dicLdMtens), .ce(1), .rst(reset[3]), .clk(clk));
-		 assign reset[0] = ((di_Sones == 4'b1001) || rst) ? 1'b1 : 1'b0;
-		 assign reset[1] = (((di_Stens == 4'b0101) && (di_Sones == 4'b1001)) || rst) ? 1'b1 : 1'b0;
-		 assign reset[2] = (((di_Mones == 4'b1001) && (di_Stens == 4'b0101) && (di_Sones == 4'b1001)) || rst) ? 1'b1 : 1'b0;
-		 assign reset[3] = (((di_Mtens == 4'b0101) && (di_Mones == 4'b1001) && (di_Stens == 4'b0101) && (di_Sones == 4'b1001)) || rst) ? 1'b1 : 1'b0;
-		 
+	 	countrce countrce(.q(di_Sones), .d(di_Sones), .ld(dicLdSones), .ce(dicRun), .rst(rst), .clk(clk));
 
 endmodule
 
