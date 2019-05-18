@@ -34,7 +34,7 @@ module countrce #(parameter WIDTH = 4)
    (
     output reg [WIDTH-1:0] q,
     input wire [WIDTH-1:0] d,
-    input wire             ld, // load the counter
+    input wire       ld, // load the counter
     input wire		   ce, //clock enable
     input wire		   rst, // synchronous reset
     input wire		   clk);

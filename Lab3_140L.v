@@ -49,12 +49,29 @@ module Lab3_140L (
 		  wire alarmMatch;
 		  wire loadtime;
 		  wire loadalarm;
+		    
+			wire [6:0] seg1, seg2, seg3, seg4;
+
+			always @(*) begin
+				L3_segment1 = seg1;
+				L3_segment2 = seg2;
+				L3_segment3 = seg3;
+				L3_segment4 = seg4;
+			end
+
+			bcd2segment bcd2segment1(seg1, di_Sones, 1);
+			bcd2segment bcd2segment2(seg2, di_Stens, 1);
+			bcd2segment bcd2segment3(seg3, di_Mones, 1);
+			bcd2segment bcd2segment4(seg4, di_Mtens, 1);
+			
+	
+
 			didp didp(.di_Mtens(di_Mtens), .di_Mones(di_Mones), .di_Stens(di_Stens), .di_Sones(di_Sones),
 		 	.di_AMtens(di_AMtens), .di_AMones(di_AMones),.di_AStens(di_AStens), .di_ASones(di_ASones), 
 			.did_alarmMatch(alarmMatch), .L3_led(L3_led), .bu_rx_data(bu_rx_data), 
-			.dicLdMtens(0), .dicLdMones(0), .dicLdStens(0), .dicLdSones(0), 
+			.dicLdMtens(bu_rx_data_rdy), .dicLdMones(bu_rx_data_rdy), .dicLdStens(bu_rx_data_rdy), .dicLdSones(bu_rx_data_rdy), 
 			.dicLdAMtens(0), .dicLdAMones(0), .dicLdAStens(0), .dicLdASones(0), 
-			.dicRun(clk), .oneSecStrb(oneSecStrb), .rst(rst), .clk(clk));
+			.dicRun(1), .oneSecStrb(oneSecStrb), .rst(rst), .clk(clk));
 
 endmodule // Lab3_140L
 
@@ -64,10 +81,10 @@ endmodule // Lab3_140L
 // sample interface for clock datpath
 //
 module didp (
-	     output [3:0] di_Mtens, // current 10's minutes
-	     output [3:0] di_Mones, // current 1's minutes
-	     output [3:0] di_Stens, // current 10's second
-	     output [3:0] di_Sones, // current 1's second
+	     output reg [3:0] di_Mtens, // current 10's minutes
+	     output reg [3:0] di_Mones, // current 1's minutes
+	     output reg [3:0] di_Stens, // current 10's second
+	     output reg [3:0] di_Sones, // current 1's second
 
 	     output [3:0] di_AMtens, // current alarm 10's minutes
 	     output [3:0] di_AMones, // current alarm 1's minutes
@@ -94,16 +111,36 @@ module didp (
 	     input 	  clk 	  
 	     );
 
-		 wire [3:0] reset;
+		 reg [3:0] reset;
+		 reg [3:0] ce;
+		 wire [3:0] Mtens, Mones, Stens, Sones;
 		 
-	   countrce countrce1(.q(di_Sones), .d(0), .ld(dicLdSones), .ce(1), .rst(reset[0]), .clk(clk));
-		 countrce countrce2(.q(di_Stens), .d(0), .ld(dicLdStens), .ce(1), .rst(reset[1]), .clk(clk));
-		 countrce countrce3(.q(di_Mones), .d(0), .ld(dicLdMones), .ce(1), .rst(reset[2]), .clk(clk));
-		 countrce countrce4(.q(di_Mtens), .d(0), .ld(dicLdMtens), .ce(1), .rst(reset[3]), .clk(clk));
-		 assign reset[0] = ((di_Sones == 4'b1001) || rst) ? 1'b1 : 1'b0;
-		 assign reset[1] = (((di_Stens == 4'b0101) && (di_Sones == 4'b1001)) || rst) ? 1'b1 : 1'b0;
-		 assign reset[2] = (((di_Mones == 4'b1001) && (di_Stens == 4'b0101) && (di_Sones == 4'b1001)) || rst) ? 1'b1 : 1'b0;
-		 assign reset[3] = (((di_Mtens == 4'b0101) && (di_Mones == 4'b1001) && (di_Stens == 4'b0101) && (di_Sones == 4'b1001)) || rst) ? 1'b1 : 1'b0;
+
+		 always @(*) begin
+		 	di_Mtens = Mtens;
+		  	di_Mones = Mones;
+		  	di_Stens = Stens;
+		  	di_Sones = Sones;
+		 end
+
+		 always @(oneSecStrb) begin
+				ce[0] = 1;
+				ce[1] = (Sones == 4'b1001) ? 1 : 0;
+				ce[2] = ((Stens == 4'b0101) && ce[1]) ? 1 : 0;
+				ce[3] = ((Mones == 4'b1001) && ce[2]) ? 1 : 0;
+				
+				reset[0] = ((Sones == 4'b1001) || rst) ? 1 : 0;
+		 		reset[1] = (((Stens == 4'b0101) && reset[0]) || rst) ? 1 : 0;
+		 		reset[2] = (((Mones == 4'b1001) && reset[1]) || rst) ? 1 : 0;
+		 		reset[3] = (((Mtens == 4'b0101) && reset[2]) || rst) ? 1 : 0;
+		 end
+
+	     countrce countrce1(.q(Sones[3:0]), .d(bu_rx_data[3:0]), .ld(dicLdSones), .ce(ce[0]), .rst(reset[0]), .clk(clk));
+		 countrce countrce2(.q(Stens[3:0]), .d(bu_rx_data[3:0]), .ld(dicLdStens), .ce(ce[1]), .rst(reset[1]), .clk(clk));
+		 countrce countrce3(.q(Mones[3:0]), .d(bu_rx_data[3:0]), .ld(dicLdMones), .ce(ce[2]), .rst(reset[2]), .clk(clk));
+		 countrce countrce4(.q(Mtens[3:0]), .d(bu_rx_data[3:0]), .ld(dicLdMtens), .ce(ce[3]), .rst(reset[3]), .clk(clk));
+
+		 
 		 
 
 endmodule

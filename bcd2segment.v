@@ -88,32 +88,18 @@ module bcd2segment (
 		      eight | nine | ten | eleven | thirteen) ;
    
    // d
-   // assign segmentUQ[3] = ( ... );
+   assign segmentUQ[3] = (zero | two | three | five | six | eight);
    
    // e
-   // assign segmentUQ[4] = ( ... );
+   assign segmentUQ[4] = (zero | two | six | eight);
 
    
    // f
-   // assign segmentUQ[5] = ( ... );
+   assign segmentUQ[5] = (zero | four | five | six | eight | nine);
 
    // g
-   // assign segmentUQ[6] = ( ... );
+   assign segmentUQ[6] = (two | three | four | five | six | eight | nine);
 
    assign segment = {7{enable}} & segmentUQ;
    
 endmodule
-
-   
-   
-
-   
-   
-   
-   
-   
-   
-
-   
-   
-
