@@ -165,7 +165,7 @@ module didp (
 			end
 		 	else if(oneSecStrb) begin
 				ce[0] = ((1 && dicRun) || dicLdSones || dicLdASones);
-				ce[1] = (Sones == 4'b1001) || dicLdStens || dicLdAStens) ? 1 : 0;
+				ce[1] = ((Sones == 4'b1001) || dicLdStens || dicLdAStens) ? 1 : 0;
 				ce[2] = ((Stens == 4'b0101) && ce[1] || dicLdMones || dicLdAMones) ? 1 : 0;
 				ce[3] = ((Mones == 4'b1001) && ce[2] || dicLdMtens || dicLdAMtens) ? 1 : 0;
 				
