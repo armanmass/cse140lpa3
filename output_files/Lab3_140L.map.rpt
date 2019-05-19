@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab3_140L
-Sat May 18 18:08:12 2019
+Sat May 18 23:57:05 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -16,16 +16,24 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   8. State Machine - |Lab3_140L|dictrl:dictrl|alarmstate
   9. State Machine - |Lab3_140L|dictrl:dictrl|state
  10. Registers Removed During Synthesis
- 11. General Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Parameter Settings for User Entity Instance: dictrl:dictrl
- 14. Parameter Settings for User Entity Instance: didp:didp|countrce:countrce1
- 15. Parameter Settings for User Entity Instance: didp:didp|countrce:countrce2
- 16. Parameter Settings for User Entity Instance: didp:didp|countrce:countrce3
- 17. Parameter Settings for User Entity Instance: didp:didp|countrce:countrce4
- 18. Port Connectivity Checks: "didp:didp|countrce:countrce1"
- 19. Port Connectivity Checks: "dictrl:dictrl"
- 20. Analysis & Synthesis Messages
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for User Entity Instance: dictrl:dictrl
+ 15. Parameter Settings for User Entity Instance: didp:didp|countrce:countrce1
+ 16. Parameter Settings for User Entity Instance: didp:didp|countrce:countrce2
+ 17. Parameter Settings for User Entity Instance: didp:didp|countrce:countrce3
+ 18. Parameter Settings for User Entity Instance: didp:didp|countrce:countrce4
+ 19. Parameter Settings for User Entity Instance: didp:didp|regrce:regrce1
+ 20. Parameter Settings for User Entity Instance: didp:didp|regrce:regrce2
+ 21. Parameter Settings for User Entity Instance: didp:didp|regrce:regrce3
+ 22. Parameter Settings for User Entity Instance: didp:didp|regrce:regrce4
+ 23. Port Connectivity Checks: "didp:didp|regrce:regrce4"
+ 24. Port Connectivity Checks: "didp:didp|regrce:regrce3"
+ 25. Port Connectivity Checks: "didp:didp|regrce:regrce2"
+ 26. Port Connectivity Checks: "didp:didp|regrce:regrce1"
+ 27. Port Connectivity Checks: "dispString:dispString"
+ 28. Analysis & Synthesis Messages
 
 
 
@@ -51,12 +59,12 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Sat May 18 18:08:12 2019       ;
+; Analysis & Synthesis Status ; Successful - Sat May 18 23:57:05 2019       ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; Lab3_140L                                   ;
 ; Top-level Entity Name       ; Lab3_140L                                   ;
 ; Family                      ; MAX V                                       ;
-; Total logic elements        ; 111                                         ;
+; Total logic elements        ; 159                                         ;
 ; Total pins                  ; 86                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
@@ -155,44 +163,46 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+------------------------+-------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path              ; Library ;
 +----------------------------------+-----------------+------------------------+-------------------------------------------+---------+
+; regrce.v                         ; yes             ; User Verilog HDL File  ; C:/Users/Arman/Desktop/Lab3/regrce.v      ;         ;
 ; Lab3_140L.v                      ; yes             ; User Verilog HDL File  ; C:/Users/Arman/Desktop/Lab3/Lab3_140L.v   ;         ;
+; dispString.v                     ; yes             ; User Verilog HDL File  ; C:/Users/Arman/Desktop/Lab3/dispString.v  ;         ;
 ; countrce.v                       ; yes             ; User Verilog HDL File  ; C:/Users/Arman/Desktop/Lab3/countrce.v    ;         ;
 ; bcd2segment.v                    ; yes             ; User Verilog HDL File  ; C:/Users/Arman/Desktop/Lab3/bcd2segment.v ;         ;
 +----------------------------------+-----------------+------------------------+-------------------------------------------+---------+
 
 
-+----------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                          ;
-+---------------------------------------------+------------------------+
-; Resource                                    ; Usage                  ;
-+---------------------------------------------+------------------------+
-; Total logic elements                        ; 111                    ;
-;     -- Combinational with no register       ; 84                     ;
-;     -- Register only                        ; 0                      ;
-;     -- Combinational with a register        ; 27                     ;
-;                                             ;                        ;
-; Logic element usage by number of LUT inputs ;                        ;
-;     -- 4 input functions                    ; 54                     ;
-;     -- 3 input functions                    ; 20                     ;
-;     -- 2 input functions                    ; 37                     ;
-;     -- 1 input functions                    ; 0                      ;
-;     -- 0 input functions                    ; 0                      ;
-;                                             ;                        ;
-; Logic elements by mode                      ;                        ;
-;     -- normal mode                          ; 111                    ;
-;     -- arithmetic mode                      ; 0                      ;
-;     -- qfbk mode                            ; 0                      ;
-;     -- register cascade mode                ; 0                      ;
-;     -- synchronous clear/load mode          ; 0                      ;
-;     -- asynchronous clear/load mode         ; 0                      ;
-;                                             ;                        ;
-; Total registers                             ; 27                     ;
-; I/O pins                                    ; 86                     ;
-; Maximum fan-out node                        ; dictrl:dictrl|state.s0 ;
-; Maximum fan-out                             ; 31                     ;
-; Total fan-out                               ; 421                    ;
-; Average fan-out                             ; 2.14                   ;
-+---------------------------------------------+------------------------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Total logic elements                        ; 159   ;
+;     -- Combinational with no register       ; 105   ;
+;     -- Register only                        ; 4     ;
+;     -- Combinational with a register        ; 50    ;
+;                                             ;       ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 72    ;
+;     -- 3 input functions                    ; 29    ;
+;     -- 2 input functions                    ; 54    ;
+;     -- 1 input functions                    ; 0     ;
+;     -- 0 input functions                    ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 159   ;
+;     -- arithmetic mode                      ; 0     ;
+;     -- qfbk mode                            ; 0     ;
+;     -- register cascade mode                ; 0     ;
+;     -- synchronous clear/load mode          ; 4     ;
+;     -- asynchronous clear/load mode         ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 54    ;
+; I/O pins                                    ; 86    ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 54    ;
+; Total fan-out                               ; 613   ;
+; Average fan-out                             ; 2.50  ;
++---------------------------------------------+-------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -200,17 +210,18 @@ refer to the applicable agreement for further details.
 +-------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------+-------------+--------------+
 ; Compilation Hierarchy Node    ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                     ; Entity Name ; Library Name ;
 +-------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------+-------------+--------------+
-; |Lab3_140L                    ; 111 (0)     ; 27           ; 0          ; 86   ; 0            ; 84 (0)       ; 0 (0)             ; 27 (0)           ; 0 (0)           ; 0 (0)      ; |Lab3_140L                              ; Lab3_140L   ; work         ;
+; |Lab3_140L                    ; 159 (4)     ; 54           ; 0          ; 86   ; 0            ; 105 (0)      ; 4 (2)             ; 50 (2)           ; 0 (0)           ; 0 (0)      ; |Lab3_140L                              ; Lab3_140L   ; work         ;
 ;    |bcd2segment:bcd2segment1| ; 14 (14)     ; 0            ; 0          ; 0    ; 0            ; 14 (14)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Lab3_140L|bcd2segment:bcd2segment1     ; bcd2segment ; work         ;
-;    |bcd2segment:bcd2segment2| ; 14 (14)     ; 0            ; 0          ; 0    ; 0            ; 14 (14)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Lab3_140L|bcd2segment:bcd2segment2     ; bcd2segment ; work         ;
-;    |bcd2segment:bcd2segment3| ; 14 (14)     ; 0            ; 0          ; 0    ; 0            ; 14 (14)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Lab3_140L|bcd2segment:bcd2segment3     ; bcd2segment ; work         ;
+;    |bcd2segment:bcd2segment2| ; 15 (15)     ; 0            ; 0          ; 0    ; 0            ; 15 (15)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Lab3_140L|bcd2segment:bcd2segment2     ; bcd2segment ; work         ;
+;    |bcd2segment:bcd2segment3| ; 15 (15)     ; 0            ; 0          ; 0    ; 0            ; 15 (15)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Lab3_140L|bcd2segment:bcd2segment3     ; bcd2segment ; work         ;
 ;    |bcd2segment:bcd2segment4| ; 14 (14)     ; 0            ; 0          ; 0    ; 0            ; 14 (14)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Lab3_140L|bcd2segment:bcd2segment4     ; bcd2segment ; work         ;
-;    |dictrl:dictrl|            ; 18 (18)     ; 11           ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 11 (11)          ; 0 (0)           ; 0 (0)      ; |Lab3_140L|dictrl:dictrl                ; dictrl      ; work         ;
-;    |didp:didp|                ; 37 (8)      ; 16           ; 0          ; 0    ; 0            ; 21 (8)       ; 0 (0)             ; 16 (0)           ; 0 (0)           ; 0 (0)      ; |Lab3_140L|didp:didp                    ; didp        ; work         ;
-;       |countrce:countrce1|    ; 5 (5)       ; 4            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |Lab3_140L|didp:didp|countrce:countrce1 ; countrce    ; work         ;
-;       |countrce:countrce2|    ; 7 (7)       ; 4            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |Lab3_140L|didp:didp|countrce:countrce2 ; countrce    ; work         ;
+;    |dictrl:dictrl|            ; 24 (24)     ; 14           ; 0          ; 0    ; 0            ; 10 (10)      ; 0 (0)             ; 14 (14)          ; 0 (0)           ; 0 (0)      ; |Lab3_140L|dictrl:dictrl                ; dictrl      ; work         ;
+;    |didp:didp|                ; 44 (18)     ; 24           ; 0          ; 0    ; 0            ; 20 (10)      ; 1 (1)             ; 23 (7)           ; 0 (0)           ; 0 (0)      ; |Lab3_140L|didp:didp                    ; didp        ; work         ;
+;       |countrce:countrce1|    ; 6 (6)       ; 4            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |Lab3_140L|didp:didp|countrce:countrce1 ; countrce    ; work         ;
+;       |countrce:countrce2|    ; 6 (6)       ; 4            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |Lab3_140L|didp:didp|countrce:countrce2 ; countrce    ; work         ;
 ;       |countrce:countrce3|    ; 6 (6)       ; 4            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |Lab3_140L|didp:didp|countrce:countrce3 ; countrce    ; work         ;
-;       |countrce:countrce4|    ; 11 (11)     ; 4            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |Lab3_140L|didp:didp|countrce:countrce4 ; countrce    ; work         ;
+;       |countrce:countrce4|    ; 8 (8)       ; 4            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |Lab3_140L|didp:didp|countrce:countrce4 ; countrce    ; work         ;
+;    |dispString:dispString|    ; 29 (29)     ; 12           ; 0          ; 0    ; 0            ; 17 (17)      ; 1 (1)             ; 11 (11)          ; 0 (0)           ; 0 (0)      ; |Lab3_140L|dispString:dispString        ; dispString  ; work         ;
 +-------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -247,22 +258,38 @@ Encoding Type:  One-Hot
 +-----------+-----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+
 
 
-+------------------------------------------------------------+
-; Registers Removed During Synthesis                         ;
-+---------------------------------------+--------------------+
-; Register name                         ; Reason for Removal ;
-+---------------------------------------+--------------------+
-; dictrl:dictrl|alarmstate~4            ; Lost fanout        ;
-; dictrl:dictrl|alarmstate~5            ; Lost fanout        ;
-; dictrl:dictrl|state~2                 ; Lost fanout        ;
-; dictrl:dictrl|state~3                 ; Lost fanout        ;
-; dictrl:dictrl|state~4                 ; Lost fanout        ;
-; dictrl:dictrl|state~5                 ; Lost fanout        ;
-; dictrl:dictrl|alarmstate.alarmArm     ; Lost fanout        ;
-; dictrl:dictrl|alarmstate.alarmTrig    ; Lost fanout        ;
-; dictrl:dictrl|alarmstate.alarmOff     ; Lost fanout        ;
-; Total Number of Removed Registers = 9 ;                    ;
-+---------------------------------------+--------------------+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; alarmchar[7]                           ; Stuck at GND due to stuck port data_in ;
+; dispString:dispString|dOut[7]          ; Stuck at GND due to stuck port data_in ;
+; didp:didp|regrce:regrce4|q[0]          ; Stuck at GND due to stuck port data_in ;
+; didp:didp|regrce:regrce3|q[0]          ; Stuck at GND due to stuck port data_in ;
+; didp:didp|regrce:regrce2|q[0]          ; Stuck at GND due to stuck port data_in ;
+; didp:didp|regrce:regrce1|q[0]          ; Stuck at GND due to stuck port data_in ;
+; alarmchar[3]                           ; Merged with alarmchar[1]               ;
+; alarmchar[2]                           ; Merged with alarmchar[0]               ;
+; dictrl:dictrl|alarmstate~4             ; Lost fanout                            ;
+; dictrl:dictrl|alarmstate~5             ; Lost fanout                            ;
+; dictrl:dictrl|state~2                  ; Lost fanout                            ;
+; dictrl:dictrl|state~3                  ; Lost fanout                            ;
+; dictrl:dictrl|state~4                  ; Lost fanout                            ;
+; dictrl:dictrl|state~5                  ; Lost fanout                            ;
+; alarmchar[6]                           ; Merged with alarmchar[1]               ;
+; Total Number of Removed Registers = 15 ;                                        ;
++----------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                        ;
++---------------+---------------------------+----------------------------------------+
+; Register name ; Reason for Removal        ; Registers Removed due to This Register ;
++---------------+---------------------------+----------------------------------------+
+; alarmchar[7]  ; Stuck at GND              ; dispString:dispString|dOut[7]          ;
+;               ; due to stuck port data_in ;                                        ;
++---------------+---------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -270,12 +297,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 27    ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 54    ;
+; Number of registers using Synchronous Clear  ; 4     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 16    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -285,9 +312,15 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Lab3_140L|alarmchar[6]                      ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Lab3_140L|didp:didp|countrce:countrce1|q[2] ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Lab3_140L|didp:didp|countrce:countrce2|q[0] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Lab3_140L|didp:didp|countrce:countrce3|q[0] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Lab3_140L|didp:didp|countrce:countrce3|q[2] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Lab3_140L|dispString:dispString|cnt[0]      ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Lab3_140L|didp:didp|countrce:countrce4|q[0] ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; Yes        ; |Lab3_140L|dispString:dispString|dOut[5]     ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; Yes        ; |Lab3_140L|dispString:dispString|dOut[2]     ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Lab3_140L|dispString:dispString|dOut[1]     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
 
 
@@ -361,24 +394,109 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------+
-; Port Connectivity Checks: "didp:didp|countrce:countrce1" ;
-+------+-------+----------+--------------------------------+
-; Port ; Type  ; Severity ; Details                        ;
-+------+-------+----------+--------------------------------+
-; ce   ; Input ; Info     ; Stuck at VCC                   ;
-+------+-------+----------+--------------------------------+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: didp:didp|regrce:regrce1 ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; WIDTH          ; 1     ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "dictrl:dictrl"                                                                               ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port          ; Type   ; Severity ; Details                                                                             ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; dicAlarmIdle  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; dicAlarmArmed ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; dicAlarmTrig  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: didp:didp|regrce:regrce2 ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; WIDTH          ; 1     ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: didp:didp|regrce:regrce3 ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; WIDTH          ; 1     ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: didp:didp|regrce:regrce4 ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; WIDTH          ; 1     ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "didp:didp|regrce:regrce4"                                                                                                                                                        ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                                                          ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; q    ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (4 bits) it drives.  The 3 most-significant bit(s) in the port expression will be connected to GND.            ;
+; d    ; Input  ; Warning  ; Input port expression (4 bits) is wider than the input port (1 bits) it drives.  The 3 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "didp:didp|regrce:regrce3"                                                                                                                                                        ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                                                          ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; q    ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (4 bits) it drives.  The 3 most-significant bit(s) in the port expression will be connected to GND.            ;
+; d    ; Input  ; Warning  ; Input port expression (4 bits) is wider than the input port (1 bits) it drives.  The 3 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "didp:didp|regrce:regrce2"                                                                                                                                                        ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                                                          ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; q    ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (4 bits) it drives.  The 3 most-significant bit(s) in the port expression will be connected to GND.            ;
+; d    ; Input  ; Warning  ; Input port expression (4 bits) is wider than the input port (1 bits) it drives.  The 3 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "didp:didp|regrce:regrce1"                                                                                                                                                        ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                                                          ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; q    ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (4 bits) it drives.  The 3 most-significant bit(s) in the port expression will be connected to GND.            ;
+; d    ; Input  ; Warning  ; Input port expression (4 bits) is wider than the input port (1 bits) it drives.  The 3 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "dispString:dispString"                                                                                                                          ;
++----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                                                                                                      ;
++----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; b0       ; Input ; Warning  ; Input port expression (4 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "b0[7..4]" will be connected to GND.   ;
+; b1       ; Input ; Warning  ; Input port expression (4 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "b1[7..4]" will be connected to GND.   ;
+; b2[5..3] ; Input ; Info     ; Stuck at VCC                                                                                                                                 ;
+; b2[7..6] ; Input ; Info     ; Stuck at GND                                                                                                                                 ;
+; b2[2]    ; Input ; Info     ; Stuck at GND                                                                                                                                 ;
+; b2[1]    ; Input ; Info     ; Stuck at VCC                                                                                                                                 ;
+; b2[0]    ; Input ; Info     ; Stuck at GND                                                                                                                                 ;
+; b3       ; Input ; Warning  ; Input port expression (4 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "b3[7..4]" will be connected to GND.   ;
+; b4       ; Input ; Warning  ; Input port expression (4 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "b4[7..4]" will be connected to GND.   ;
+; b5[7..6] ; Input ; Info     ; Stuck at GND                                                                                                                                 ;
+; b5[4..0] ; Input ; Info     ; Stuck at GND                                                                                                                                 ;
+; b5[5]    ; Input ; Info     ; Stuck at VCC                                                                                                                                 ;
+; b7[3..2] ; Input ; Info     ; Stuck at VCC                                                                                                                                 ;
+; b7[7..4] ; Input ; Info     ; Stuck at GND                                                                                                                                 ;
+; b7[1]    ; Input ; Info     ; Stuck at GND                                                                                                                                 ;
+; b7[0]    ; Input ; Info     ; Stuck at VCC                                                                                                                                 ;
+; go       ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -387,7 +505,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat May 18 18:08:02 2019
+    Info: Processing started: Sat May 18 23:56:56 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab3_140L -c Lab3_140L
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -408,8 +526,8 @@ Info (12021): Found 2 design units, including 2 entities, in source file lattice
     Info (12023): Found entity 2: latticehx1k File: C:/Users/Arman/Desktop/Lab3/latticehx1k.v Line: 95
 Info (12021): Found 3 design units, including 3 entities, in source file lab3_140l.v
     Info (12023): Found entity 1: Lab3_140L File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 26
-    Info (12023): Found entity 2: didp File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 88
-    Info (12023): Found entity 3: dictrl File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 160
+    Info (12023): Found entity 2: didp File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 102
+    Info (12023): Found entity 3: dictrl File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 198
 Info (12021): Found 1 design units, including 1 entities, in source file half_sec_pulse_every_sec.v
     Info (12023): Found entity 1: Half_Sec_Pulse_Per_Sec File: C:/Users/Arman/Desktop/Lab3/Half_Sec_Pulse_Every_Sec.v Line: 44
 Info (12021): Found 1 design units, including 1 entities, in source file fake_pll.v
@@ -431,68 +549,47 @@ Info (12021): Found 5 design units, including 5 entities, in source file buart.v
 Info (12021): Found 1 design units, including 1 entities, in source file bcd2segment.v
     Info (12023): Found entity 1: bcd2segment File: C:/Users/Arman/Desktop/Lab3/bcd2segment.v Line: 49
 Info (12127): Elaborating entity "Lab3_140L" for the top level hierarchy
-Warning (10034): Output port "L3_tx_data" at Lab3_140L.v(33) has no driver File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 33
-Warning (10034): Output port "L3_tx_data_rdy" at Lab3_140L.v(32) has no driver File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 32
-Info (12128): Elaborating entity "bcd2segment" for hierarchy "bcd2segment:bcd2segment1" File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 63
-Info (12128): Elaborating entity "dictrl" for hierarchy "dictrl:dictrl" File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 72
-Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(234): variable "dataIn" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 234
-Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(240): variable "dataIn" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 240
-Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(242): variable "did_alarmMatch" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 242
-Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(248): variable "dataIn" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 248
-Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(259): variable "dataIn" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 259
-Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(261): variable "dataIn" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 261
-Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(267): variable "dataIn" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 267
-Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(273): variable "dataIn" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 273
-Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(279): variable "dataIn" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 279
-Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(285): variable "dataIn" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 285
-Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(291): variable "dataIn" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 291
+Info (12128): Elaborating entity "bcd2segment" for hierarchy "bcd2segment:bcd2segment1" File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 75
+Info (12128): Elaborating entity "dispString" for hierarchy "dispString:dispString" File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 81
+Warning (10230): Verilog HDL assignment warning at dispString.v(61): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab3/dispString.v Line: 61
+Info (12128): Elaborating entity "dictrl" for hierarchy "dictrl:dictrl" File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 86
+Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(272): variable "dataIn" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 272
+Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(278): variable "dataIn" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 278
+Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(280): variable "did_alarmMatch" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 280
+Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(286): variable "dataIn" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 286
 Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(297): variable "dataIn" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 297
-Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(303): variable "dataIn" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 303
-Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(309): variable "dataIn" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 309
-Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(315): variable "dataIn" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 315
-Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(321): variable "dataIn" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 321
-Warning (10034): Output port "dicLdMones" at Lab3_140L.v(162) has no driver File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 162
-Warning (10034): Output port "dicLdStens" at Lab3_140L.v(163) has no driver File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 163
-Warning (10034): Output port "dicLdSones" at Lab3_140L.v(164) has no driver File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 164
-Warning (10034): Output port "dicLdAMtens" at Lab3_140L.v(165) has no driver File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 165
-Warning (10034): Output port "dicLdAMones" at Lab3_140L.v(166) has no driver File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 166
-Warning (10034): Output port "dicLdAStens" at Lab3_140L.v(167) has no driver File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 167
-Warning (10034): Output port "dicLdASones" at Lab3_140L.v(168) has no driver File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 168
-Info (12128): Elaborating entity "didp" for hierarchy "didp:didp" File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 79
-Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(133): variable "Sones" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 133
-Warning (10230): Verilog HDL assignment warning at Lab3_140L.v(133): truncated value with size 32 to match size of target (1) File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 133
-Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(134): variable "Stens" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 134
-Warning (10230): Verilog HDL assignment warning at Lab3_140L.v(134): truncated value with size 32 to match size of target (1) File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 134
-Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(135): variable "Mones" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 135
-Warning (10230): Verilog HDL assignment warning at Lab3_140L.v(135): truncated value with size 32 to match size of target (1) File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 135
-Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(137): variable "Sones" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 137
-Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(137): variable "rst" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 137
-Warning (10230): Verilog HDL assignment warning at Lab3_140L.v(137): truncated value with size 32 to match size of target (1) File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 137
-Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(138): variable "Stens" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 138
-Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(138): variable "rst" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 138
-Warning (10230): Verilog HDL assignment warning at Lab3_140L.v(138): truncated value with size 32 to match size of target (1) File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 138
-Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(139): variable "Mones" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 139
-Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(139): variable "rst" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 139
-Warning (10230): Verilog HDL assignment warning at Lab3_140L.v(139): truncated value with size 32 to match size of target (1) File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 139
-Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(140): variable "Mtens" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 140
-Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(140): variable "rst" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 140
-Warning (10230): Verilog HDL assignment warning at Lab3_140L.v(140): truncated value with size 32 to match size of target (1) File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 140
-Warning (10034): Output port "di_AMtens" at Lab3_140L.v(94) has no driver File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 94
-Warning (10034): Output port "di_AMones" at Lab3_140L.v(95) has no driver File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 95
-Warning (10034): Output port "di_AStens" at Lab3_140L.v(96) has no driver File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 96
-Warning (10034): Output port "di_ASones" at Lab3_140L.v(97) has no driver File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 97
-Warning (10034): Output port "L3_led" at Lab3_140L.v(101) has no driver File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 101
-Warning (10034): Output port "did_alarmMatch" at Lab3_140L.v(99) has no driver File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 99
-Info (12128): Elaborating entity "countrce" for hierarchy "didp:didp|countrce:countrce1" File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 143
+Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(299): variable "dataIn" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 299
+Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(305): variable "dataIn" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 305
+Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(311): variable "dataIn" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 311
+Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(317): variable "dataIn" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 317
+Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(323): variable "dataIn" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 323
+Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(329): variable "dataIn" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 329
+Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(335): variable "dataIn" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 335
+Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(341): variable "dataIn" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 341
+Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(347): variable "dataIn" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 347
+Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(353): variable "dataIn" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 353
+Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(359): variable "dataIn" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 359
+Warning (10034): Output port "dicLdMones" at Lab3_140L.v(200) has no driver File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 200
+Warning (10034): Output port "dicLdStens" at Lab3_140L.v(201) has no driver File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 201
+Warning (10034): Output port "dicLdSones" at Lab3_140L.v(202) has no driver File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 202
+Warning (10034): Output port "dicLdAMtens" at Lab3_140L.v(203) has no driver File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 203
+Warning (10034): Output port "dicLdAMones" at Lab3_140L.v(204) has no driver File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 204
+Warning (10034): Output port "dicLdAStens" at Lab3_140L.v(205) has no driver File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 205
+Warning (10034): Output port "dicLdASones" at Lab3_140L.v(206) has no driver File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 206
+Info (12128): Elaborating entity "didp" for hierarchy "didp:didp" File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 93
+Warning (10230): Verilog HDL assignment warning at Lab3_140L.v(154): truncated value with size 32 to match size of target (1) File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 154
+Warning (10230): Verilog HDL assignment warning at Lab3_140L.v(155): truncated value with size 32 to match size of target (1) File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 155
+Warning (10230): Verilog HDL assignment warning at Lab3_140L.v(156): truncated value with size 32 to match size of target (1) File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 156
+Warning (10230): Verilog HDL assignment warning at Lab3_140L.v(158): truncated value with size 32 to match size of target (1) File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 158
+Warning (10230): Verilog HDL assignment warning at Lab3_140L.v(159): truncated value with size 32 to match size of target (1) File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 159
+Warning (10230): Verilog HDL assignment warning at Lab3_140L.v(160): truncated value with size 32 to match size of target (1) File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 160
+Warning (10230): Verilog HDL assignment warning at Lab3_140L.v(161): truncated value with size 32 to match size of target (1) File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 161
+Warning (10230): Verilog HDL assignment warning at Lab3_140L.v(176): truncated value with size 32 to match size of target (1) File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 176
+Warning (10034): Output port "L3_led" at Lab3_140L.v(115) has no driver File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 115
+Info (12128): Elaborating entity "countrce" for hierarchy "didp:didp|countrce:countrce1" File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 178
+Info (12128): Elaborating entity "regrce" for hierarchy "didp:didp|regrce:regrce1" File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 183
+Warning (12241): 5 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "L3_tx_data_rdy" is stuck at GND File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 32
-    Warning (13410): Pin "L3_tx_data[0]" is stuck at GND File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 33
-    Warning (13410): Pin "L3_tx_data[1]" is stuck at GND File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 33
-    Warning (13410): Pin "L3_tx_data[2]" is stuck at GND File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 33
-    Warning (13410): Pin "L3_tx_data[3]" is stuck at GND File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 33
-    Warning (13410): Pin "L3_tx_data[4]" is stuck at GND File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 33
-    Warning (13410): Pin "L3_tx_data[5]" is stuck at GND File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 33
-    Warning (13410): Pin "L3_tx_data[6]" is stuck at GND File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 33
     Warning (13410): Pin "L3_tx_data[7]" is stuck at GND File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 33
     Warning (13410): Pin "L3_led[0]" is stuck at GND File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 34
     Warning (13410): Pin "L3_led[1]" is stuck at GND File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 34
@@ -515,18 +612,17 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "di_ASones[1]" is stuck at GND File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 48
     Warning (13410): Pin "di_ASones[2]" is stuck at GND File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 48
     Warning (13410): Pin "di_ASones[3]" is stuck at GND File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 48
-Info (17049): 9 registers lost all their fanouts during netlist optimizations.
-Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "oneSecStrb" File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 29
+Info (17049): 6 registers lost all their fanouts during netlist optimizations.
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "bu_rx_data_rdy" File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 30
-Info (21057): Implemented 197 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 245 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 12 input pins
     Info (21059): Implemented 74 output pins
-    Info (21061): Implemented 111 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 85 warnings
-    Info: Peak virtual memory: 565 megabytes
-    Info: Processing ended: Sat May 18 18:08:12 2019
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:23
+    Info (21061): Implemented 159 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 61 warnings
+    Info: Peak virtual memory: 563 megabytes
+    Info: Processing ended: Sat May 18 23:57:05 2019
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:22
 
 

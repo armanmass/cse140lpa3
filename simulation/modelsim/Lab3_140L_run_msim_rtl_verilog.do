@@ -5,7 +5,9 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
+vlog -vlog01compat -work work +incdir+C:/Users/Arman/Desktop/Lab3 {C:/Users/Arman/Desktop/Lab3/regrce.v}
 vlog -vlog01compat -work work +incdir+C:/Users/Arman/Desktop/Lab3 {C:/Users/Arman/Desktop/Lab3/Lab3_140L.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Arman/Desktop/Lab3 {C:/Users/Arman/Desktop/Lab3/dispString.v}
 vlog -vlog01compat -work work +incdir+C:/Users/Arman/Desktop/Lab3 {C:/Users/Arman/Desktop/Lab3/countrce.v}
 vlog -vlog01compat -work work +incdir+C:/Users/Arman/Desktop/Lab3 {C:/Users/Arman/Desktop/Lab3/bcd2segment.v}
 

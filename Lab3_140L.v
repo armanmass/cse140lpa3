@@ -50,6 +50,7 @@ module Lab3_140L (
 	      		 LdAMones, LdAStens, LdASones, Run;
 
 			wire idle, armed, trig, alarmMatch;
+			reg [7:0] alarmchar;
 		    
 			wire [6:0] seg1, seg2, seg3, seg4;
 
@@ -60,12 +61,25 @@ module Lab3_140L (
 				L3_segment4 = seg4;
 			end
 
+			always @(posedge clk) begin
+				if(idle)
+					alarmchar = 8'b00101110;
+				else if(armed)
+					alarmchar = 8'b01100001;
+				else if(trig)
+					alarmchar = 8'b01010100;
+				else
+					alarmchar = 8'b00101110;
+			end
+
 			bcd2segment bcd2segment1(seg1, di_Sones, Run);
 			bcd2segment bcd2segment2(seg2, di_Stens, Run);
 			bcd2segment bcd2segment3(seg3, di_Mones, Run);
 			bcd2segment bcd2segment4(seg4, di_Mtens, Run);
 			
-	
+			dispString dispString(.rdy(L3_tx_data_rdy), .dOut(L3_tx_data), .b0(di_Mtens), .b1(di_Mones), .b2(8'b00111010), 
+								  .b3(di_Stens), .b4(di_Sones), .b5(8'b00100000), .b6(alarmchar), .b7(8'b00001101), .rst(rst), .clk(clk));
+
 			dictrl dictrl(.dicLdMtens(LdMtens), .dicLdMones(LdMones), .dicLdStens(LdStens), .dicLdSones(LdSones), 
 			.dicLdAMtens(LdAMtens), .dicLdAMones(LdAMones), .dicLdAStens(LdAStens), .dicLdASones(LdASones), .dicRun(Run),
 			.dicAlarmIdle(idle), .dicAlarmArmed(armed), .dicAlarmTrig(trig), .did_alarmMatch(alarmMatch), 
@@ -91,10 +105,10 @@ module didp (
 	     output reg [3:0] di_Stens, // current 10's second
 	     output reg [3:0] di_Sones, // current 1's second
 
-	     output [3:0] di_AMtens, // current alarm 10's minutes
-	     output [3:0] di_AMones, // current alarm 1's minutes
-	     output [3:0] di_AStens, // current alarm 10's second
-	     output [3:0] di_ASones, // current alarm 1's second
+	     output reg [3:0] di_AMtens, // current alarm 10's minutes
+	     output reg [3:0] di_AMones, // current alarm 1's minutes
+	     output reg [3:0] di_AStens, // current alarm 10's second
+	     output reg [3:0] di_ASones, // current alarm 1's second
 
 	     output wire  did_alarmMatch, // one cydie alarm match (raw signal, unqualified)
 
@@ -118,7 +132,8 @@ module didp (
 
 		 reg [3:0] reset;
 		 reg [3:0] ce;
-		 wire [3:0] Mtens, Mones, Stens, Sones;
+		 wire [3:0] Mtens, Mones, Stens, Sones,
+		 			AMtens, AMones, AStens, ASones;
 		 
 
 		 always @(*) begin
@@ -126,10 +141,16 @@ module didp (
 		  	di_Mones = Mones;
 		  	di_Stens = Stens;
 		  	di_Sones = Sones;
+
+			di_AMtens = AMtens;
+		  	di_AMones = AMones;
+		  	di_AStens = AStens;
+		  	di_ASones = ASones;
 		 end
 
-		 always @(oneSecStrb) begin
-				ce[0] = 1;
+		 always @(posedge clk) begin
+		 	if(oneSecStrb) begin
+				ce[0] = 1 && dicRun;
 				ce[1] = (Sones == 4'b1001) ? 1 : 0;
 				ce[2] = ((Stens == 4'b0101) && ce[1]) ? 1 : 0;
 				ce[3] = ((Mones == 4'b1001) && ce[2]) ? 1 : 0;
@@ -138,14 +159,31 @@ module didp (
 		 		reset[1] = (((Stens == 4'b0101) && reset[0]) || rst) ? 1 : 0;
 		 		reset[2] = (((Mones == 4'b1001) && reset[1]) || rst) ? 1 : 0;
 		 		reset[3] = (((Mtens == 4'b0101) && reset[2]) || rst) ? 1 : 0;
-		 end
+		 	end
+			else begin
+				ce[0] = 0;
+				ce[1] = 0;
+				ce[2] = 0;
+				ce[3] = 0;
+				
+				reset[0] = 0;
+		 		reset[1] = 0;
+		 		reset[2] = 0;
+		 		reset[3] = 0;
+			end
+		end
+
+		 assign did_alarmMatch = ((Mtens == AMtens) && (Mones == AMones) && (Stens == AStens) && (Stens == ASones)) ? 1 : 0;
 
 	     countrce countrce1(.q(Sones[3:0]), .d(bu_rx_data[3:0]), .ld(dicLdSones), .ce(ce[0]), .rst(reset[0]), .clk(clk));
 		 countrce countrce2(.q(Stens[3:0]), .d(bu_rx_data[3:0]), .ld(dicLdStens), .ce(ce[1]), .rst(reset[1]), .clk(clk));
 		 countrce countrce3(.q(Mones[3:0]), .d(bu_rx_data[3:0]), .ld(dicLdMones), .ce(ce[2]), .rst(reset[2]), .clk(clk));
 		 countrce countrce4(.q(Mtens[3:0]), .d(bu_rx_data[3:0]), .ld(dicLdMtens), .ce(ce[3]), .rst(reset[3]), .clk(clk));
 
-		 
+		 regrce regrce1(.q(ASones[3:0]), .d(bu_rx_data[3:0]), .ce(dicLdASones), .rst(rst), .clk(clk));
+		 regrce regrce2(.q(AStens[3:0]), .d(bu_rx_data[3:0]), .ce(dicLdAStens), .rst(rst), .clk(clk));
+		 regrce regrce3(.q(AMones[3:0]), .d(bu_rx_data[3:0]), .ce(dicLdAMones), .rst(rst), .clk(clk));
+		 regrce regrce4(.q(AMtens[3:0]), .d(bu_rx_data[3:0]), .ce(dicLdAMtens), .rst(rst), .clk(clk));
 		 
 
 endmodule
