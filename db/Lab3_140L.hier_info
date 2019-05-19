@@ -1,7 +1,7 @@
 |Lab3_140L
 rst => rst.IN3
 clk => clk.IN3
-oneSecStrb => oneSecStrb.IN2
+oneSecStrb => oneSecStrb.IN3
 bu_rx_data_rdy => bu_rx_data_rdy.IN1
 bu_rx_data[0] => bu_rx_data[0].IN2
 bu_rx_data[1] => bu_rx_data[1].IN2
@@ -69,22 +69,22 @@ di_Sones[0] <= di_Sones[0].DB_MAX_OUTPUT_PORT_TYPE
 di_Sones[1] <= di_Sones[1].DB_MAX_OUTPUT_PORT_TYPE
 di_Sones[2] <= di_Sones[2].DB_MAX_OUTPUT_PORT_TYPE
 di_Sones[3] <= di_Sones[3].DB_MAX_OUTPUT_PORT_TYPE
-di_AMtens[0] <= didp:didp.di_AMtens
-di_AMtens[1] <= didp:didp.di_AMtens
-di_AMtens[2] <= didp:didp.di_AMtens
-di_AMtens[3] <= didp:didp.di_AMtens
-di_AMones[0] <= didp:didp.di_AMones
-di_AMones[1] <= didp:didp.di_AMones
-di_AMones[2] <= didp:didp.di_AMones
-di_AMones[3] <= didp:didp.di_AMones
-di_AStens[0] <= didp:didp.di_AStens
-di_AStens[1] <= didp:didp.di_AStens
-di_AStens[2] <= didp:didp.di_AStens
-di_AStens[3] <= didp:didp.di_AStens
-di_ASones[0] <= didp:didp.di_ASones
-di_ASones[1] <= didp:didp.di_ASones
-di_ASones[2] <= didp:didp.di_ASones
-di_ASones[3] <= didp:didp.di_ASones
+di_AMtens[0] <= min1[0].DB_MAX_OUTPUT_PORT_TYPE
+di_AMtens[1] <= min1[1].DB_MAX_OUTPUT_PORT_TYPE
+di_AMtens[2] <= min1[2].DB_MAX_OUTPUT_PORT_TYPE
+di_AMtens[3] <= min1[3].DB_MAX_OUTPUT_PORT_TYPE
+di_AMones[0] <= min2[0].DB_MAX_OUTPUT_PORT_TYPE
+di_AMones[1] <= min2[1].DB_MAX_OUTPUT_PORT_TYPE
+di_AMones[2] <= min2[2].DB_MAX_OUTPUT_PORT_TYPE
+di_AMones[3] <= min2[3].DB_MAX_OUTPUT_PORT_TYPE
+di_AStens[0] <= sec1[0].DB_MAX_OUTPUT_PORT_TYPE
+di_AStens[1] <= sec1[1].DB_MAX_OUTPUT_PORT_TYPE
+di_AStens[2] <= sec1[2].DB_MAX_OUTPUT_PORT_TYPE
+di_AStens[3] <= sec1[3].DB_MAX_OUTPUT_PORT_TYPE
+di_ASones[0] <= sec2[0].DB_MAX_OUTPUT_PORT_TYPE
+di_ASones[1] <= sec2[1].DB_MAX_OUTPUT_PORT_TYPE
+di_ASones[2] <= sec2[2].DB_MAX_OUTPUT_PORT_TYPE
+di_ASones[3] <= sec2[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Lab3_140L|bcd2segment:bcd2segment1
@@ -534,6 +534,20 @@ dicRun <= dicRun.DB_MAX_OUTPUT_PORT_TYPE
 dicAlarmIdle <= alarm1.DB_MAX_OUTPUT_PORT_TYPE
 dicAlarmArmed <= alarm2.DB_MAX_OUTPUT_PORT_TYPE
 dicAlarmTrig <= alarm3.DB_MAX_OUTPUT_PORT_TYPE
+oneSecStrb => state.OUTPUTSELECT
+oneSecStrb => state.OUTPUTSELECT
+oneSecStrb => state.OUTPUTSELECT
+oneSecStrb => state.OUTPUTSELECT
+oneSecStrb => state.OUTPUTSELECT
+oneSecStrb => state.OUTPUTSELECT
+oneSecStrb => state.OUTPUTSELECT
+oneSecStrb => state.OUTPUTSELECT
+oneSecStrb => state.OUTPUTSELECT
+oneSecStrb => state.OUTPUTSELECT
+oneSecStrb => state.OUTPUTSELECT
+oneSecStrb => alarmstate.OUTPUTSELECT
+oneSecStrb => alarmstate.OUTPUTSELECT
+oneSecStrb => alarmstate.OUTPUTSELECT
 did_alarmMatch => next_alarmstate.DATAA
 did_alarmMatch => next_alarmstate.DATAA
 bu_rx_data_rdy => ~NO_FANOUT~
@@ -607,8 +621,8 @@ rst => state.OUTPUTSELECT
 rst => alarmstate.OUTPUTSELECT
 rst => alarmstate.OUTPUTSELECT
 rst => alarmstate.OUTPUTSELECT
-clk => alarmstate~1.DATAIN
-clk => state~1.DATAIN
+clk => alarmstate~4.DATAIN
+clk => state~12.DATAIN
 
 
 |Lab3_140L|didp:didp
@@ -666,14 +680,11 @@ dicLdAMtens => dicLdAMtens.IN1
 dicLdAMones => dicLdAMones.IN1
 dicLdAStens => dicLdAStens.IN1
 dicLdASones => dicLdASones.IN1
-dicRun => ce.IN0
+dicRun => ce.DATAB
 oneSecStrb => ce.OUTPUTSELECT
 oneSecStrb => ce.OUTPUTSELECT
 oneSecStrb => ce.OUTPUTSELECT
 oneSecStrb => ce.OUTPUTSELECT
-oneSecStrb => reset.OUTPUTSELECT
-oneSecStrb => reset.OUTPUTSELECT
-oneSecStrb => reset.OUTPUTSELECT
 oneSecStrb => reset.OUTPUTSELECT
 rst => rst.IN4
 clk => clk.IN8
@@ -789,33 +800,93 @@ clk => q[3]~reg0.CLK
 
 |Lab3_140L|didp:didp|regrce:regrce1
 q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 d[0] => q.DATAB
+d[1] => q.DATAB
+d[2] => q.DATAB
+d[3] => q.DATAB
+ce => q.OUTPUTSELECT
+ce => q.OUTPUTSELECT
+ce => q.OUTPUTSELECT
 ce => q.OUTPUTSELECT
 rst => q.OUTPUTSELECT
+rst => q.OUTPUTSELECT
+rst => q.OUTPUTSELECT
+rst => q.OUTPUTSELECT
 clk => q[0]~reg0.CLK
+clk => q[1]~reg0.CLK
+clk => q[2]~reg0.CLK
+clk => q[3]~reg0.CLK
 
 
 |Lab3_140L|didp:didp|regrce:regrce2
 q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 d[0] => q.DATAB
+d[1] => q.DATAB
+d[2] => q.DATAB
+d[3] => q.DATAB
+ce => q.OUTPUTSELECT
+ce => q.OUTPUTSELECT
+ce => q.OUTPUTSELECT
 ce => q.OUTPUTSELECT
 rst => q.OUTPUTSELECT
+rst => q.OUTPUTSELECT
+rst => q.OUTPUTSELECT
+rst => q.OUTPUTSELECT
 clk => q[0]~reg0.CLK
+clk => q[1]~reg0.CLK
+clk => q[2]~reg0.CLK
+clk => q[3]~reg0.CLK
 
 
 |Lab3_140L|didp:didp|regrce:regrce3
 q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 d[0] => q.DATAB
+d[1] => q.DATAB
+d[2] => q.DATAB
+d[3] => q.DATAB
+ce => q.OUTPUTSELECT
+ce => q.OUTPUTSELECT
+ce => q.OUTPUTSELECT
 ce => q.OUTPUTSELECT
 rst => q.OUTPUTSELECT
+rst => q.OUTPUTSELECT
+rst => q.OUTPUTSELECT
+rst => q.OUTPUTSELECT
 clk => q[0]~reg0.CLK
+clk => q[1]~reg0.CLK
+clk => q[2]~reg0.CLK
+clk => q[3]~reg0.CLK
 
 
 |Lab3_140L|didp:didp|regrce:regrce4
 q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 d[0] => q.DATAB
+d[1] => q.DATAB
+d[2] => q.DATAB
+d[3] => q.DATAB
+ce => q.OUTPUTSELECT
+ce => q.OUTPUTSELECT
+ce => q.OUTPUTSELECT
 ce => q.OUTPUTSELECT
 rst => q.OUTPUTSELECT
+rst => q.OUTPUTSELECT
+rst => q.OUTPUTSELECT
+rst => q.OUTPUTSELECT
 clk => q[0]~reg0.CLK
+clk => q[1]~reg0.CLK
+clk => q[2]~reg0.CLK
+clk => q[3]~reg0.CLK
 
 

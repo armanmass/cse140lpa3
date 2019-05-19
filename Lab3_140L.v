@@ -65,16 +65,11 @@ module Lab3_140L (
 				min2[7:4] = 4'b0011;
 				sec1[7:4] = 4'b0011;
 				sec2[7:4] = 4'b0011;
+				min1[3:0] = di_AMtens;
+				min2[3:0] = di_AMones;
+				sec1[3:0] = di_AStens;
+				sec2[3:0] = di_ASones;
 			end
-
-			always @(posedge clk) begin
-				min1[3:0] <= di_AMtens;
-				min2[3:0] <= di_AMones;
-				sec1[3:0] <= di_AStens;
-				sec2[3:0] <= di_ASones;
-			end
-
-
 
 
 			always @(posedge clk) begin
@@ -102,7 +97,7 @@ module Lab3_140L (
 
 			dictrl dictrl(.dicLdMtens(LdMtens), .dicLdMones(LdMones), .dicLdStens(LdStens), .dicLdSones(LdSones), 
 			.dicLdAMtens(LdAMtens), .dicLdAMones(LdAMones), .dicLdAStens(LdAStens), .dicLdASones(LdASones), .dicRun(Run),
-			.dicAlarmIdle(idle), .dicAlarmArmed(armed), .dicAlarmTrig(trig), .did_alarmMatch(alarmMatch), 
+			.dicAlarmIdle(idle), .dicAlarmArmed(armed), .dicAlarmTrig(trig), .oneSecStrb(oneSecStrb), .did_alarmMatch(alarmMatch), 
 			.bu_rx_data_rdy(bu_rx_data_rdy), .dataIn(bu_rx_data), .rst(rst), .clk(clk));
 
 			didp didp(.di_Mtens(di_Mtens), .di_Mones(di_Mones), .di_Stens(di_Stens), .di_Sones(di_Sones),
@@ -181,21 +176,21 @@ module didp (
 		 		reset[3] = 1'b1;
 			end
 		 	else if(oneSecStrb) begin
-				ce[0] = ((1 && dicRun) || dicLdSones || dicLdASones);
-				ce[1] = ((Sones == 4'b1001) || dicLdStens || dicLdAStens) ? 1'b1 : 1'b0;
-				ce[2] = (((Stens == 4'b0101) && ce[1]) || dicLdMones || dicLdAMones) ? 1'b1 : 1'b0;
-				ce[3] = (((Mones == 4'b1001) && ce[2]) || dicLdMtens || dicLdAMtens) ? 1'b1 : 1'b0;
+				ce[0] = (1 && dicRun);
+				ce[1] = (Sones == 4'b1001) ? 1'b1 : 1'b0;
+				ce[2] = ((Stens == 4'b0101) && ce[1]) ? 1'b1 : 1'b0;
+				ce[3] = ((Mones == 4'b1001) && ce[2]) ? 1'b1 : 1'b0;
 				
-				reset[0] = ((Sones == 4'b1001) || rst) ? 1'b1 : 1'b0;
-		 		reset[1] = (((Stens == 4'b0101) && reset[0]) || rst) ? 1'b1 : 1'b0;
-		 		reset[2] = (((Mones == 4'b1001) && reset[1]) || rst) ? 1'b1 : 1'b0;
-		 		reset[3] = (((Mtens == 4'b0101) && reset[2]) || rst) ? 1'b1 : 1'b0;
+				reset[0] = (Sones == 4'b1001) ? 1'b1 : 1'b0;
+		 		reset[1] = ((Stens == 4'b0101) && reset[0]) ? 1'b1 : 1'b0;
+		 		reset[2] = ((Mones == 4'b1001) && reset[1]) ? 1'b1 : 1'b0;
+		 		reset[3] = ((Mtens == 4'b0101) && reset[2]) ? 1'b1 : 1'b0;
 		 	end
 			else begin
-				ce[0] = 1'b0 || dicLdSones || dicLdASones;
-				ce[1] = 1'b0 || dicLdStens || dicLdAStens;
-				ce[2] = 1'b0 || dicLdMones || dicLdAMones;
-				ce[3] = 1'b0 || dicLdMtens || dicLdAMtens;
+				ce[0] = 1'b0;
+				ce[1] = 1'b0;
+				ce[2] = 1'b0;
+				ce[3] = 1'b0;
 				
 				reset[0] = 1'b0;
 		 		reset[1] = 1'b0;
@@ -206,10 +201,10 @@ module didp (
 
 		 assign did_alarmMatch = ((Mtens == AMtens) && (Mones == AMones) && (Stens == AStens) && (Stens == ASones)) ? 1'b1 : 1'b0;
 
-	     countrce countrce1(.q(Sones[3:0]), .d(bu_rx_data[3:0]), .ld(dicLdSones), .ce(ce[0]), .rst(reset[0]), .clk(clk));
-		 countrce countrce2(.q(Stens[3:0]), .d(bu_rx_data[3:0]), .ld(dicLdStens), .ce(ce[1]), .rst(reset[1]), .clk(clk));
-		 countrce countrce3(.q(Mones[3:0]), .d(bu_rx_data[3:0]), .ld(dicLdMones), .ce(ce[2]), .rst(reset[2]), .clk(clk));
-		 countrce countrce4(.q(Mtens[3:0]), .d(bu_rx_data[3:0]), .ld(dicLdMtens), .ce(ce[3]), .rst(reset[3]), .clk(clk));
+	     countrce countrce1(.q(Sones[3:0]), .d(bu_rx_data[3:0]), .ld(dicLdSones), .ce(ce[0] || dicLdSones), .rst(reset[0]), .clk(clk));
+		 countrce countrce2(.q(Stens[3:0]), .d(bu_rx_data[3:0]), .ld(dicLdStens), .ce(ce[1] || dicLdStens), .rst(reset[1]), .clk(clk));
+		 countrce countrce3(.q(Mones[3:0]), .d(bu_rx_data[3:0]), .ld(dicLdMones), .ce(ce[2] || dicLdMones), .rst(reset[2]), .clk(clk));
+		 countrce countrce4(.q(Mtens[3:0]), .d(bu_rx_data[3:0]), .ld(dicLdMtens), .ce(ce[3] || dicLdMtens), .rst(reset[3]), .clk(clk));
 
 		 regrce regrce1(.q(ASones[3:0]), .d(bu_rx_data[3:0]), .ce(dicLdASones), .rst(rst), .clk(clk));
 		 regrce regrce2(.q(AStens[3:0]), .d(bu_rx_data[3:0]), .ce(dicLdAStens), .rst(rst), .clk(clk));
@@ -241,6 +236,7 @@ module dictrl(
 	      output wire dicAlarmArmed, // alarm is armed
 	      output wire dicAlarmTrig, // alarm is triggered
 
+		  input oneSecStrb,
 	      input       did_alarmMatch, // raw alarm match
 
               input 	  bu_rx_data_rdy, // new data from uart rdy
@@ -275,7 +271,7 @@ module dictrl(
 				state <= s0;
 				alarmstate <= alarmOff;
 			end
-			else begin
+			else if (bu_rx_data_rdy) begin
 				state <= next_state;
 				alarmstate <= next_alarmstate;
 			end
@@ -297,7 +293,7 @@ module dictrl(
 			alarm3 = (alarmstate == alarmTrig);
 		end
 
-		always @(alarmstate, bu_rx_data_rdy, did_alarmMatch, dataIn) begin
+		always @(alarmstate, did_alarmMatch, dataIn) begin
 			case (alarmstate)
 				alarmOff:begin
 					if(dataIn == at)
@@ -322,7 +318,7 @@ module dictrl(
 			endcase
 		end
 
-		always @(state, dataIn,bu_rx_data_rdy) begin
+		always @(state, dataIn) begin
 			case (state)
 				s0: begin
 					if(dataIn == a)
