@@ -507,13 +507,13 @@ clk => cnt[3].CLK
 
 |Lab3_140L|dictrl:dictrl
 dicLdMtens <= dicLdMtens.DB_MAX_OUTPUT_PORT_TYPE
-dicLdMones <= <GND>
-dicLdStens <= <GND>
-dicLdSones <= <GND>
-dicLdAMtens <= <GND>
-dicLdAMones <= <GND>
-dicLdAStens <= <GND>
-dicLdASones <= <GND>
+dicLdMones <= dicLdMones.DB_MAX_OUTPUT_PORT_TYPE
+dicLdStens <= dicLdStens.DB_MAX_OUTPUT_PORT_TYPE
+dicLdSones <= dicLdSones.DB_MAX_OUTPUT_PORT_TYPE
+dicLdAMtens <= dicLdAMtens.DB_MAX_OUTPUT_PORT_TYPE
+dicLdAMones <= dicLdAMones.DB_MAX_OUTPUT_PORT_TYPE
+dicLdAStens <= dicLdAStens.DB_MAX_OUTPUT_PORT_TYPE
+dicLdASones <= dicLdASones.DB_MAX_OUTPUT_PORT_TYPE
 dicRun <= dicRun.DB_MAX_OUTPUT_PORT_TYPE
 dicAlarmIdle <= alarm1.DB_MAX_OUTPUT_PORT_TYPE
 dicAlarmArmed <= alarm2.DB_MAX_OUTPUT_PORT_TYPE
