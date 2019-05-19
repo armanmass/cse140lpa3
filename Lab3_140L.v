@@ -164,10 +164,10 @@ module didp (
 		 		reset[3] = 1;
 			end
 		 	else if(oneSecStrb) begin
-				ce[0] = 1 && dicRun;
-				ce[1] = (Sones == 4'b1001) ? 1 : 0;
-				ce[2] = ((Stens == 4'b0101) && ce[1]) ? 1 : 0;
-				ce[3] = ((Mones == 4'b1001) && ce[2]) ? 1 : 0;
+				ce[0] = ((1 && dicRun) || dicLdSones || dicLdASones);
+				ce[1] = (Sones == 4'b1001) || dicLdStens || dicLdAStens) ? 1 : 0;
+				ce[2] = ((Stens == 4'b0101) && ce[1] || dicLdMones || dicLdAMones) ? 1 : 0;
+				ce[3] = ((Mones == 4'b1001) && ce[2] || dicLdMtens || dicLdAMtens) ? 1 : 0;
 				
 				reset[0] = ((Sones == 4'b1001) || rst) ? 1 : 0;
 		 		reset[1] = (((Stens == 4'b0101) && reset[0]) || rst) ? 1 : 0;
