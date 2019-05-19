@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab3_140L
-Sun May 19 04:57:52 2019
+Sun May 19 15:10:32 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -59,12 +59,12 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Sun May 19 04:57:52 2019       ;
+; Analysis & Synthesis Status ; Successful - Sun May 19 15:10:32 2019       ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; Lab3_140L                                   ;
 ; Top-level Entity Name       ; Lab3_140L                                   ;
 ; Family                      ; MAX V                                       ;
-; Total logic elements        ; 163                                         ;
+; Total logic elements        ; 167                                         ;
 ; Total pins                  ; 86                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
@@ -176,9 +176,9 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Total logic elements                        ; 163   ;
+; Total logic elements                        ; 167   ;
 ;     -- Combinational with no register       ; 106   ;
-;     -- Register only                        ; 3     ;
+;     -- Register only                        ; 7     ;
 ;     -- Combinational with a register        ; 54    ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
@@ -189,19 +189,19 @@ refer to the applicable agreement for further details.
 ;     -- 0 input functions                    ; 0     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 163   ;
+;     -- normal mode                          ; 167   ;
 ;     -- arithmetic mode                      ; 0     ;
 ;     -- qfbk mode                            ; 0     ;
 ;     -- register cascade mode                ; 0     ;
 ;     -- synchronous clear/load mode          ; 20    ;
 ;     -- asynchronous clear/load mode         ; 0     ;
 ;                                             ;       ;
-; Total registers                             ; 57    ;
+; Total registers                             ; 61    ;
 ; I/O pins                                    ; 86    ;
 ; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 57    ;
-; Total fan-out                               ; 686   ;
-; Average fan-out                             ; 2.76  ;
+; Maximum fan-out                             ; 61    ;
+; Total fan-out                               ; 694   ;
+; Average fan-out                             ; 2.74  ;
 +---------------------------------------------+-------+
 
 
@@ -210,7 +210,7 @@ refer to the applicable agreement for further details.
 +-------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------+-------------+--------------+
 ; Compilation Hierarchy Node    ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                     ; Entity Name ; Library Name ;
 +-------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------+-------------+--------------+
-; |Lab3_140L                    ; 163 (4)     ; 57           ; 0          ; 86   ; 0            ; 106 (0)      ; 3 (2)             ; 54 (2)           ; 0 (0)           ; 0 (0)      ; |Lab3_140L                              ; Lab3_140L   ; work         ;
+; |Lab3_140L                    ; 167 (8)     ; 61           ; 0          ; 86   ; 0            ; 106 (0)      ; 7 (6)             ; 54 (2)           ; 0 (0)           ; 0 (0)      ; |Lab3_140L                              ; Lab3_140L   ; work         ;
 ;    |bcd2segment:bcd2segment1| ; 14 (14)     ; 0            ; 0          ; 0    ; 0            ; 14 (14)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Lab3_140L|bcd2segment:bcd2segment1     ; bcd2segment ; work         ;
 ;    |bcd2segment:bcd2segment2| ; 14 (14)     ; 0            ; 0          ; 0    ; 0            ; 14 (14)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Lab3_140L|bcd2segment:bcd2segment2     ; bcd2segment ; work         ;
 ;    |bcd2segment:bcd2segment3| ; 14 (14)     ; 0            ; 0          ; 0    ; 0            ; 14 (14)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Lab3_140L|bcd2segment:bcd2segment3     ; bcd2segment ; work         ;
@@ -268,6 +268,10 @@ Encoding Type:  One-Hot
 ; Register name                          ; Reason for Removal                     ;
 +----------------------------------------+----------------------------------------+
 ; alarmchar[7]                           ; Stuck at GND due to stuck port data_in ;
+; sec2[1..3]                             ; Stuck at GND due to stuck port data_in ;
+; sec1[1..3]                             ; Stuck at GND due to stuck port data_in ;
+; min2[1..3]                             ; Stuck at GND due to stuck port data_in ;
+; min1[1..3]                             ; Stuck at GND due to stuck port data_in ;
 ; dispString:dispString|dOut[7]          ; Stuck at GND due to stuck port data_in ;
 ; alarmchar[3]                           ; Merged with alarmchar[1]               ;
 ; alarmchar[2]                           ; Merged with alarmchar[0]               ;
@@ -278,7 +282,7 @@ Encoding Type:  One-Hot
 ; dictrl:dictrl|state~4                  ; Lost fanout                            ;
 ; dictrl:dictrl|state~5                  ; Lost fanout                            ;
 ; alarmchar[6]                           ; Merged with alarmchar[1]               ;
-; Total Number of Removed Registers = 11 ;                                        ;
+; Total Number of Removed Registers = 23 ;                                        ;
 +----------------------------------------+----------------------------------------+
 
 
@@ -297,7 +301,7 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 57    ;
+; Total registers                              ; 61    ;
 ; Number of registers using Synchronous Clear  ; 19    ;
 ; Number of registers using Synchronous Load   ; 1     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -508,7 +512,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun May 19 04:57:43 2019
+    Info: Processing started: Sun May 19 15:10:24 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab3_140L -c Lab3_140L
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -529,8 +533,8 @@ Info (12021): Found 2 design units, including 2 entities, in source file lattice
     Info (12023): Found entity 2: latticehx1k File: C:/Users/Arman/Desktop/Lab3/latticehx1k.v Line: 95
 Info (12021): Found 3 design units, including 3 entities, in source file lab3_140l.v
     Info (12023): Found entity 1: Lab3_140L File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 26
-    Info (12023): Found entity 2: didp File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 126
-    Info (12023): Found entity 3: dictrl File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 233
+    Info (12023): Found entity 2: didp File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 122
+    Info (12023): Found entity 3: dictrl File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 229
 Info (12021): Found 1 design units, including 1 entities, in source file half_sec_pulse_every_sec.v
     Info (12023): Found entity 1: Half_Sec_Pulse_Per_Sec File: C:/Users/Arman/Desktop/Lab3/Half_Sec_Pulse_Every_Sec.v Line: 44
 Info (12021): Found 1 design units, including 1 entities, in source file fake_pll.v
@@ -552,17 +556,14 @@ Info (12021): Found 5 design units, including 5 entities, in source file buart.v
 Info (12021): Found 1 design units, including 1 entities, in source file bcd2segment.v
     Info (12023): Found entity 1: bcd2segment File: C:/Users/Arman/Desktop/Lab3/bcd2segment.v Line: 49
 Info (12127): Elaborating entity "Lab3_140L" for the top level hierarchy
-Info (12128): Elaborating entity "bcd2segment" for hierarchy "bcd2segment:bcd2segment1" File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 97
-Info (12128): Elaborating entity "dispString" for hierarchy "dispString:dispString" File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 105
+Info (12128): Elaborating entity "bcd2segment" for hierarchy "bcd2segment:bcd2segment1" File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 91
+Info (12128): Elaborating entity "dispString" for hierarchy "dispString:dispString" File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 99
 Warning (10230): Verilog HDL assignment warning at dispString.v(37): truncated value with size 32 to match size of target (3) File: C:/Users/Arman/Desktop/Lab3/dispString.v Line: 37
-Info (12128): Elaborating entity "dictrl" for hierarchy "dictrl:dictrl" File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 110
-Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(307): variable "dataIn" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 307
-Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(313): variable "dataIn" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 313
-Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(321): variable "dataIn" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 321
-Info (12128): Elaborating entity "didp" for hierarchy "didp:didp" File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 117
-Warning (10034): Output port "L3_led" at Lab3_140L.v(139) has no driver File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 139
-Info (12128): Elaborating entity "countrce" for hierarchy "didp:didp|countrce:countrce1" File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 213
-Info (12128): Elaborating entity "regrce" for hierarchy "didp:didp|regrce:regrce1" File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 218
+Info (12128): Elaborating entity "dictrl" for hierarchy "dictrl:dictrl" File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 106
+Info (12128): Elaborating entity "didp" for hierarchy "didp:didp" File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 113
+Warning (10034): Output port "L3_led" at Lab3_140L.v(135) has no driver File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 135
+Info (12128): Elaborating entity "countrce" for hierarchy "didp:didp|countrce:countrce1" File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 209
+Info (12128): Elaborating entity "regrce" for hierarchy "didp:didp|regrce:regrce1" File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 214
 Warning (12241): 5 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "L3_tx_data[7]" is stuck at GND File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 33
@@ -586,14 +587,14 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (17049): 6 registers lost all their fanouts during netlist optimizations.
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "bu_rx_data_rdy" File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 30
-Info (21057): Implemented 249 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 253 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 12 input pins
     Info (21059): Implemented 74 output pins
-    Info (21061): Implemented 163 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 29 warnings
+    Info (21061): Implemented 167 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 26 warnings
     Info: Peak virtual memory: 567 megabytes
-    Info: Processing ended: Sun May 19 04:57:52 2019
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:21
+    Info: Processing ended: Sun May 19 15:10:32 2019
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:19
 
 

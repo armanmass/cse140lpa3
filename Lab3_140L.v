@@ -67,6 +67,15 @@ module Lab3_140L (
 				sec2[7:4] = 4'b0011;
 			end
 
+			always @(posedge clk) begin
+				min1[3:0] <= di_AMtens;
+				min2[3:0] <= di_AMones;
+				sec1[3:0] <= di_AStens;
+				sec2[3:0] <= di_ASones;
+			end
+
+
+
 
 			always @(posedge clk) begin
 				if(idle)
@@ -86,8 +95,10 @@ module Lab3_140L (
 
 
 			dispString dispString(.rdy(L3_tx_data_rdy), .dOut(L3_tx_data), .b0(min1), .b1(min2), .b2(8'b00111010), 
-								  .b3(sec1), .b4(sec2), .b5(8'b00100000), .b6(alarmchar), .b7(8'b00001101), .go(oneSecStrb), 
+								  .b3(sec1), .b4(sec2), .b5(8'b00100000), .b6(alarmchar), .b7(8'h0d), .go(oneSecStrb), 
 								  .rst(rst), .clk(clk));
+
+
 
 			dictrl dictrl(.dicLdMtens(LdMtens), .dicLdMones(LdMones), .dicLdStens(LdStens), .dicLdSones(LdSones), 
 			.dicLdAMtens(LdAMtens), .dicLdAMones(LdAMones), .dicLdAStens(LdAStens), .dicLdASones(LdASones), .dicRun(Run),
@@ -172,8 +183,8 @@ module didp (
 		 	else if(oneSecStrb) begin
 				ce[0] = ((1 && dicRun) || dicLdSones || dicLdASones);
 				ce[1] = ((Sones == 4'b1001) || dicLdStens || dicLdAStens) ? 1'b1 : 1'b0;
-				ce[2] = ((Stens == 4'b0101) && ce[1] || dicLdMones || dicLdAMones) ? 1'b1 : 1'b0;
-				ce[3] = ((Mones == 4'b1001) && ce[2] || dicLdMtens || dicLdAMtens) ? 1'b1 : 1'b0;
+				ce[2] = (((Stens == 4'b0101) && ce[1]) || dicLdMones || dicLdAMones) ? 1'b1 : 1'b0;
+				ce[3] = (((Mones == 4'b1001) && ce[2]) || dicLdMtens || dicLdAMtens) ? 1'b1 : 1'b0;
 				
 				reset[0] = ((Sones == 4'b1001) || rst) ? 1'b1 : 1'b0;
 		 		reset[1] = (((Stens == 4'b0101) && reset[0]) || rst) ? 1'b1 : 1'b0;
@@ -286,7 +297,7 @@ module dictrl(
 			alarm3 = (alarmstate == alarmTrig);
 		end
 
-		always @(alarmstate, bu_rx_data_rdy, did_alarmMatch) begin
+		always @(alarmstate, bu_rx_data_rdy, did_alarmMatch, dataIn) begin
 			case (alarmstate)
 				alarmOff:begin
 					if(dataIn == at)
@@ -311,7 +322,7 @@ module dictrl(
 			endcase
 		end
 
-		always @(state, dataIn) begin
+		always @(state, dataIn,bu_rx_data_rdy) begin
 			case (state)
 				s0: begin
 					if(dataIn == a)
