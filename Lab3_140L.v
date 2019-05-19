@@ -78,7 +78,7 @@ module Lab3_140L (
 			bcd2segment bcd2segment4(seg4, di_Mtens, Run);
 			
 			dispString dispString(.rdy(L3_tx_data_rdy), .dOut(L3_tx_data), .b0(di_Mtens), .b1(di_Mones), .b2(8'b00111010), 
-								  .b3(di_Stens), .b4(di_Sones), .b5(8'b00100000), .b6(alarmchar), .b7(8'b00100000), .go(1), .rst(rst), .clk(clk));
+								  .b3(di_Stens), .b4(di_Sones), .b5(8'b00100000), .b6(alarmchar), .b7(8'b00100000), .go(oneSecStrb), .rst(rst), .clk(clk));
 
 			//dispString dispString(.rdy(L3_tx_data_rdy), .dOut(L3_tx_data), .b0("a"), .b1("a"), .b2(8'b00111010), 
 			//					  .b3("a"), .b4("a"), .b5(8'b00100000), .b6(alarmchar), .b7(8'b00100000), .go(1), .rst(rst), .clk(clk));
@@ -316,25 +316,25 @@ module dictrl(
 						next_state <= s0;
 				end
 				s1: begin
-					if(zero <= dataIn <= five)
+					if((zero <= dataIn) && (dataIn <= five))
 						next_state <= s2;
 					else 
 						next_state <= s1;
 				end
 				s2: begin
-					if(zero <= dataIn <= nine)
+					if((zero <= dataIn) && (dataIn <= nine))
 						next_state <= s3;
 					else
 						next_state <= s2;
 				end
 				s3: begin
-					if(zero <= dataIn <= five)
+					if((zero <= dataIn) && (dataIn <= five))
 						next_state <= s4;
 					else
 						next_state <= s3;
 				end
 				s4: begin
-					if(zero <= dataIn <= nine)
+					if((zero <= dataIn) && (dataIn <= nine))
 						next_state <= s5;
 					else
 						next_state <= s4;
@@ -346,25 +346,25 @@ module dictrl(
 						next_state <= s5;
 				end
 				s6: begin
-					if(zero <= dataIn <= five)
+					if((zero <= dataIn) && (dataIn <= five))
 						next_state <= s7;
 					else
 						next_state <= s6;
 				end
 				s7: begin
-					if(zero <= dataIn <= nine)
+					if((zero <= dataIn) && (dataIn <= nine))
 						next_state <= s8;
 					else
 						next_state <= s7;
 				end
 				s8: begin
-					if(zero <= dataIn <= five)
+					if((zero <= dataIn) && (dataIn <= five))
 						next_state <= s9;
 					else
 						next_state <= s8;
 				end
 				s9: begin
-					if(zero <= dataIn <= nine)
+					if((zero <= dataIn) && (dataIn <= nine))
 						next_state <= s10;
 					else
 						next_state <= s9;

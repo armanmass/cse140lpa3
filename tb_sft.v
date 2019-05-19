@@ -305,7 +305,7 @@ module tb_sft(
    end
 
    
-   `define CHECKER
+   //`define CHECKER
    `ifndef CHECKER
    always @(segment1d, segment2d, segment3d, segment4d) begin
       displayLED(segment1d, segment2d, segment3d, segment4d);
