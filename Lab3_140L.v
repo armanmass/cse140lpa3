@@ -192,10 +192,10 @@ module didp (
 		 		reset[3] = (((Mtens == 4'b0101) && reset[2]) || rst) ? 1'b1 : 1'b0;
 		 	end
 			else begin
-				ce[0] = 1'b0;
-				ce[1] = 1'b0;
-				ce[2] = 1'b0;
-				ce[3] = 1'b0;
+				ce[0] = 1'b0 || dicLdSones || dicLdASones;
+				ce[1] = 1'b0 || dicLdStens || dicLdAStens;
+				ce[2] = 1'b0 || dicLdMones || dicLdAMones;
+				ce[3] = 1'b0 || dicLdMtens || dicLdAMtens;
 				
 				reset[0] = 1'b0;
 		 		reset[1] = 1'b0;

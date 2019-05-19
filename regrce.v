@@ -36,7 +36,7 @@
 // hold the old value.
 //
 //
-module regrce #(parameter WIDTH = 1)
+module regrce #(parameter WIDTH = 4)
    (
     output reg [WIDTH-1:0] q,
     input wire [WIDTH-1:0]  d,
