@@ -80,8 +80,8 @@ module Lab3_140L (
 			//dispString dispString(.rdy(L3_tx_data_rdy), .dOut(L3_tx_data), .b0(di_Mtens), .b1(di_Mones), .b2(8'b00111010), 
 			//					  .b3(di_Stens), .b4(di_Sones), .b5(8'b00100000), .b6(alarmchar), .b7(8'b00100000), .go(1), .rst(rst), .clk(clk));
 
-			dispString dispString(.rdy(L3_tx_data_rdy), .dOut(L3_tx_data), .b0('a'), .b1('a'), .b2(8'b00111010), 
-								  .b3('a'), .b4('a'), .b5(8'b00100000), .b6(alarmchar), .b7(8'b00100000), .go(1), .rst(rst), .clk(clk));
+			dispString dispString(.rdy(L3_tx_data_rdy), .dOut(L3_tx_data), .b0("a"), .b1("a"), .b2(8'b00111010), 
+								  .b3("a"), .b4("a"), .b5(8'b00100000), .b6(alarmchar), .b7(8'b00100000), .go(1), .rst(rst), .clk(clk));
 
 			dictrl dictrl(.dicLdMtens(LdMtens), .dicLdMones(LdMones), .dicLdStens(LdStens), .dicLdSones(LdSones), 
 			.dicLdAMtens(LdAMtens), .dicLdAMones(LdAMones), .dicLdAStens(LdAStens), .dicLdASones(LdASones), .dicRun(Run),
