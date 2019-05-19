@@ -149,7 +149,18 @@ module didp (
 		 end
 
 		 always @(posedge clk) begin
-		 	if(oneSecStrb) begin
+			if(rst) begin
+				ce[0] = 0;
+				ce[1] = 0;
+				ce[2] = 0;
+				ce[3] = 0;
+				
+				reset[0] = 1;
+		 		reset[1] = 1;
+		 		reset[2] = 1;
+		 		reset[3] = 1;
+			end
+		 	else if(oneSecStrb) begin
 				ce[0] = 1 && dicRun;
 				ce[1] = (Sones == 4'b1001) ? 1 : 0;
 				ce[2] = ((Stens == 4'b0101) && ce[1]) ? 1 : 0;
@@ -253,13 +264,13 @@ module dictrl(
 		always @(*) begin
 			dicRun = (state == s0);
 			dicLdMtens = (state == s6);
-			dicLdMtens = (state == s7);
-			dicLdMtens = (state == s8);
-			dicLdMtens = (state == s9);
-			dicLdMtens = (state == s1);
-			dicLdMtens = (state == s2);
-			dicLdMtens = (state == s3);
-			dicLdMtens = (state == s4);
+			dicLdMones = (state == s7);
+			dicLdStens = (state == s8);
+			dicLdSones = (state == s9);
+			dicLdAMtens = (state == s1);
+			dicLdAMones = (state == s2);
+			dicLdAStens = (state == s3);
+			dicLdASones = (state == s4);
 
 			alarm1 = (alarmstate == alarmOff);
 			alarm2 = (alarmstate == alarmArm);
