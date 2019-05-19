@@ -46,9 +46,10 @@ module Lab3_140L (
 		  output [3:0] 	    di_AStens,
 		  output [3:0] 	    di_ASones
 		  );
-		  wire alarmMatch;
-		  wire loadtime;
-		  wire loadalarm;
+		    wire LdMtens, LdMones, LdStens, LdSones, LdAMtens,
+	      		 LdAMones, LdAStens, LdASones, Run;
+
+			wire idle, armed, trig, alarmMatch;
 		    
 			wire [6:0] seg1, seg2, seg3, seg4;
 
@@ -59,19 +60,23 @@ module Lab3_140L (
 				L3_segment4 = seg4;
 			end
 
-			bcd2segment bcd2segment1(seg1, di_Sones, 1);
-			bcd2segment bcd2segment2(seg2, di_Stens, 1);
-			bcd2segment bcd2segment3(seg3, di_Mones, 1);
-			bcd2segment bcd2segment4(seg4, di_Mtens, 1);
+			bcd2segment bcd2segment1(seg1, di_Sones, Run);
+			bcd2segment bcd2segment2(seg2, di_Stens, Run);
+			bcd2segment bcd2segment3(seg3, di_Mones, Run);
+			bcd2segment bcd2segment4(seg4, di_Mtens, Run);
 			
 	
+			dictrl dictrl(.dicLdMtens(LdMtens), .dicLdMones(LdMones), .dicLdStens(LdStens), .dicLdSones(LdSones), 
+			.dicLdAMtens(LdAMtens), .dicLdAMones(LdAMones), .dicLdAStens(LdAStens), .dicLdASones(LdASones), .dicRun(Run),
+			.dicAlarmIdle(idle), .dicAlarmArmed(armed), .dicAlarmTrig(trig), .did_alarmMatch(alarmMatch), 
+			.bu_rx_data_rdy(bu_rx_data_rdy), .dataIn(bu_rx_data), .rst(rst), .clk(clk));
 
 			didp didp(.di_Mtens(di_Mtens), .di_Mones(di_Mones), .di_Stens(di_Stens), .di_Sones(di_Sones),
 		 	.di_AMtens(di_AMtens), .di_AMones(di_AMones),.di_AStens(di_AStens), .di_ASones(di_ASones), 
 			.did_alarmMatch(alarmMatch), .L3_led(L3_led), .bu_rx_data(bu_rx_data), 
-			.dicLdMtens(bu_rx_data_rdy), .dicLdMones(bu_rx_data_rdy), .dicLdStens(bu_rx_data_rdy), .dicLdSones(bu_rx_data_rdy), 
-			.dicLdAMtens(0), .dicLdAMones(0), .dicLdAStens(0), .dicLdASones(0), 
-			.dicRun(1), .oneSecStrb(oneSecStrb), .rst(rst), .clk(clk));
+			.dicLdMtens(LdMtens), .dicLdMones(LdMones), .dicLdStens(LdStens), .dicLdSones(LdSones), 
+			.dicLdAMtens(LdAMtens), .dicLdAMones(LdAMones), .dicLdAStens(LdAStens), .dicLdASones(LdASones), 
+			.dicRun(Run), .oneSecStrb(oneSecStrb), .rst(rst), .clk(clk));
 
 endmodule // Lab3_140L
 
@@ -153,15 +158,15 @@ endmodule
 // sample interface for clock control
 //
 module dictrl(
-	      output 	  dicLdMtens, // load the 10's minutes
-	      output 	  dicLdMones, // load the 1's minutes
-	      output 	  dicLdStens, // load the 10's seconds
-	      output 	  dicLdSones, // load the 1's seconds
-	      output 	  dicLdAMtens, // load the alarm 10's minutes
-	      output 	  dicLdAMones, // load the alarm 1's minutes
-	      output 	  dicLdAStens, // load the alarm 10's seconds
-	      output 	  dicLdASones, // load the alarm 1's seconds
-	      output 	  dicRun, // clock should run
+	      output reg  dicLdMtens, // load the 10's minutes
+	      output reg  dicLdMones, // load the 1's minutes
+	      output reg  dicLdStens, // load the 10's seconds
+	      output reg  dicLdSones, // load the 1's seconds
+	      output reg  dicLdAMtens, // load the alarm 10's minutes
+	      output reg  dicLdAMones, // load the alarm 1's minutes
+	      output reg  dicLdAStens, // load the alarm 10's seconds
+	      output reg  dicLdASones, // load the alarm 1's seconds
+	      output reg  dicRun, // clock should run
 
 	      output wire dicAlarmIdle, // alarm is off
 	      output wire dicAlarmArmed, // alarm is armed
@@ -170,49 +175,155 @@ module dictrl(
 	      input       did_alarmMatch, // raw alarm match
 
               input 	  bu_rx_data_rdy, // new data from uart rdy
-              input [7:0] bu_rx_data, // new data from uart
+              input [7:0] dataIn, // new data from uart
               input 	  rst,
 	      input 	  clk
 	      );
 
-		  parameter S0 = 4'b0000, S1 = 4'b0001, S2 = 4'b0010, S3 = 4'b0011, S4 = 4'b0100, 
-		  S5 = 4'b0101, S6 = 4'b0110, S7 = 4'b0111, S8 = 4'b1000, S9 = 4'b1001, S10 = 4'b1010;
+		  parameter [3:0] s0 = 4'b0000, s1 = 4'b0001, s2 = 4'b0010, s3 = 4'b0011, s4 = 4'b0100, 
+		  s5 = 4'b0101, s6 = 4'b0110, s7 = 4'b0111, s8 = 4'b1000, s9 = 4'b1001, s10 = 4'b1010;
+		  reg [3:0] next_state, state;
 
-		  reg state;
+		  parameter [1:0] alarmOff = 2'b00, alarmArm = 2'b01, alarmTrig = 2'b10;
+		  reg [3:0]	next_alarmstate, alarmstate;
 
-		always @(bu_rx_data_rdy) begin
-		end
+		  parameter [7:0] zero =  8'b00110000,
+		  				  five =  8'b00110101,
+		  				  nine =  8'b00111001,
+						  cr =    8'b00001101,
+						  a =     8'b01100001,
+		  				  l =     8'b01101100,
+						  at =    8'b01000000;
+
+		  reg alarm1, alarm2, alarm3;
+
+		  assign dicAlarmIdle = alarm1;
+		  assign dicAlarmArmed = alarm2;
+		  assign dicAlarmTrig = alarm3;
 
 		always @(posedge clk) begin
-		  	if (rst) begin
-			  state <= S0;
+			if(rst) begin
+				state <= s0;
+				alarmstate <= alarmOff;
 			end
 			else begin
-			case (state)
-				S0: begin
+				state <= next_state;
+				alarmstate <= next_alarmstate;
+			end
+		end
+
+		always @(*) begin
+			dicRun = (state == s0);
+			dicLdMtens = (state == s6);
+			dicLdMtens = (state == s7);
+			dicLdMtens = (state == s8);
+			dicLdMtens = (state == s9);
+			dicLdMtens = (state == s1);
+			dicLdMtens = (state == s2);
+			dicLdMtens = (state == s3);
+			dicLdMtens = (state == s4);
+
+			alarm1 = (alarmstate == alarmOff);
+			alarm2 = (alarmstate == alarmArm);
+			alarm3 = (alarmstate == alarmTrig);
+		end
+
+		always @(alarmstate, bu_rx_data_rdy) begin
+			case (alarmstate)
+				alarmOff:begin
+					if(dataIn == at)
+						next_alarmstate <= alarmArm;
+					else
+						next_alarmstate <= alarmstate;
 				end
-				S1: begin
+				alarmArm:begin
+					if(dataIn == at)
+						next_alarmstate <= alarmOff;
+					else if (did_alarmMatch)
+						next_alarmstate <= alarmTrig;
+					else
+						next_alarmstate <= alarmstate;
 				end
-				S2: begin
-				end
-				S3: begin
-				end
-				S4: begin
-				end
-				S5: begin
-				end
-				S6: begin
-				end
-				S7: begin
-				end
-				S8: begin
-				end
-				S9: begin
-				end
-				S10: begin
+				alarmTrig:begin
+					if(dataIn == at)
+						next_alarmstate <= alarmOff;
+					else
+						next_alarmstate <= alarmstate;
 				end
 			endcase
 		end
+
+		always @(state, bu_rx_data_rdy) begin
+			case (state)
+				s0: begin
+					if(dataIn == a)
+						next_state <= s1;
+					else if(dataIn == l)
+						next_state <= s6;
+					else
+						next_state <= s0;
+				end
+				s1: begin
+					if(zero <= dataIn <= five)
+						next_state <= s2;
+					else 
+						next_state <= s1;
+				end
+				s2: begin
+					if(zero <= dataIn <= nine)
+						next_state <= s3;
+					else
+						next_state <= s2;
+				end
+				s3: begin
+					if(zero <= dataIn <= five)
+						next_state <= s4;
+					else
+						next_state <= s3;
+				end
+				s4: begin
+					if(zero <= dataIn <= nine)
+						next_state <= s5;
+					else
+						next_state <= s4;
+				end
+				s5: begin
+					if(dataIn == cr)
+						next_state <= s0;
+					else
+						next_state <= s5;
+				end
+				s6: begin
+					if(zero <= dataIn <= five)
+						next_state <= s7;
+					else
+						next_state <= s6;
+				end
+				s7: begin
+					if(zero <= dataIn <= nine)
+						next_state <= s8;
+					else
+						next_state <= s7;
+				end
+				s8: begin
+					if(zero <= dataIn <= five)
+						next_state <= s9;
+					else
+						next_state <= s8;
+				end
+				s9: begin
+					if(zero <= dataIn <= nine)
+						next_state <= s10;
+					else
+						next_state <= s9;
+				end
+				s10: begin
+					if(dataIn == cr)
+						next_state <= s0;
+					else
+						next_state <= s10;
+				end
+			endcase
 	end 
 endmodule
 
