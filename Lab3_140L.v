@@ -51,6 +51,7 @@ module Lab3_140L (
 
 			wire idle, armed, trig, alarmMatch;
 			reg [7:0] alarmchar;
+			reg [7:0] min1,min2,sec1,sec2;
 		    
 			wire [6:0] seg1, seg2, seg3, seg4;
 
@@ -59,7 +60,13 @@ module Lab3_140L (
 				L3_segment2 = seg2;
 				L3_segment3 = seg3;
 				L3_segment4 = seg4;
+
+				min1[7:4] = 4'b0011;
+				min2[7:4] = 4'b0011;
+				sec1[7:4] = 4'b0011;
+				sec2[7:4] = 4'b0011;
 			end
+
 
 			always @(posedge clk) begin
 				if(idle)
@@ -76,12 +83,11 @@ module Lab3_140L (
 			bcd2segment bcd2segment2(seg2, di_Stens, Run);
 			bcd2segment bcd2segment3(seg3, di_Mones, Run);
 			bcd2segment bcd2segment4(seg4, di_Mtens, Run);
-			
-			dispString dispString(.rdy(L3_tx_data_rdy), .dOut(L3_tx_data), .b0(8'b00110000), .b1(8'b00110001), .b2(8'b00111010), 
-								  .b3(8'b00110010), .b4(8'b00110100), .b5(8'b00100000), .b6(alarmchar), .b7(8'b00100000), .go(oneSecStrb), .rst(rst), .clk(clk));
 
-			//dispString dispString(.rdy(L3_tx_data_rdy), .dOut(L3_tx_data), .b0("a"), .b1("a"), .b2(8'b00111010), 
-			//					  .b3("a"), .b4("a"), .b5(8'b00100000), .b6(alarmchar), .b7(8'b00100000), .go(1), .rst(rst), .clk(clk));
+
+			dispString dispString(.rdy(L3_tx_data_rdy), .dOut(L3_tx_data), .b0(min1), .b1(min2), .b2(8'b00111010), 
+								  .b3(sec1), .b4(sec2), .b5(8'b00100000), .b6(alarmchar), .b7(8'b00001101), .go(oneSecStrb), 
+								  .rst(rst), .clk(clk));
 
 			dictrl dictrl(.dicLdMtens(LdMtens), .dicLdMones(LdMones), .dicLdStens(LdStens), .dicLdSones(LdSones), 
 			.dicLdAMtens(LdAMtens), .dicLdAMones(LdAMones), .dicLdAStens(LdAStens), .dicLdASones(LdASones), .dicRun(Run),
@@ -153,41 +159,41 @@ module didp (
 
 		 always @(posedge clk) begin
 			if(rst) begin
-				ce[0] = 0;
-				ce[1] = 0;
-				ce[2] = 0;
-				ce[3] = 0;
+				ce[0] = 1'b0;
+				ce[1] = 1'b0;
+				ce[2] = 1'b0;
+				ce[3] = 1'b0;
 				
-				reset[0] = 1;
-		 		reset[1] = 1;
-		 		reset[2] = 1;
-		 		reset[3] = 1;
+				reset[0] = 1'b1;
+		 		reset[1] = 1'b1;
+		 		reset[2] = 1'b1;
+		 		reset[3] = 1'b1;
 			end
 		 	else if(oneSecStrb) begin
 				ce[0] = ((1 && dicRun) || dicLdSones || dicLdASones);
-				ce[1] = ((Sones == 4'b1001) || dicLdStens || dicLdAStens) ? 1 : 0;
-				ce[2] = ((Stens == 4'b0101) && ce[1] || dicLdMones || dicLdAMones) ? 1 : 0;
-				ce[3] = ((Mones == 4'b1001) && ce[2] || dicLdMtens || dicLdAMtens) ? 1 : 0;
+				ce[1] = ((Sones == 4'b1001) || dicLdStens || dicLdAStens) ? 1'b1 : 1'b0;
+				ce[2] = ((Stens == 4'b0101) && ce[1] || dicLdMones || dicLdAMones) ? 1'b1 : 1'b0;
+				ce[3] = ((Mones == 4'b1001) && ce[2] || dicLdMtens || dicLdAMtens) ? 1'b1 : 1'b0;
 				
-				reset[0] = ((Sones == 4'b1001) || rst) ? 1 : 0;
-		 		reset[1] = (((Stens == 4'b0101) && reset[0]) || rst) ? 1 : 0;
-		 		reset[2] = (((Mones == 4'b1001) && reset[1]) || rst) ? 1 : 0;
-		 		reset[3] = (((Mtens == 4'b0101) && reset[2]) || rst) ? 1 : 0;
+				reset[0] = ((Sones == 4'b1001) || rst) ? 1'b1 : 1'b0;
+		 		reset[1] = (((Stens == 4'b0101) && reset[0]) || rst) ? 1'b1 : 1'b0;
+		 		reset[2] = (((Mones == 4'b1001) && reset[1]) || rst) ? 1'b1 : 1'b0;
+		 		reset[3] = (((Mtens == 4'b0101) && reset[2]) || rst) ? 1'b1 : 1'b0;
 		 	end
 			else begin
-				ce[0] = 0;
-				ce[1] = 0;
-				ce[2] = 0;
-				ce[3] = 0;
+				ce[0] = 1'b0;
+				ce[1] = 1'b0;
+				ce[2] = 1'b0;
+				ce[3] = 1'b0;
 				
-				reset[0] = 0;
-		 		reset[1] = 0;
-		 		reset[2] = 0;
-		 		reset[3] = 0;
+				reset[0] = 1'b0;
+		 		reset[1] = 1'b0;
+		 		reset[2] = 1'b0;
+		 		reset[3] = 1'b0;
 			end
 		end
 
-		 assign did_alarmMatch = ((Mtens == AMtens) && (Mones == AMones) && (Stens == AStens) && (Stens == ASones)) ? 1 : 0;
+		 assign did_alarmMatch = ((Mtens == AMtens) && (Mones == AMones) && (Stens == AStens) && (Stens == ASones)) ? 1'b1 : 1'b0;
 
 	     countrce countrce1(.q(Sones[3:0]), .d(bu_rx_data[3:0]), .ld(dicLdSones), .ce(ce[0]), .rst(reset[0]), .clk(clk));
 		 countrce countrce2(.q(Stens[3:0]), .d(bu_rx_data[3:0]), .ld(dicLdStens), .ce(ce[1]), .rst(reset[1]), .clk(clk));
@@ -280,7 +286,7 @@ module dictrl(
 			alarm3 = (alarmstate == alarmTrig);
 		end
 
-		always @(alarmstate, dataIn) begin
+		always @(alarmstate, bu_rx_data_rdy, did_alarmMatch) begin
 			case (alarmstate)
 				alarmOff:begin
 					if(dataIn == at)
