@@ -266,7 +266,7 @@ module dictrl(
 			alarm3 = (alarmstate == alarmTrig);
 		end
 
-		always @(alarmstate, bu_rx_data_rdy) begin
+		always @(alarmstate, dataIn) begin
 			case (alarmstate)
 				alarmOff:begin
 					if(dataIn == at)
@@ -291,7 +291,7 @@ module dictrl(
 			endcase
 		end
 
-		always @(state, bu_rx_data_rdy) begin
+		always @(state, dataIn) begin
 			case (state)
 				s0: begin
 					if(dataIn == a)
