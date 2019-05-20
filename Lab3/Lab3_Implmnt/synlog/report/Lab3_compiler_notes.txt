@@ -19,12 +19,12 @@
 @N: CG364 :"D:\PhotonUser\Lab32\bcd2segment.v":49:7:49:17|Synthesizing module bcd2segment in library work.
 @N: CG364 :"D:\PhotonUser\Lab32\dispString.v":13:7:13:16|Synthesizing module dispString in library work.
 @N: CG179 :"D:\PhotonUser\Lab32\dispString.v":39:11:39:13|Removing redundant assignment.
-@N: CG364 :"D:\PhotonUser\Lab32\Lab3_140L.v":262:7:262:12|Synthesizing module dictrl in library work.
+@N: CG364 :"D:\PhotonUser\Lab32\Lab3_140L.v":263:7:263:12|Synthesizing module dictrl in library work.
 @N: CG364 :"D:\PhotonUser\Lab32\countrce.v":33:7:33:14|Synthesizing module countrce in library work.
 @N: CG179 :"D:\PhotonUser\Lab32\countrce.v":59:9:59:9|Removing redundant assignment.
 @N: CG364 :"D:\PhotonUser\Lab32\regrce.v":39:7:39:12|Synthesizing module regrce in library work.
 @N: CG179 :"D:\PhotonUser\Lab32\regrce.v":54:9:54:9|Removing redundant assignment.
-@N: CG364 :"D:\PhotonUser\Lab32\Lab3_140L.v":146:7:146:10|Synthesizing module didp in library work.
+@N: CG364 :"D:\PhotonUser\Lab32\Lab3_140L.v":147:7:147:10|Synthesizing module didp in library work.
 @N: CG364 :"D:\PhotonUser\Lab32\Lab3_140L.v":26:7:26:15|Synthesizing module Lab3_140L in library work.
 @N: CG364 :"D:\PhotonUser\Lab32\NBitCounter.v":31:7:31:19|Synthesizing module N_bit_counter in library work.
 @N: CG364 :"D:\PhotonUser\Lab32\NBitCounter.v":31:7:31:19|Synthesizing module N_bit_counter in library work.
@@ -381,8 +381,8 @@
 @N: CL159 :"D:\PhotonUser\Lab32\vbuf.v":79:18:79:25|Input alarm_on is unused.
 @N: CL159 :"D:\PhotonUser\Lab32\vbuf.v":81:12:81:30|Input enable_pulling_mode is unused.
 @N: CL159 :"D:\PhotonUser\Lab32\vbuf.v":82:12:82:25|Input data_sink_busy is unused.
-@N: CL159 :"D:\PhotonUser\Lab32\Lab3_140L.v":173:12:173:24|Input dicAlarmArmed is unused.
-@N: CL159 :"D:\PhotonUser\Lab32\Lab3_140L.v":277:10:277:19|Input oneSecStrb is unused.
+@N: CL159 :"D:\PhotonUser\Lab32\Lab3_140L.v":174:12:174:24|Input dicAlarmArmed is unused.
+@N: CL159 :"D:\PhotonUser\Lab32\Lab3_140L.v":278:10:278:19|Input oneSecStrb is unused.
 @N: CL159 :"D:\PhotonUser\Lab32\dispString.v":16:21:16:24|Input dInP is unused.
 @N: CL159 :"D:\PhotonUser\Lab32\dispString.v":17:19:17:24|Input rdyInP is unused.
 @N|Running in 64-bit mode

@@ -6,7 +6,7 @@
 
 * Build Date:         Sep 11 2017 16:52:36
 
-* File Generated:     May 20 2019 23:36:17
+* File Generated:     May 20 2019 23:49:47
 
 * Purpose:            General info of design implementation
 
@@ -17,7 +17,7 @@
 Synthesis/Placement Summary:
 ----------------------------
     Status:  Successful
-    Runtime: 0 seconds
+    Runtime: 1 seconds
 
 Device Info:
 ------------
@@ -27,8 +27,8 @@ Device Info:
 
 Design statistics:
 ------------------
-    FFs:                  252
-    LUTs:                 652
+    FFs:                  245
+    LUTs:                 608
     RAMs:                 1
     IOBs:                 10
     GBs:                  5
@@ -37,12 +37,12 @@ Design statistics:
 
 Logic Resource Utilization:
 ---------------------------
-    Total Logic Cells: 655/1280
-        Combinational Logic Cells: 403      out of   1280      31.4844%
-        Sequential Logic Cells:    252      out of   1280      19.6875%
-        Logic Tiles:               124      out of   160       77.5%
+    Total Logic Cells: 611/1280
+        Combinational Logic Cells: 366      out of   1280      28.5938%
+        Sequential Logic Cells:    245      out of   1280      19.1406%
+        Logic Tiles:               109      out of   160       68.125%
     Registers: 
-        Logic Registers:           252      out of   1280      19.6875%
+        Logic Registers:           245      out of   1280      19.1406%
         IO Registers:              1        out of   560       0.178571
     Block RAMs:                    1        out of   16        6.25%
     Warm Boots:                    0        out of   1         0%
@@ -88,8 +88,8 @@ Detailed Global Buffer Info:
 ----------------------------
     Buffer Number  IO Bank  Driven By  Fanout  Signal Name           
     -------------  -------  ---------  ------  -----------           
-    4              0                   214     clk_g                 
-    7              1                   17      bu_rx_data_rdy_0_g    
+    4              0                   202     clk_g                 
+    7              1                   18      bu_rx_data_rdy_0_g    
+    1              0                   22      buart.Z_rx.sample_g   
     3              3                   19      uu0.un11_l_count_i_g  
-    1              0                   31      buart__rx_sample_g    
-    6              3                   200     rst_g                 
+    6              3                   201     rst_g                 

@@ -11,52 +11,23 @@
 @W: CG781 :"D:\PhotonUser\Lab32\latticehx1k.v":48:33:48:35|Input D_OUT_0 on instance _io is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
 @W: CG1273 :"D:\PhotonUser\Lab32\latticehx1k.v":49:21:49:23|An input port (port pin) is the target of an assignment - please check if this is intentional
 @W: CL265 :"D:\PhotonUser\Lab32\buart.v":185:2:185:7|Removing unused bit 2 of hh[2:0]. Either assign all bits or reduce the width of the signal.
-@W: CG133 :"D:\PhotonUser\Lab32\Lab3_140L.v":291:14:291:28|Object next_alarmstate is declared but not assigned. Either assign a value or remove the declaration.
-@W: CL118 :"D:\PhotonUser\Lab32\Lab3_140L.v":370:3:370:6|Latch generated from always block for signal next_state[3:0]; possible missing assignment in an if or case statement.
-@W: CL118 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|Latch generated from always block for signal alarmstate[1:0]; possible missing assignment in an if or case statement.
-@W: CL118 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|Latch generated from always block for signal justentered[31:0]; possible missing assignment in an if or case statement.
-@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 1 of justentered[31:0] assign 0, register removed by optimization.
-@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 2 of justentered[31:0] assign 0, register removed by optimization.
-@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 3 of justentered[31:0] assign 0, register removed by optimization.
-@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 4 of justentered[31:0] assign 0, register removed by optimization.
-@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 5 of justentered[31:0] assign 0, register removed by optimization.
-@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 6 of justentered[31:0] assign 0, register removed by optimization.
-@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 7 of justentered[31:0] assign 0, register removed by optimization.
-@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 8 of justentered[31:0] assign 0, register removed by optimization.
-@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 9 of justentered[31:0] assign 0, register removed by optimization.
-@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 10 of justentered[31:0] assign 0, register removed by optimization.
-@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 11 of justentered[31:0] assign 0, register removed by optimization.
-@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 12 of justentered[31:0] assign 0, register removed by optimization.
-@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 13 of justentered[31:0] assign 0, register removed by optimization.
-@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 14 of justentered[31:0] assign 0, register removed by optimization.
-@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 15 of justentered[31:0] assign 0, register removed by optimization.
-@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 16 of justentered[31:0] assign 0, register removed by optimization.
-@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 17 of justentered[31:0] assign 0, register removed by optimization.
-@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 18 of justentered[31:0] assign 0, register removed by optimization.
-@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 19 of justentered[31:0] assign 0, register removed by optimization.
-@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 20 of justentered[31:0] assign 0, register removed by optimization.
-@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 21 of justentered[31:0] assign 0, register removed by optimization.
-@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 22 of justentered[31:0] assign 0, register removed by optimization.
-@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 23 of justentered[31:0] assign 0, register removed by optimization.
-@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 24 of justentered[31:0] assign 0, register removed by optimization.
-@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 25 of justentered[31:0] assign 0, register removed by optimization.
-@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 26 of justentered[31:0] assign 0, register removed by optimization.
-@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 27 of justentered[31:0] assign 0, register removed by optimization.
-@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 28 of justentered[31:0] assign 0, register removed by optimization.
-@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 29 of justentered[31:0] assign 0, register removed by optimization.
-@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 30 of justentered[31:0] assign 0, register removed by optimization.
-@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 31 of justentered[31:0] assign 0, register removed by optimization.
-@W: CG360 :"D:\PhotonUser\Lab32\Lab3_140L.v":159:19:159:24|Removing wire L3_led, as there is no assignment to it.
-@W: CS263 :"D:\PhotonUser\Lab32\Lab3_140L.v":113:34:113:37|Port-width mismatch for port num. The port definition is 4 bits, but the actual port connection bit width is 8. Adjust either the definition or the instantiation of this port.
-@W: CS263 :"D:\PhotonUser\Lab32\Lab3_140L.v":113:40:113:40|Port-width mismatch for port enable. The port definition is 1 bits, but the actual port connection bit width is 32. Adjust either the definition or the instantiation of this port.
+@W: CG133 :"D:\PhotonUser\Lab32\Lab3_140L.v":292:14:292:28|Object next_alarmstate is declared but not assigned. Either assign a value or remove the declaration.
+@W: CL118 :"D:\PhotonUser\Lab32\Lab3_140L.v":373:3:373:6|Latch generated from always block for signal next_state[3:0]; possible missing assignment in an if or case statement.
+@W: CL118 :"D:\PhotonUser\Lab32\Lab3_140L.v":342:3:342:6|Latch generated from always block for signal justentered; possible missing assignment in an if or case statement.
+@W: CL118 :"D:\PhotonUser\Lab32\Lab3_140L.v":342:3:342:6|Latch generated from always block for signal alarmstate[1:0]; possible missing assignment in an if or case statement.
+@W: CG360 :"D:\PhotonUser\Lab32\Lab3_140L.v":160:19:160:24|Removing wire L3_led, as there is no assignment to it.
 @W: CS263 :"D:\PhotonUser\Lab32\Lab3_140L.v":114:34:114:37|Port-width mismatch for port num. The port definition is 4 bits, but the actual port connection bit width is 8. Adjust either the definition or the instantiation of this port.
 @W: CS263 :"D:\PhotonUser\Lab32\Lab3_140L.v":114:40:114:40|Port-width mismatch for port enable. The port definition is 1 bits, but the actual port connection bit width is 32. Adjust either the definition or the instantiation of this port.
 @W: CS263 :"D:\PhotonUser\Lab32\Lab3_140L.v":115:34:115:37|Port-width mismatch for port num. The port definition is 4 bits, but the actual port connection bit width is 8. Adjust either the definition or the instantiation of this port.
 @W: CS263 :"D:\PhotonUser\Lab32\Lab3_140L.v":115:40:115:40|Port-width mismatch for port enable. The port definition is 1 bits, but the actual port connection bit width is 32. Adjust either the definition or the instantiation of this port.
 @W: CS263 :"D:\PhotonUser\Lab32\Lab3_140L.v":116:34:116:37|Port-width mismatch for port num. The port definition is 4 bits, but the actual port connection bit width is 8. Adjust either the definition or the instantiation of this port.
 @W: CS263 :"D:\PhotonUser\Lab32\Lab3_140L.v":116:40:116:40|Port-width mismatch for port enable. The port definition is 1 bits, but the actual port connection bit width is 32. Adjust either the definition or the instantiation of this port.
-@W: CG781 :"D:\PhotonUser\Lab32\Lab3_140L.v":120:14:120:23|Input dInP on instance dispString is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
-@W: CG781 :"D:\PhotonUser\Lab32\Lab3_140L.v":120:14:120:23|Input rdyInP on instance dispString is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CS263 :"D:\PhotonUser\Lab32\Lab3_140L.v":117:34:117:37|Port-width mismatch for port num. The port definition is 4 bits, but the actual port connection bit width is 8. Adjust either the definition or the instantiation of this port.
+@W: CS263 :"D:\PhotonUser\Lab32\Lab3_140L.v":117:40:117:40|Port-width mismatch for port enable. The port definition is 1 bits, but the actual port connection bit width is 32. Adjust either the definition or the instantiation of this port.
+@W: CG781 :"D:\PhotonUser\Lab32\Lab3_140L.v":121:14:121:23|Input dInP on instance dispString is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\PhotonUser\Lab32\Lab3_140L.v":121:14:121:23|Input rdyInP on instance dispString is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CL118 :"D:\PhotonUser\Lab32\Lab3_140L.v":105:4:105:5|Latch generated from always block for signal alarmchar[7:0]; possible missing assignment in an if or case statement.
+@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":105:4:105:5|All reachable assignments to bit 7 of alarmchar[7:0] assign 0, register removed by optimization.
 @W: CL169 :"D:\PhotonUser\Lab32\vbuf.v":186:0:186:5|Pruning unused register l_count_15. Make sure that there are no unused intermediate registers.
 @W: CL279 :"D:\PhotonUser\Lab32\vbuf.v":456:0:456:5|Pruning register bits 447 to 318 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
 @W: CL279 :"D:\PhotonUser\Lab32\vbuf.v":456:0:456:5|Pruning register bits 313 to 312 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
@@ -175,6 +146,6 @@
 @W: CL177 :"D:\PhotonUser\Lab32\vbuf.v":456:0:456:5|Sharing sequential element bitmap. Add a syn_preserve attribute to the element to prevent sharing.
 @W: CL177 :"D:\PhotonUser\Lab32\vbuf.v":456:0:456:5|Sharing sequential element bitmap. Add a syn_preserve attribute to the element to prevent sharing.
 @W: CL177 :"D:\PhotonUser\Lab32\vbuf.v":456:0:456:5|Sharing sequential element bitmap. Add a syn_preserve attribute to the element to prevent sharing.
-@W: CL246 :"D:\PhotonUser\Lab32\Lab3_140L.v":161:19:161:28|Input port bits 7 to 4 of bu_rx_data[7:0] are unused. Assign logic for all port bits or change the input port size.
-@W: CL157 :"D:\PhotonUser\Lab32\Lab3_140L.v":159:19:159:24|*Output L3_led has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL246 :"D:\PhotonUser\Lab32\Lab3_140L.v":162:19:162:28|Input port bits 7 to 4 of bu_rx_data[7:0] are unused. Assign logic for all port bits or change the input port size.
+@W: CL157 :"D:\PhotonUser\Lab32\Lab3_140L.v":160:19:160:24|*Output L3_led has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the output.
 

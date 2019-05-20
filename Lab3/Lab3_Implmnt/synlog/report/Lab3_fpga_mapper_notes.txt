@@ -1,10 +1,10 @@
 @N: MF248 |Running in 64-bit mode.
 @N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
-@N: MO111 :"d:\photonuser\lab32\lab3_140l.v":159:19:159:24|Tristate driver L3_led_1 (in view: work.didp(verilog)) on net L3_led_1 (in view: work.didp(verilog)) has its enable tied to GND.
-@N: MO111 :"d:\photonuser\lab32\lab3_140l.v":159:19:159:24|Tristate driver L3_led_2 (in view: work.didp(verilog)) on net L3_led_2 (in view: work.didp(verilog)) has its enable tied to GND.
-@N: MO111 :"d:\photonuser\lab32\lab3_140l.v":159:19:159:24|Tristate driver L3_led_3 (in view: work.didp(verilog)) on net L3_led_3 (in view: work.didp(verilog)) has its enable tied to GND.
-@N: MO111 :"d:\photonuser\lab32\lab3_140l.v":159:19:159:24|Tristate driver L3_led_4 (in view: work.didp(verilog)) on net L3_led_4 (in view: work.didp(verilog)) has its enable tied to GND.
-@N: MO111 :"d:\photonuser\lab32\lab3_140l.v":159:19:159:24|Tristate driver L3_led_5 (in view: work.didp(verilog)) on net L3_led_5 (in view: work.didp(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\photonuser\lab32\lab3_140l.v":160:19:160:24|Tristate driver L3_led_1 (in view: work.didp(verilog)) on net L3_led_1 (in view: work.didp(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\photonuser\lab32\lab3_140l.v":160:19:160:24|Tristate driver L3_led_2 (in view: work.didp(verilog)) on net L3_led_2 (in view: work.didp(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\photonuser\lab32\lab3_140l.v":160:19:160:24|Tristate driver L3_led_3 (in view: work.didp(verilog)) on net L3_led_3 (in view: work.didp(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\photonuser\lab32\lab3_140l.v":160:19:160:24|Tristate driver L3_led_4 (in view: work.didp(verilog)) on net L3_led_4 (in view: work.didp(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\photonuser\lab32\lab3_140l.v":160:19:160:24|Tristate driver L3_led_5 (in view: work.didp(verilog)) on net L3_led_5 (in view: work.didp(verilog)) has its enable tied to GND.
 @N: MO111 :|Tristate driver L3_led_t[0] (in view: work.Lab3_140L(verilog)) on net L3_led[0] (in view: work.Lab3_140L(verilog)) has its enable tied to GND.
 @N: MO111 :|Tristate driver L3_led_t[1] (in view: work.Lab3_140L(verilog)) on net L3_led[1] (in view: work.Lab3_140L(verilog)) has its enable tied to GND.
 @N: MO111 :|Tristate driver L3_led_t[2] (in view: work.Lab3_140L(verilog)) on net L3_led[2] (in view: work.Lab3_140L(verilog)) has its enable tied to GND.
@@ -13,29 +13,29 @@
 @N: MT206 |Auto Constrain mode is enabled
 @N: BN362 :"d:\photonuser\lab32\vbuf.v":456:0:456:5|Removing sequential instance vram_wr_tap_4_user[1:0] (in view: work.vbuf_Z1(verilog)) of type view:PrimLib.sdffr(prim) because it does not drive other instances.
 @N: MO231 :"d:\photonuser\lab32\buart.v":185:2:185:7|Found counter in view:work.rxuart(verilog) instance bitcount[4:0] 
-@N: BN362 :"d:\photonuser\lab32\lab3_140l.v":311:2:311:7|Removing sequential instance Lab_UT.dictrl.state[3] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
-@N: BN362 :"d:\photonuser\lab32\lab3_140l.v":311:2:311:7|Removing sequential instance Lab_UT.dictrl.state[1] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
-@N: BN362 :"d:\photonuser\lab32\lab3_140l.v":311:2:311:7|Removing sequential instance Lab_UT.dictrl.state[0] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
-@N: BN362 :"d:\photonuser\lab32\lab3_140l.v":311:2:311:7|Removing sequential instance Lab_UT.dictrl.state[2] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
-@N: BN362 :"d:\photonuser\lab32\buart.v":185:2:185:7|Removing sequential instance buart._rx.shifter[7] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
-@N: BN362 :"d:\photonuser\lab32\buart.v":185:2:185:7|Removing sequential instance buart._rx.shifter[5] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
-@N: BN362 :"d:\photonuser\lab32\buart.v":185:2:185:7|Removing sequential instance buart._rx.shifter[4] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
-@N: BN362 :"d:\photonuser\lab32\buart.v":185:2:185:7|Removing sequential instance buart._rx.shifter[3] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
-@N: BN362 :"d:\photonuser\lab32\buart.v":185:2:185:7|Removing sequential instance buart._rx.shifter[2] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
-@N: BN362 :"d:\photonuser\lab32\buart.v":185:2:185:7|Removing sequential instance buart._rx.shifter[1] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
-@N: BN362 :"d:\photonuser\lab32\buart.v":185:2:185:7|Removing sequential instance buart._rx.shifter[0] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
-@N: BN362 :"d:\photonuser\lab32\buart.v":185:2:185:7|Removing sequential instance buart._rx.shifter[6] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
-@N: FX271 :"d:\photonuser\lab32\buart.v":185:2:185:7|Replicating instance buart._rx.shifter_ret_3 (in view: work.latticehx1k(verilog)) with 22 loads 2 times to improve timing.
-@N: FX271 :"d:\photonuser\lab32\buart.v":185:2:185:7|Replicating instance buart._rx.shifter_0[6] (in view: work.latticehx1k(verilog)) with 25 loads 2 times to improve timing.
-@N: FX271 :"d:\photonuser\lab32\buart.v":185:2:185:7|Replicating instance buart._rx.shifter_0[5] (in view: work.latticehx1k(verilog)) with 27 loads 2 times to improve timing.
-@N: FX271 :"d:\photonuser\lab32\buart.v":185:2:185:7|Replicating instance buart._rx.shifter_0[4] (in view: work.latticehx1k(verilog)) with 22 loads 2 times to improve timing.
-@N: FX271 :"d:\photonuser\lab32\lab3_140l.v":311:2:311:7|Replicating instance Lab_UT.dictrl.state_0[3] (in view: work.latticehx1k(verilog)) with 39 loads 3 times to improve timing.
-@N: FX271 :"d:\photonuser\lab32\lab3_140l.v":311:2:311:7|Replicating instance Lab_UT.dictrl.state_0[0] (in view: work.latticehx1k(verilog)) with 39 loads 2 times to improve timing.
-@N: FX271 :"d:\photonuser\lab32\buart.v":185:2:185:7|Replicating instance buart._rx.shifter_0[3] (in view: work.latticehx1k(verilog)) with 18 loads 1 time to improve timing.
-@N: FX271 :"d:\photonuser\lab32\buart.v":185:2:185:7|Replicating instance buart._rx.shifter_0[2] (in view: work.latticehx1k(verilog)) with 15 loads 1 time to improve timing.
-@N: FX271 :"d:\photonuser\lab32\buart.v":185:2:185:7|Replicating instance buart._rx.shifter_ret_1 (in view: work.latticehx1k(verilog)) with 12 loads 1 time to improve timing.
-@N: FX271 :"d:\photonuser\lab32\buart.v":185:2:185:7|Replicating instance buart._rx.shifter_ret_5 (in view: work.latticehx1k(verilog)) with 8 loads 1 time to improve timing.
-@N: FX271 :"d:\photonuser\lab32\buart.v":185:2:185:7|Replicating instance buart._rx.shifter_ret_6 (in view: work.latticehx1k(verilog)) with 17 loads 2 times to improve timing.
+@N: BN362 :"d:\photonuser\lab32\lab3_140l.v":312:2:312:7|Removing sequential instance Lab_UT.dictrl.state[3] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\photonuser\lab32\lab3_140l.v":312:2:312:7|Removing sequential instance Lab_UT.dictrl.state[1] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\photonuser\lab32\lab3_140l.v":312:2:312:7|Removing sequential instance Lab_UT.dictrl.state[0] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\photonuser\lab32\lab3_140l.v":312:2:312:7|Removing sequential instance Lab_UT.dictrl.state[2] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\photonuser\lab32\lab3_140l.v":373:3:373:6|Removing sequential instance Lab_UT.dictrl.next_state[1] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\photonuser\lab32\lab3_140l.v":373:3:373:6|Removing sequential instance Lab_UT.dictrl.next_state[2] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\photonuser\lab32\lab3_140l.v":373:3:373:6|Removing sequential instance Lab_UT.dictrl.next_state[3] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\photonuser\lab32\lab3_140l.v":373:3:373:6|Removing sequential instance Lab_UT.dictrl.next_state[0] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
+@N: FX271 :"d:\photonuser\lab32\buart.v":185:2:185:7|Replicating instance buart._rx.shifter[2] (in view: work.latticehx1k(verilog)) with 38 loads 2 times to improve timing.
+@N: FX271 :"d:\photonuser\lab32\buart.v":185:2:185:7|Replicating instance buart._rx.shifter[6] (in view: work.latticehx1k(verilog)) with 18 loads 1 time to improve timing.
+@N: FX271 :"d:\photonuser\lab32\buart.v":185:2:185:7|Replicating instance buart._rx.shifter[1] (in view: work.latticehx1k(verilog)) with 33 loads 2 times to improve timing.
+@N: FX271 :"d:\photonuser\lab32\buart.v":185:2:185:7|Replicating instance buart._rx.shifter[5] (in view: work.latticehx1k(verilog)) with 17 loads 1 time to improve timing.
+@N: FX271 :"d:\photonuser\lab32\buart.v":185:2:185:7|Replicating instance buart._rx.shifter[7] (in view: work.latticehx1k(verilog)) with 21 loads 2 times to improve timing.
+@N: FX271 :"d:\photonuser\lab32\buart.v":185:2:185:7|Replicating instance buart._rx.shifter[3] (in view: work.latticehx1k(verilog)) with 40 loads 3 times to improve timing.
+@N: FX271 :"d:\photonuser\lab32\buart.v":185:2:185:7|Replicating instance buart._rx.shifter[4] (in view: work.latticehx1k(verilog)) with 22 loads 2 times to improve timing.
+@N: FX271 :"d:\photonuser\lab32\buart.v":185:2:185:7|Replicating instance buart._rx.shifter[0] (in view: work.latticehx1k(verilog)) with 21 loads 1 time to improve timing.
+@N: FX271 :"d:\photonuser\lab32\lab3_140l.v":312:2:312:7|Replicating instance Lab_UT.dictrl.state_0[3] (in view: work.latticehx1k(verilog)) with 41 loads 3 times to improve timing.
+@N: FX271 :"d:\photonuser\lab32\lab3_140l.v":312:2:312:7|Replicating instance Lab_UT.dictrl.state_0[2] (in view: work.latticehx1k(verilog)) with 29 loads 2 times to improve timing.
+@N: FX271 :"d:\photonuser\lab32\vbuf.v":456:0:456:5|Replicating instance uu2.w_addr_displaying[3] (in view: work.latticehx1k(verilog)) with 19 loads 2 times to improve timing.
+@N: FX271 :"d:\photonuser\lab32\vbuf.v":456:0:456:5|Replicating instance uu2.w_addr_displaying[7] (in view: work.latticehx1k(verilog)) with 15 loads 1 time to improve timing.
+@N: FX271 :"d:\photonuser\lab32\vbuf.v":456:0:456:5|Replicating instance uu2.w_addr_displaying[0] (in view: work.latticehx1k(verilog)) with 16 loads 1 time to improve timing.
+@N: FX271 :"d:\photonuser\lab32\vbuf.v":456:0:456:5|Replicating instance uu2.w_addr_displaying[2] (in view: work.latticehx1k(verilog)) with 15 loads 1 time to improve timing.
+@N: FX271 :"d:\photonuser\lab32\lab3_140l.v":312:2:312:7|Replicating instance Lab_UT.dictrl.state_0[1] (in view: work.latticehx1k(verilog)) with 29 loads 2 times to improve timing.
 @N: FX1017 :"d:\photonuser\lab32\latticehx1k.v":365:14:365:33|SB_GB inserted on the net clk.
 @N: FX1017 :"d:\photonuser\lab32\latticehx1k.v":84:3:84:8|SB_GB inserted on the net rst.
 @N: FX1017 :|SB_GB inserted on the net buart._rx.sample.

@@ -6,7 +6,7 @@
 
 * Build Date:         Sep 11 2017 17:12:22
 
-* File Generated:     May 20 2019 23:35:46
+* File Generated:     May 20 2019 23:49:15
 
 * Purpose:            
 
@@ -35,8 +35,8 @@ I2053: Starting placement of the design
 =============================================================
 
 Input Design Statistics
-    Number of LUTs      	:	597
-    Number of DFFs      	:	252
+    Number of LUTs      	:	542
+    Number of DFFs      	:	245
     Number of DFFs packed to IO	:	0
     Number of Carrys    	:	13
     Number of RAMs      	:	1
@@ -52,16 +52,16 @@ Phase 1
 I2077: Start design legalization
 
 Design Legalization Statistics
-    Number of feedthru LUTs inserted to legalize input of DFFs     	:	33
+    Number of feedthru LUTs inserted to legalize input of DFFs     	:	46
     Number of feedthru LUTs inserted for LUTs driving multiple DFFs	:	0
-    Number of LUTs replicated for LUTs driving multiple DFFs       	:	16
+    Number of LUTs replicated for LUTs driving multiple DFFs       	:	14
     Number of feedthru LUTs inserted to legalize output of CARRYs  	:	5
     Number of feedthru LUTs inserted to legalize global signals    	:	0
     Number of feedthru CARRYs inserted to legalize input of CARRYs 	:	0
     Number of inserted LUTs to Legalize IOs with PIN_TYPE= 01xxxx  	:	0
     Number of inserted LUTs to Legalize IOs with PIN_TYPE= 10xxxx  	:	0
     Number of inserted LUTs to Legalize IOs with PIN_TYPE= 11xxxx  	:	0
-    Total LUTs inserted                                            	:	54
+    Total LUTs inserted                                            	:	65
     Total CARRYs inserted                                          	:	0
 
 
@@ -70,58 +70,65 @@ I2088: Phase 1, elapsed time : 0.0 (sec)
 
 
 Phase 2
-I2088: Phase 2, elapsed time : 0.0 (sec)
+I2088: Phase 2, elapsed time : 0.1 (sec)
 
 Phase 3
 Info-1404: Inferred PLL generated clock at latticehx1k_pll_inst.latticehx1k_pll_inst/PLLOUTCORE
 Info-1404: Inferred PLL generated clock at latticehx1k_pll_inst.latticehx1k_pll_inst/PLLOUTGLOBAL
-Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.shifter_ret_3_RNI_LC_95/in2" to pin "Lab_UT.dictrl.shifter_ret_3_RNI_LC_95/lcout" to break the combinatorial loop
-Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.shifter_ret_3_RNI6626_LC_98/in1" to pin "Lab_UT.dictrl.shifter_ret_3_RNI6626_LC_98/lcout" to break the combinatorial loop
-Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.shifter_ret_3_RNIK5FS8_LC_100/in0" to pin "Lab_UT.dictrl.shifter_ret_3_RNIK5FS8_LC_100/lcout" to break the combinatorial loop
-Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.shifter_ret_3_RNI4PQ1_LC_96/in0" to pin "Lab_UT.dictrl.shifter_ret_3_RNI4PQ1_LC_96/lcout" to break the combinatorial loop
-Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.shifter_ret_3_RNIK5FS8_LC_100/in3" to pin "Lab_UT.dictrl.shifter_ret_3_RNIK5FS8_LC_100/lcout" to break the combinatorial loop
-Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.shifter_ret_3_RNIQBH29_LC_102/in3" to pin "Lab_UT.dictrl.shifter_ret_3_RNIQBH29_LC_102/lcout" to break the combinatorial loop
-Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.shifter_ret_3_RNIGCKQ8_LC_99/in2" to pin "Lab_UT.dictrl.shifter_ret_3_RNIGCKQ8_LC_99/lcout" to break the combinatorial loop
-Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.shifter_ret_3_RNIQBH29_LC_102/in2" to pin "Lab_UT.dictrl.shifter_ret_3_RNIQBH29_LC_102/lcout" to break the combinatorial loop
-Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.shifter_ret_3_RNIQBH29_LC_102/in1" to pin "Lab_UT.dictrl.shifter_ret_3_RNIQBH29_LC_102/lcout" to break the combinatorial loop
-Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.shifter_ret_3_RNIGCKQ8_LC_99/in3" to pin "Lab_UT.dictrl.shifter_ret_3_RNIGCKQ8_LC_99/lcout" to break the combinatorial loop
-Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.shifter_ret_3_RNIK5FS8_LC_100/in1" to pin "Lab_UT.dictrl.shifter_ret_3_RNIK5FS8_LC_100/lcout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.alarmchar_latch[0]_LC_0/in3" to pin "Lab_UT.alarmchar_latch[0]_LC_0/lcout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.alarmchar_latch[6]_LC_4/in3" to pin "Lab_UT.alarmchar_latch[6]_LC_4/lcout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.alarmstate_1_0_.m3_LC_36/in0" to pin "Lab_UT.dictrl.alarmstate_1_0_.m3_LC_36/lcout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.alarmstate_1_0_.m3_LC_36/in1" to pin "Lab_UT.dictrl.alarmstate_1_0_.m3_LC_36/lcout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.justentered_1_sqmuxa_i_LC_60/in1" to pin "Lab_UT.dictrl.justentered_1_sqmuxa_i_LC_60/lcout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.alarmchar_latch[4]_LC_3/in2" to pin "Lab_UT.alarmchar_latch[4]_LC_3/lcout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.alarmstate_1_sqmuxa_LC_38/in2" to pin "Lab_UT.dictrl.alarmstate_1_sqmuxa_LC_38/lcout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.alarmstate_latch[0]_LC_40/in0" to pin "Lab_UT.dictrl.alarmstate_latch[0]_LC_40/lcout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.alarmstate_latch[1]_LC_41/in0" to pin "Lab_UT.dictrl.alarmstate_latch[1]_LC_41/lcout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.alarmstate_latch[1]_LC_41/in1" to pin "Lab_UT.dictrl.alarmstate_latch[1]_LC_41/lcout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.justentered_1_sqmuxa_i_LC_60/in0" to pin "Lab_UT.dictrl.justentered_1_sqmuxa_i_LC_60/lcout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.un1_alarmstate_1_sqmuxa_1_0_i_LC_173/in0" to pin "Lab_UT.dictrl.un1_alarmstate_1_sqmuxa_1_0_i_LC_173/lcout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.alarmchar_latch[1]_LC_1/in1" to pin "Lab_UT.alarmchar_latch[1]_LC_1/lcout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.alarmchar_latch[3]_LC_2/in1" to pin "Lab_UT.alarmchar_latch[3]_LC_2/lcout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.alarmstate_latch[0]_LC_40/in3" to pin "Lab_UT.dictrl.alarmstate_latch[0]_LC_40/lcout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.alarmstate_latch[1]_LC_41/in3" to pin "Lab_UT.dictrl.alarmstate_latch[1]_LC_41/lcout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.justentered_latch_LC_61/in1" to pin "Lab_UT.dictrl.justentered_latch_LC_61/lcout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.alarmstate_latch[0]_LC_40/in1" to pin "Lab_UT.dictrl.alarmstate_latch[0]_LC_40/lcout" to break the combinatorial loop
 
 Design Statistics after Packing
-    Number of LUTs      	:	652
-    Number of DFFs      	:	252
+    Number of LUTs      	:	608
+    Number of DFFs      	:	245
     Number of DFFs packed to IO	:	0
     Number of Carrys    	:	13
 
 Device Utilization Summary after Packing
     Sequential LogicCells
-        LUT and DFF      	:	247
+        LUT and DFF      	:	240
         LUT, DFF and CARRY	:	5
     Combinational LogicCells
-        Only LUT         	:	395
+        Only LUT         	:	358
         CARRY Only       	:	3
         LUT with CARRY   	:	5
-    LogicCells                  :	655/1280
-    PLBs                        :	105/160
+    LogicCells                  :	611/1280
+    PLBs                        :	83/160
     BRAMs                       :	1/16
     IOs and GBIOs               :	10/96
     PLLs                        :	1/1
 
 
-I2088: Phase 3, elapsed time : 1.3 (sec)
+I2088: Phase 3, elapsed time : 1.1 (sec)
 
 Phase 4
 I2088: Phase 4, elapsed time : 0.1 (sec)
 
 Phase 5
-I2088: Phase 5, elapsed time : 1.8 (sec)
+I2088: Phase 5, elapsed time : 1.6 (sec)
 
 Phase 6
-I2088: Phase 6, elapsed time : 25.9 (sec)
+I2088: Phase 6, elapsed time : 26.5 (sec)
 
 Final Design Statistics
-    Number of LUTs      	:	652
-    Number of DFFs      	:	252
+    Number of LUTs      	:	608
+    Number of DFFs      	:	245
     Number of DFFs packed to IO	:	0
     Number of Carrys    	:	13
     Number of RAMs      	:	1
@@ -133,8 +140,8 @@ Final Design Statistics
     Number of PLLs      	:	1
 
 Device Utilization Summary
-    LogicCells                  :	655/1280
-    PLBs                        :	124/160
+    LogicCells                  :	611/1280
+    PLBs                        :	109/160
     BRAMs                       :	1/16
     IOs and GBIOs               :	10/96
     PLLs                        :	1/1
@@ -153,9 +160,9 @@ analysis after routing.
                      Clock Summary 
 =====================================================================
 Number of clocks: 3
-Clock: latticehx1k_pll_inst.latticehx1k_pll_inst/PLLOUTCORE | Frequency: 53.70 MHz | Target: 65.36 MHz
-Clock: latticehx1k_pll_inst.latticehx1k_pll_inst/PLLOUTGLOBAL | Frequency: N/A | Target: 65.36 MHz
-Clock: latticehx1k|clk_in | Frequency: N/A | Target: 65.36 MHz
+Clock: latticehx1k_pll_inst.latticehx1k_pll_inst/PLLOUTCORE | Frequency: 51.70 MHz | Target: 60.94 MHz
+Clock: latticehx1k_pll_inst.latticehx1k_pll_inst/PLLOUTGLOBAL | Frequency: N/A | Target: 60.94 MHz
+Clock: latticehx1k|clk_in | Frequency: N/A | Target: 60.94 MHz
 
 =====================================================================
                      End of Clock Summary
@@ -163,5 +170,5 @@ Clock: latticehx1k|clk_in | Frequency: N/A | Target: 65.36 MHz
 
 I2054: Placement of design completed successfully
 
-I2076: Placer run-time: 29.7 sec.
+I2076: Placer run-time: 29.9 sec.
 

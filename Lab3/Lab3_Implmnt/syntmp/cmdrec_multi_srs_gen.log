@@ -1,7 +1,7 @@
 C:\lscc\iCEcube2.2017.08\synpbase\bin64\syn_nfilter.exe  -link  -multisrs  D:\PhotonUser\Lab32\Lab3\Lab3_Implmnt\synwork\Lab3_comp.srs  -osyn  D:\PhotonUser\Lab32\Lab3\Lab3_Implmnt\synwork\Lab3_mult.srs  -log  D:\PhotonUser\Lab32\Lab3\Lab3_Implmnt\synlog\Lab3_multi_srs_gen.srr 
 rc:0 success:1 runtime:1
-file:D:\PhotonUser\Lab32\Lab3\Lab3_Implmnt\synwork\Lab3_comp.srs|io:i|time:1558395278|size:54603|exec:0
-file:D:\PhotonUser\Lab32\Lab3\Lab3_Implmnt\synwork\Lab3_mult.srs|io:o|time:1558395280|size:7152|exec:0
-file:D:\PhotonUser\Lab32\Lab3\Lab3_Implmnt\synlog\Lab3_multi_srs_gen.srr|io:o|time:1558395280|size:749|exec:0
+file:D:\PhotonUser\Lab32\Lab3\Lab3_Implmnt\synwork\Lab3_comp.srs|io:i|time:1558396138|size:55114|exec:0
+file:D:\PhotonUser\Lab32\Lab3\Lab3_Implmnt\synwork\Lab3_mult.srs|io:o|time:1558396140|size:7203|exec:0
+file:D:\PhotonUser\Lab32\Lab3\Lab3_Implmnt\synlog\Lab3_multi_srs_gen.srr|io:o|time:1558396140|size:749|exec:0
 file:C:\lscc\iCEcube2.2017.08\synpbase\bin\syn_nfilter.exe|io:i|time:1553706822|size:3128320|exec:1
 file:C:\lscc\iCEcube2.2017.08\synpbase\bin64\syn_nfilter.exe|io:i|time:1553706824|size:3947520|exec:1
