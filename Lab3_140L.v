@@ -96,7 +96,7 @@ module Lab3_140L (
 			end
 
 
-			always @(idle, armed, trig) begin
+			always @(oneSecStrb) begin
 				if(idle)
 					alarmchar = 8'b00101110;
 				else if(armed)
@@ -174,8 +174,6 @@ module didp (
 		 reg [3:0] ce;
 		 wire [3:0] Mtens, Mones, Stens, Sones,
 		 			AMtens, AMones, AStens, ASones;
-
-		reg alarmmatching;
 		 
 
 		 always @(*) begin
@@ -191,6 +189,7 @@ module didp (
 		 end
 
 		 always @(posedge clk) begin
+		 	
 			if(rst) begin
 				ce[0] = 1'b0;
 				ce[1] = 1'b0;
@@ -201,8 +200,7 @@ module didp (
 		 		reset[1] = 1'b1;
 		 		reset[2] = 1'b1;
 		 		reset[3] = 1'b1;
-
-				alarmmatching = 1'b0;
+				 
 			end
 		 	else if(oneSecStrb) begin
 				ce[0] = (1 && dicRun);
@@ -229,7 +227,7 @@ module didp (
 			end
 		end
 
-		 assign did_alarmMatch = ((Mtens == AMtens) && (Mones == AMones) && (Stens == AStens) && (Stens == ASones)) ? 1'b1 : 1'b0;
+		 assign did_alarmMatch = ((Mtens == AMtens) && (Mones == AMones) && (Stens == AStens) && (Stens == ASones));
 
 	     countrce countrce1(.q(Sones[3:0]), .d(bu_rx_data[3:0]), .ld(dicLdSones), .ce(ce[0] || dicLdSones), .rst(reset[0]), .clk(clk));
 		 countrce countrce2(.q(Stens[3:0]), .d(bu_rx_data[3:0]), .ld(dicLdStens), .ce(ce[1] || dicLdStens), .rst(reset[1]), .clk(clk));
@@ -300,11 +298,9 @@ module dictrl(
 		always @(posedge clk) begin
 			if(rst) begin
 				state <= s0;
-				alarmstate <= alarmOff;
 			end
 			else if (bu_rx_data_rdy) begin
-				state <= next_state;
-				alarmstate <= next_alarmstate;
+				state <= next_state;	
 			end
 		end
 
@@ -324,27 +320,29 @@ module dictrl(
 			alarm3 = (alarmstate == alarmTrig);
 		end
 
-		always @(did_alarmMatch, dataIn) begin
+		always @(rst, did_alarmMatch, bu_rx_data_rdy) begin
+			if(rst)
+				alarmstate <= alarmOff;
 			case (alarmstate)
 				alarmOff:begin
-					if((dataIn == at) && ~did_alarmMatch)
-						next_alarmstate <= alarmArm;
+					if(dataIn == at)
+						alarmstate <= alarmArm;
 					else
-						next_alarmstate <= alarmOff;
+						alarmstate <= alarmOff;
 				end
 				alarmArm:begin
-					if(dataIn == at)
-						next_alarmstate <= alarmOff;
+					if((dataIn == at) && ~did_alarmMatch)
+						alarmstate <= alarmOff;
 					else if (did_alarmMatch)
-						next_alarmstate <= alarmTrig;
+						alarmstate <= alarmTrig;
 					else
-						next_alarmstate <= alarmArm;
+						alarmstate <= alarmArm;
 				end
 				alarmTrig:begin
 					if(dataIn == at)
-						next_alarmstate <= alarmOff;
+						alarmstate <= alarmOff;
 					else
-						next_alarmstate <= alarmTrig;
+						alarmstate <= alarmTrig;
 				end
 			endcase
 		end
