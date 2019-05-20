@@ -98,15 +98,16 @@ module Lab3_140L (
 			end
 
 			//update alarm trigger
-			always @(idle, armed, trig) begin
+			always @(idle, armed, trig, rst) begin
+				if(rst)
+					alarmchar <= 8'b00101110;
+					
 				if(idle)
-					alarmchar = 8'b00101110;
+					alarmchar <= 8'b00101110;
 				else if(armed)
-					alarmchar = 8'b01100001;
+					alarmchar <= 8'b01100001;
 				else if(trig)
-					alarmchar = 8'b01010100;
-				else
-					alarmchar = 8'b00101110;
+					alarmchar <= 8'b01010100;
 			end
 
 			//display clock
@@ -331,11 +332,13 @@ module dictrl(
 			alarm2 = (alarmstate == alarmArm);
 			alarm3 = (alarmstate == alarmTrig);
 		end
-		integer justentered;
+		reg justentered;
 		//alarm state FSM
 		always @(rst, did_alarmMatch, dataIn) begin
-			if(rst)
+			if(rst) begin
 				alarmstate <= alarmOff;
+				justentered <= 1'b0;
+			end
 			case (alarmstate)
 				alarmOff:begin
 					if(dataIn == at)
@@ -348,17 +351,17 @@ module dictrl(
 						alarmstate <= alarmOff;
 					else if (did_alarmMatch) begin
 						alarmstate <= alarmTrig;
-						justentered <= 1;
+						justentered <= 1'b1;
 					end
 					else
 						alarmstate <= alarmArm;
 				end
 				alarmTrig:begin
-					if((dataIn == at) && (justentered == 0))
+					if((dataIn == at) && (justentered == 1'b0))
 						alarmstate <= alarmOff;
 					else begin
 						alarmstate <= alarmTrig;
-						justentered <= 0;
+						justentered <= 1'b0;
 					end
 				end
 			endcase
