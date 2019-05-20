@@ -433,16 +433,17 @@ module tb_sft(
       waitN(1);
       sendByte("5");
       sendByte("9");
-      sendByte("5");
-      sendByte("5");
+      sendByte("1");
+      sendByte("0");
       sendByte(8'h0d);
       waitN(5);
       sendByte("a");    // load alarm
-      sendByte("0");
-      sendByte("3");
-      sendByte("2");
-      sendByte("4");
+      sendByte("5");
+      sendByte("9");
+      sendByte("5");
+      sendByte("9");
       sendByte(8'h0d);
+	  sendByte("@");
       waitN(100);
 `endif      
       //

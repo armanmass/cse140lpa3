@@ -250,7 +250,7 @@ module dictrl(
 		  reg [3:0] next_state, state;
 
 		  parameter [1:0] alarmOff = 2'b00, alarmArm = 2'b01, alarmTrig = 2'b10;
-		  reg [3:0]	next_alarmstate, alarmstate;
+		  reg [1:0]	next_alarmstate, alarmstate;
 
 		  parameter [7:0] zero =  8'b00110000,
 		  				  five =  8'b00110101,
@@ -273,8 +273,9 @@ module dictrl(
 			end
 			else if (bu_rx_data_rdy) begin
 				state <= next_state;
-				alarmstate <= next_alarmstate;
 			end
+			if(oneSecStrb)
+				alarmstate <= next_alarmstate;
 		end
 
 		always @(*) begin
@@ -299,7 +300,7 @@ module dictrl(
 					if(dataIn == at)
 						next_alarmstate <= alarmArm;
 					else
-						next_alarmstate <= alarmstate;
+						next_alarmstate <= alarmOff;
 				end
 				alarmArm:begin
 					if(dataIn == at)
@@ -307,13 +308,13 @@ module dictrl(
 					else if (did_alarmMatch)
 						next_alarmstate <= alarmTrig;
 					else
-						next_alarmstate <= alarmstate;
+						next_alarmstate <= alarmArm;
 				end
 				alarmTrig:begin
 					if(dataIn == at)
 						next_alarmstate <= alarmOff;
 					else
-						next_alarmstate <= alarmstate;
+						next_alarmstate <= alarmTrig;
 				end
 			endcase
 		end
