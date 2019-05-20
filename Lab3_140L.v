@@ -53,6 +53,7 @@ module Lab3_140L (
 			wire idle, armed, trig, alarmMatch;
 			reg [7:0] alarmchar;
 			reg [7:0] min1,min2,sec1,sec2;
+			reg [7:0] disp1,disp2,disp3,disp4;
 		    
 			wire [6:0] seg1, seg2, seg3, seg4;
 
@@ -61,6 +62,15 @@ module Lab3_140L (
 				L3_segment2 = seg2;
 				L3_segment3 = seg3;
 				L3_segment4 = seg4;
+
+				disp1[7:4] = 4'b0011;
+				disp2[7:4] = 4'b0011;
+				disp3[7:4] = 4'b0011;
+				disp4[7:4] = 4'b0011;
+				disp1[3:0] = di_AMtens;
+				disp2[3:0] = di_AMones;
+				disp3[3:0] = di_AStens;
+				disp4[3:0] = di_ASones;
 
 
 				if(loadalarm) begin
@@ -97,10 +107,10 @@ module Lab3_140L (
 					alarmchar = 8'b00101110;
 			end
 
-			bcd2segment bcd2segment1(seg1, min1, 1);
-			bcd2segment bcd2segment2(seg2, min2, 1);
-			bcd2segment bcd2segment3(seg3, sec1, 1);
-			bcd2segment bcd2segment4(seg4, sec2, 1);
+			bcd2segment bcd2segment1(seg1, sec2, 1);
+			bcd2segment bcd2segment2(seg2, sec1, 1);
+			bcd2segment bcd2segment3(seg3, min2, 1);
+			bcd2segment bcd2segment4(seg4, min1, 1);
 
 
 			dispString dispString(.rdy(L3_tx_data_rdy), .dOut(L3_tx_data), .b0(min1), .b1(min2), .b2(8'b00111010), 
