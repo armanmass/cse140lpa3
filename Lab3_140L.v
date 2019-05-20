@@ -298,14 +298,9 @@ module dictrl(
 		always @(posedge clk) begin
 			if(rst)
 				state <= s0;
+				alarmstate <= alarmOff;
 			else if (bu_rx_data_rdy)
 				state <= next_state;
-		end
-
-		always @(posedge clk) begin
-			if(rst)
-				alarmstate <= alarmOff;
-			else
 				alarmstate <= next_alarmstate;
 		end
 
