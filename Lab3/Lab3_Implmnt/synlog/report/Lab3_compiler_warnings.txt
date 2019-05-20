@@ -11,11 +11,41 @@
 @W: CG781 :"D:\PhotonUser\Lab32\latticehx1k.v":48:33:48:35|Input D_OUT_0 on instance _io is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
 @W: CG1273 :"D:\PhotonUser\Lab32\latticehx1k.v":49:21:49:23|An input port (port pin) is the target of an assignment - please check if this is intentional
 @W: CL265 :"D:\PhotonUser\Lab32\buart.v":185:2:185:7|Removing unused bit 2 of hh[2:0]. Either assign all bits or reduce the width of the signal.
-@W: CG296 :"D:\PhotonUser\Lab32\Lab3_140L.v":336:11:336:38|Incomplete sensitivity list; assuming completeness. Make sure all referenced variables in message CG290 are included in the sensitivity list.
-@W: CG290 :"D:\PhotonUser\Lab32\Lab3_140L.v":355:25:355:38|Referenced variable bu_rx_data_rdy is not in sensitivity list.
 @W: CG133 :"D:\PhotonUser\Lab32\Lab3_140L.v":291:14:291:28|Object next_alarmstate is declared but not assigned. Either assign a value or remove the declaration.
-@W: CL118 :"D:\PhotonUser\Lab32\Lab3_140L.v":369:3:369:6|Latch generated from always block for signal next_state[3:0]; possible missing assignment in an if or case statement.
+@W: CL118 :"D:\PhotonUser\Lab32\Lab3_140L.v":370:3:370:6|Latch generated from always block for signal next_state[3:0]; possible missing assignment in an if or case statement.
 @W: CL118 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|Latch generated from always block for signal alarmstate[1:0]; possible missing assignment in an if or case statement.
+@W: CL118 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|Latch generated from always block for signal justentered[31:0]; possible missing assignment in an if or case statement.
+@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 1 of justentered[31:0] assign 0, register removed by optimization.
+@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 2 of justentered[31:0] assign 0, register removed by optimization.
+@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 3 of justentered[31:0] assign 0, register removed by optimization.
+@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 4 of justentered[31:0] assign 0, register removed by optimization.
+@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 5 of justentered[31:0] assign 0, register removed by optimization.
+@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 6 of justentered[31:0] assign 0, register removed by optimization.
+@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 7 of justentered[31:0] assign 0, register removed by optimization.
+@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 8 of justentered[31:0] assign 0, register removed by optimization.
+@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 9 of justentered[31:0] assign 0, register removed by optimization.
+@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 10 of justentered[31:0] assign 0, register removed by optimization.
+@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 11 of justentered[31:0] assign 0, register removed by optimization.
+@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 12 of justentered[31:0] assign 0, register removed by optimization.
+@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 13 of justentered[31:0] assign 0, register removed by optimization.
+@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 14 of justentered[31:0] assign 0, register removed by optimization.
+@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 15 of justentered[31:0] assign 0, register removed by optimization.
+@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 16 of justentered[31:0] assign 0, register removed by optimization.
+@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 17 of justentered[31:0] assign 0, register removed by optimization.
+@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 18 of justentered[31:0] assign 0, register removed by optimization.
+@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 19 of justentered[31:0] assign 0, register removed by optimization.
+@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 20 of justentered[31:0] assign 0, register removed by optimization.
+@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 21 of justentered[31:0] assign 0, register removed by optimization.
+@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 22 of justentered[31:0] assign 0, register removed by optimization.
+@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 23 of justentered[31:0] assign 0, register removed by optimization.
+@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 24 of justentered[31:0] assign 0, register removed by optimization.
+@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 25 of justentered[31:0] assign 0, register removed by optimization.
+@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 26 of justentered[31:0] assign 0, register removed by optimization.
+@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 27 of justentered[31:0] assign 0, register removed by optimization.
+@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 28 of justentered[31:0] assign 0, register removed by optimization.
+@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 29 of justentered[31:0] assign 0, register removed by optimization.
+@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 30 of justentered[31:0] assign 0, register removed by optimization.
+@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 31 of justentered[31:0] assign 0, register removed by optimization.
 @W: CG360 :"D:\PhotonUser\Lab32\Lab3_140L.v":159:19:159:24|Removing wire L3_led, as there is no assignment to it.
 @W: CG296 :"D:\PhotonUser\Lab32\Lab3_140L.v":101:12:101:21|Incomplete sensitivity list; assuming completeness. Make sure all referenced variables in message CG290 are included in the sensitivity list.
 @W: CG290 :"D:\PhotonUser\Lab32\Lab3_140L.v":102:7:102:10|Referenced variable idle is not in sensitivity list.

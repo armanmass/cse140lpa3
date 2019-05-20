@@ -6,7 +6,7 @@
 
 * Build Date:         Sep 11 2017 17:03:42
 
-* File Generated:     May 20 2019 23:10:41
+* File Generated:     May 20 2019 23:27:38
 
 * Purpose:            Router runtime info
 
@@ -19,26 +19,43 @@ I1203: Reading Design latticehx1k
 I1202: Reading Architecture of device iCE40HX1K
 Info-1404: Inferred PLL generated clock at latticehx1k_pll_inst.latticehx1k_pll_inst/PLLOUTCORE
 Info-1404: Inferred PLL generated clock at latticehx1k_pll_inst.latticehx1k_pll_inst/PLLOUTGLOBAL
-Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.alarmstate_latch_0_LC_5_7_6/in1" to pin "Lab_UT.dictrl.alarmstate_latch_0_LC_5_7_6/lcout" to break the combinatorial loop
-Warning-1035: Removing timing arc from pin "Lab_UT.dispString.alarmstate_1_sqmuxa_1_i_LC_5_7_5/in0" to pin "Lab_UT.dispString.alarmstate_1_sqmuxa_1_i_LC_5_7_5/ltout" to break the combinatorial loop
-Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.alarmstate_latch_1_LC_5_7_4/in0" to pin "Lab_UT.dictrl.alarmstate_latch_1_LC_5_7_4/ltout" to break the combinatorial loop
-Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.alarmstate_latch_1_LC_5_7_4/in1" to pin "Lab_UT.dictrl.alarmstate_latch_1_LC_5_7_4/ltout" to break the combinatorial loop
-Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.alarmstate_latch_1_LC_5_7_4/in1" to pin "Lab_UT.dictrl.alarmstate_latch_1_LC_5_7_4/lcout" to break the combinatorial loop
-Warning-1035: Removing timing arc from pin "Lab_UT.dispString.alarmstate_1_0_i_1_LC_5_7_3/in1" to pin "Lab_UT.dispString.alarmstate_1_0_i_1_LC_5_7_3/ltout" to break the combinatorial loop
-Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.alarmstate_latch_0_LC_5_7_6/in3" to pin "Lab_UT.dictrl.alarmstate_latch_0_LC_5_7_6/lcout" to break the combinatorial loop
-Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.alarmstate_latch_1_LC_5_7_4/in3" to pin "Lab_UT.dictrl.alarmstate_latch_1_LC_5_7_4/ltout" to break the combinatorial loop
-Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.alarmstate_latch_1_LC_5_7_4/in3" to pin "Lab_UT.dictrl.alarmstate_latch_1_LC_5_7_4/lcout" to break the combinatorial loop
-Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.alarmstate_latch_0_LC_5_7_6/in2" to pin "Lab_UT.dictrl.alarmstate_latch_0_LC_5_7_6/lcout" to break the combinatorial loop
-Warning-1035: Removing timing arc from pin "Lab_UT.dispString.alarmstate_1_0_i_1_LC_5_7_3/in0" to pin "Lab_UT.dispString.alarmstate_1_0_i_1_LC_5_7_3/ltout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.shifter_ret_3_RNI_LC_6_10_2/in2" to pin "Lab_UT.dictrl.shifter_ret_3_RNI_LC_6_10_2/lcout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.shifter_ret_3_RNI_LC_6_10_2/in0" to pin "Lab_UT.dictrl.shifter_ret_3_RNI_LC_6_10_2/lcout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.shifter_ret_3_RNI_LC_6_10_2/in1" to pin "Lab_UT.dictrl.shifter_ret_3_RNI_LC_6_10_2/lcout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.alarmstate_1_sqmuxa_LC_6_10_5/in1" to pin "Lab_UT.dictrl.alarmstate_1_sqmuxa_LC_6_10_5/lcout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.shifter_ret_3_RNIQBH29_LC_6_9_5/in1" to pin "Lab_UT.dictrl.shifter_ret_3_RNIQBH29_LC_6_9_5/lcout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.shifter_ret_3_RNI4PQ1_LC_6_9_4/in0" to pin "Lab_UT.dictrl.shifter_ret_3_RNI4PQ1_LC_6_9_4/ltout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.shifter_ret_3_RNIK5FS8_LC_6_9_3/in0" to pin "Lab_UT.dictrl.shifter_ret_3_RNIK5FS8_LC_6_9_3/ltout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.shifter_ret_3_RNIK5FS8_LC_6_9_3/in1" to pin "Lab_UT.dictrl.shifter_ret_3_RNIK5FS8_LC_6_9_3/ltout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.shifter_ret_3_RNIK5FS8_LC_6_9_3/in1" to pin "Lab_UT.dictrl.shifter_ret_3_RNIK5FS8_LC_6_9_3/lcout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.shifter_ret_3_RNIGCKQ8_LC_6_9_2/in3" to pin "Lab_UT.dictrl.shifter_ret_3_RNIGCKQ8_LC_6_9_2/ltout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.shifter_ret_3_RNIQBH29_LC_6_9_5/in2" to pin "Lab_UT.dictrl.shifter_ret_3_RNIQBH29_LC_6_9_5/lcout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.shifter_ret_3_RNIQBH29_LC_6_9_5/in3" to pin "Lab_UT.dictrl.shifter_ret_3_RNIQBH29_LC_6_9_5/lcout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.shifter_ret_3_RNIK5FS8_LC_6_9_3/in3" to pin "Lab_UT.dictrl.shifter_ret_3_RNIK5FS8_LC_6_9_3/ltout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.shifter_ret_3_RNIK5FS8_LC_6_9_3/in3" to pin "Lab_UT.dictrl.shifter_ret_3_RNIK5FS8_LC_6_9_3/lcout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.shifter_ret_3_RNIGCKQ8_LC_6_9_2/in2" to pin "Lab_UT.dictrl.shifter_ret_3_RNIGCKQ8_LC_6_9_2/ltout" to break the combinatorial loop
 I1209: Started routing
-I1223: Total Nets : 832 
-I1212: Iteration  1 :   162 unrouted : 2 seconds
-I1212: Iteration  2 :    12 unrouted : 1 seconds
-I1212: Iteration  3 :     2 unrouted : 0 seconds
-I1212: Iteration  4 :     0 unrouted : 0 seconds
+I1223: Total Nets : 726 
+I1212: Iteration  1 :   147 unrouted : 1 seconds
+I1212: Iteration  2 :    20 unrouted : 1 seconds
+I1212: Iteration  3 :     6 unrouted : 0 seconds
+I1212: Iteration  4 :     4 unrouted : 0 seconds
+I1212: Iteration  5 :     4 unrouted : 0 seconds
+I1212: Iteration  6 :     4 unrouted : 0 seconds
+I1212: Iteration  7 :     2 unrouted : 0 seconds
+I1212: Iteration  8 :     2 unrouted : 0 seconds
+I1212: Iteration  9 :     2 unrouted : 0 seconds
+I1212: Iteration 10 :     2 unrouted : 0 seconds
+I1212: Iteration 11 :     2 unrouted : 0 seconds
+I1212: Iteration 12 :     2 unrouted : 0 seconds
+I1212: Iteration 13 :     2 unrouted : 0 seconds
+I1212: Iteration 14 :     2 unrouted : 0 seconds
+I1212: Iteration 15 :     2 unrouted : 0 seconds
+I1212: Iteration 16 :     2 unrouted : 0 seconds
+I1212: Iteration 17 :     0 unrouted : 0 seconds
 I1215: Routing is successful
 I1206: Completed routing
 I1204: Writing Design latticehx1k
 I1210: Writing routes
 I1218: Exiting the router
-I1224: Router run-time : 6 seconds
+I1224: Router run-time : 7 seconds

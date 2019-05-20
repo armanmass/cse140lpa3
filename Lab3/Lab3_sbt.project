@@ -32,7 +32,7 @@ Version=Lattice Semiconductor Corporation iCEcube - Release: 2017.08.27940 - Bui
 ProjectName=Lab3
 Vendor=SiliconBlue
 Synthesis=synplify
-ProjectVFiles=../vbuf.v,../Half_Sec_Pulse_Every_Sec.v,../Lab3_140L.v,../NBitCounter.v,../bcd2segment.v,../buart.v,../countrce.v,../decodeKeys.v,../dispString.v,../latticehx1k.v,../regrce.v
+ProjectVFiles=../vbuf.v=work,../Half_Sec_Pulse_Every_Sec.v=work,../Lab3_140L.v=work,../NBitCounter.v=work,../bcd2segment.v=work,../buart.v=work,../countrce.v=work,../decodeKeys.v=work,../dispString.v=work,../latticehx1k.v=work,../regrce.v=work
 ProjectCFiles=
 CurImplementation=Lab3_Implmnt
 Implementations=Lab3_Implmnt

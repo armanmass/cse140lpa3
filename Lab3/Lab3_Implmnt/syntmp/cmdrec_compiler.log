@@ -1,11 +1,11 @@
 C:\lscc\iCEcube2.2017.08\synpbase\bin64\c_hdl.exe  -osyn  D:\PhotonUser\Lab32\Lab3\Lab3_Implmnt\synwork\Lab3_comp.srs  -hdllog  D:\PhotonUser\Lab32\Lab3\Lab3_Implmnt\synlog\Lab3_compiler.srr  -encrypt  -mp  4  -verification_mode 0  -verilog  -prodtype  synplify_pro  -primux -fixsmult -infer_seqShift -ice -sdff_counter -nram -divnmod -nostructver   -I D:\PhotonUser\Lab32\Lab3\  -I C:\lscc\iCEcube2.2017.08\synpbase\lib   -v2001  -devicelib  C:\lscc\iCEcube2.2017.08\synpbase\lib\generic\sb_ice40.v  -encrypt  -pro  -dmgen  D:\PhotonUser\Lab32\Lab3\Lab3_Implmnt\dm  -ui -fid2 -ram -sharing on -ll 2000 -autosm  -lib work D:\PhotonUser\Lab32\vbuf.v -lib work D:\PhotonUser\Lab32\Half_Sec_Pulse_Every_Sec.v -lib work D:\PhotonUser\Lab32\Lab3_140L.v -lib work D:\PhotonUser\Lab32\NBitCounter.v -lib work D:\PhotonUser\Lab32\bcd2segment.v -lib work D:\PhotonUser\Lab32\buart.v -lib work D:\PhotonUser\Lab32\countrce.v -lib work D:\PhotonUser\Lab32\decodeKeys.v -lib work D:\PhotonUser\Lab32\dispString.v -lib work D:\PhotonUser\Lab32\latticehx1k.v -lib work D:\PhotonUser\Lab32\regrce.v 
 rc:0 success:1 runtime:2
-file:D:\PhotonUser\Lab32\Lab3\Lab3_Implmnt\synwork\Lab3_comp.srs|io:o|time:1558393759|size:54292|exec:0
-file:D:\PhotonUser\Lab32\Lab3\Lab3_Implmnt\synlog\Lab3_compiler.srr|io:o|time:1558393759|size:70390|exec:0
+file:D:\PhotonUser\Lab32\Lab3\Lab3_Implmnt\synwork\Lab3_comp.srs|io:o|time:1558394753|size:54571|exec:0
+file:D:\PhotonUser\Lab32\Lab3\Lab3_Implmnt\synlog\Lab3_compiler.srr|io:o|time:1558394753|size:75395|exec:0
 file:C:\lscc\iCEcube2.2017.08\synpbase\lib\generic\sb_ice40.v|io:i|time:1553706825|size:224837|exec:0
 file:D:\PhotonUser\Lab32\vbuf.v|io:i|time:1558249704|size:27296|exec:0
 file:D:\PhotonUser\Lab32\Half_Sec_Pulse_Every_Sec.v|io:i|time:1558249704|size:3982|exec:0
-file:D:\PhotonUser\Lab32\Lab3_140L.v|io:i|time:1558393296|size:13490|exec:0
+file:D:\PhotonUser\Lab32\Lab3_140L.v|io:i|time:1558394722|size:13556|exec:0
 file:D:\PhotonUser\Lab32\NBitCounter.v|io:i|time:1558249704|size:2432|exec:0
 file:D:\PhotonUser\Lab32\bcd2segment.v|io:i|time:1558249704|size:3417|exec:0
 file:D:\PhotonUser\Lab32\buart.v|io:i|time:1558249704|size:6512|exec:0
