@@ -98,7 +98,7 @@ module Lab3_140L (
 			end
 
 			//update alarm trigger
-			always @(oneSecStrb) begin
+			always @(idle, armed, trig) begin
 				if(idle)
 					alarmchar = 8'b00101110;
 				else if(armed)
