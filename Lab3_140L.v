@@ -331,7 +331,7 @@ module dictrl(
 			alarm2 = (alarmstate == alarmArm);
 			alarm3 = (alarmstate == alarmTrig);
 		end
-
+		integer justentered;
 		//alarm state FSM
 		always @(rst, did_alarmMatch, dataIn) begin
 			if(rst)
@@ -346,23 +346,24 @@ module dictrl(
 				alarmArm:begin
 					if((dataIn == at) && ~did_alarmMatch)
 						alarmstate <= alarmOff;
-					else if (did_alarmMatch)
+					else if (did_alarmMatch) begin
 						alarmstate <= alarmTrig;
+						justentered <= 1;
+					end
 					else
 						alarmstate <= alarmArm;
 				end
 				alarmTrig:begin
-					if((dataIn == at) &&bu_rx_data_rdy)
+					if((dataIn == at) && (justentered == 0))
 						alarmstate <= alarmOff;
-					else
+					else begin
 						alarmstate <= alarmTrig;
+						justentered <= 0;
+					end
 				end
 			endcase
 		end
 
-		always @(did_alarmMatch) begin
-
-		end
 
 		//clock input fsm
 		always @(state, dataIn) begin
