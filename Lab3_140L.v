@@ -48,6 +48,7 @@ module Lab3_140L (
 		  );
 		    wire LdMtens, LdMones, LdStens, LdSones, LdAMtens,
 	      		 LdAMones, LdAStens, LdASones, Run;
+			wire loadalarm;
 
 			wire idle, armed, trig, alarmMatch;
 			reg [7:0] alarmchar;
@@ -61,14 +62,27 @@ module Lab3_140L (
 				L3_segment3 = seg3;
 				L3_segment4 = seg4;
 
-				min1[7:4] = 4'b0011;
-				min2[7:4] = 4'b0011;
-				sec1[7:4] = 4'b0011;
-				sec2[7:4] = 4'b0011;
-				min1[3:0] = di_AMtens;
-				min2[3:0] = di_AMones;
-				sec1[3:0] = di_AStens;
-				sec2[3:0] = di_ASones;
+
+				if(loadalarm) begin
+					min1[7:4] = 4'b0011;
+					min2[7:4] = 4'b0011;
+					sec1[7:4] = 4'b0011;
+					sec2[7:4] = 4'b0011;
+					min1[3:0] = di_AMtens;
+					min2[3:0] = di_AMones;
+					sec1[3:0] = di_AStens;
+					sec2[3:0] = di_ASones;
+				end
+				else begin
+					min1[7:4] = 4'b0011;
+					min2[7:4] = 4'b0011;
+					sec1[7:4] = 4'b0011;
+					sec2[7:4] = 4'b0011;
+					min1[3:0] = di_Mtens;
+					min2[3:0] = di_Mones;
+					sec1[3:0] = di_Stens;
+					sec2[3:0] = di_Sones;
+				end
 			end
 
 
@@ -83,10 +97,10 @@ module Lab3_140L (
 					alarmchar = 8'b00101110;
 			end
 
-			bcd2segment bcd2segment1(seg1, di_Sones, Run);
-			bcd2segment bcd2segment2(seg2, di_Stens, Run);
-			bcd2segment bcd2segment3(seg3, di_Mones, Run);
-			bcd2segment bcd2segment4(seg4, di_Mtens, Run);
+			bcd2segment bcd2segment1(seg1, min1, 1);
+			bcd2segment bcd2segment2(seg2, min2, 1);
+			bcd2segment bcd2segment3(seg3, sec1, 1);
+			bcd2segment bcd2segment4(seg4, sec2, 1);
 
 
 			dispString dispString(.rdy(L3_tx_data_rdy), .dOut(L3_tx_data), .b0(min1), .b1(min2), .b2(8'b00111010), 
@@ -98,7 +112,7 @@ module Lab3_140L (
 			dictrl dictrl(.dicLdMtens(LdMtens), .dicLdMones(LdMones), .dicLdStens(LdStens), .dicLdSones(LdSones), 
 			.dicLdAMtens(LdAMtens), .dicLdAMones(LdAMones), .dicLdAStens(LdAStens), .dicLdASones(LdASones), .dicRun(Run),
 			.dicAlarmIdle(idle), .dicAlarmArmed(armed), .dicAlarmTrig(trig), .oneSecStrb(oneSecStrb), .did_alarmMatch(alarmMatch), 
-			.bu_rx_data_rdy(bu_rx_data_rdy), .dataIn(bu_rx_data), .rst(rst), .clk(clk));
+			.bu_rx_data_rdy(bu_rx_data_rdy), .dataIn(bu_rx_data), .loadalarm(loadalarm), .rst(rst), .clk(clk));
 
 			didp didp(.di_Mtens(di_Mtens), .di_Mones(di_Mones), .di_Stens(di_Stens), .di_Sones(di_Sones),
 		 	.di_AMtens(di_AMtens), .di_AMones(di_AMones),.di_AStens(di_AStens), .di_ASones(di_ASones), 
@@ -149,6 +163,8 @@ module didp (
 		 reg [3:0] ce;
 		 wire [3:0] Mtens, Mones, Stens, Sones,
 		 			AMtens, AMones, AStens, ASones;
+
+		reg alarmmatching;
 		 
 
 		 always @(*) begin
@@ -185,6 +201,8 @@ module didp (
 		 		reset[1] = ((Stens == 4'b0101) && reset[0]) ? 1'b1 : 1'b0;
 		 		reset[2] = ((Mones == 4'b1001) && reset[1]) ? 1'b1 : 1'b0;
 		 		reset[3] = ((Mtens == 4'b0101) && reset[2]) ? 1'b1 : 1'b0;
+
+				alarmmatching = ((Mtens == AMtens) && (Mones == AMones) && (Stens == AStens) && (Stens == ASones)) ? 1'b1 : 1'b0;
 		 	end
 			else begin
 				ce[0] = 1'b0;
@@ -199,7 +217,7 @@ module didp (
 			end
 		end
 
-		 assign did_alarmMatch = ((Mtens == AMtens) && (Mones == AMones) && (Stens == AStens) && (Stens == ASones)) ? 1'b1 : 1'b0;
+		 assign did_alarmMatch = alarmmatching;
 
 	     countrce countrce1(.q(Sones[3:0]), .d(bu_rx_data[3:0]), .ld(dicLdSones), .ce(ce[0] || dicLdSones), .rst(reset[0]), .clk(clk));
 		 countrce countrce2(.q(Stens[3:0]), .d(bu_rx_data[3:0]), .ld(dicLdStens), .ce(ce[1] || dicLdStens), .rst(reset[1]), .clk(clk));
@@ -231,7 +249,7 @@ module dictrl(
 	      output reg  dicLdAStens, // load the alarm 10's seconds
 	      output reg  dicLdASones, // load the alarm 1's seconds
 	      output reg  dicRun, // clock should run
-
+		  output wire loadalarm,
 	      output wire dicAlarmIdle, // alarm is off
 	      output wire dicAlarmArmed, // alarm is armed
 	      output wire dicAlarmTrig, // alarm is triggered
@@ -262,6 +280,7 @@ module dictrl(
 
 		  reg alarm1, alarm2, alarm3;
 
+		  assign loadalarm = ((state == s1) || (state == s2) || (state == s3) || (state == s4));
 		  assign dicAlarmIdle = alarm1;
 		  assign dicAlarmArmed = alarm2;
 		  assign dicAlarmTrig = alarm3;
@@ -276,7 +295,7 @@ module dictrl(
 		always @(posedge clk) begin
 			if(rst)
 				alarmstate <= alarmOff;
-			else if (bu_rx_data_rdy)
+			else if (oneSecStrb)
 				alarmstate <= next_alarmstate;
 		end
 
