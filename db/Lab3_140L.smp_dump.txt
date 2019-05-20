@@ -1,4 +1,10 @@
 
+State Machine - |Lab3_140L|dictrl:dictrl|next_alarmstate
+Name next_alarmstate.alarmOff next_alarmstate.alarmTrig next_alarmstate.alarmArm 
+next_alarmstate.alarmOff 0 0 0 
+next_alarmstate.alarmArm 1 0 1 
+next_alarmstate.alarmTrig 1 1 0 
+
 State Machine - |Lab3_140L|dictrl:dictrl|alarmstate
 Name alarmstate.alarmOff alarmstate.alarmTrig alarmstate.alarmArm 
 alarmstate.alarmOff 0 0 0 
