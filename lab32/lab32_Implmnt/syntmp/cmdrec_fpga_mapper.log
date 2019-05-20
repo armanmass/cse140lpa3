@@ -1,0 +1,14 @@
+C:\lscc\iCEcube2.2017.08\synpbase\bin64\m_generic.exe  -prodtype  synplify_pro   -encrypt  -pro  -rundir  D:\PhotonUser\Lab32\lab32\lab32_Implmnt   -part iCE40HX1K  -package TQ144    -maxfan 10000 -RWCheckOnRam 0 -pipe -fixgatedclocks 1 -fixgeneratedclocks 1 -summaryfile D:\PhotonUser\Lab32\lab32\lab32_Implmnt\synlog\report\lab32_fpga_mapper.xml  -flow mapping  -multisrs  -oedif  D:\PhotonUser\Lab32\lab32\lab32_Implmnt\lab32.edf   -autoconstraint  -freq 1.000   D:\PhotonUser\Lab32\lab32\lab32_Implmnt\synwork\lab32_prem.srd  -sap  D:\PhotonUser\Lab32\lab32\lab32_Implmnt\lab32.sap  -otap  D:\PhotonUser\Lab32\lab32\lab32_Implmnt\lab32.tap  -omap  D:\PhotonUser\Lab32\lab32\lab32_Implmnt\lab32.map  -devicelib  C:\lscc\iCEcube2.2017.08\synpbase\lib\generic\sb_ice40.v  -sap  D:\PhotonUser\Lab32\lab32\lab32_Implmnt\lab32.sap  -ologparam  D:\PhotonUser\Lab32\lab32\lab32_Implmnt\syntmp\lab32.plg  -osyn  D:\PhotonUser\Lab32\lab32\lab32_Implmnt\lab32.srm  -prjdir  D:\PhotonUser\Lab32\lab32\  -prjname  lab32_syn  -log  D:\PhotonUser\Lab32\lab32\lab32_Implmnt\synlog\lab32_fpga_mapper.srr 
+rc:1 success:1 runtime:6
+file:D:\PhotonUser\Lab32\lab32\lab32_Implmnt\lab32.edf|io:o|time:1558249794|size:518698|exec:0
+file:D:\PhotonUser\Lab32\lab32\lab32_Implmnt\synwork\lab32_prem.srd|io:i|time:1558249788|size:68226|exec:0
+file:D:\PhotonUser\Lab32\lab32\lab32_Implmnt\lab32.sap|io:o|time:1558249788|size:3104|exec:0
+file:D:\PhotonUser\Lab32\lab32\lab32_Implmnt\lab32.tap|io:o|time:0|size:0|exec:0
+file:D:\PhotonUser\Lab32\lab32\lab32_Implmnt\lab32.map|io:o|time:1558249794|size:28|exec:0
+file:C:\lscc\iCEcube2.2017.08\synpbase\lib\generic\sb_ice40.v|io:i|time:1553706825|size:224837|exec:0
+file:D:\PhotonUser\Lab32\lab32\lab32_Implmnt\lab32.sap|io:o|time:1558249788|size:3104|exec:0
+file:D:\PhotonUser\Lab32\lab32\lab32_Implmnt\syntmp\lab32.plg|io:o|time:1558249794|size:760|exec:0
+file:D:\PhotonUser\Lab32\lab32\lab32_Implmnt\lab32.srm|io:o|time:1558249793|size:14138|exec:0
+file:D:\PhotonUser\Lab32\lab32\lab32_Implmnt\synlog\lab32_fpga_mapper.srr|io:o|time:1558249794|size:39478|exec:0
+file:C:\lscc\iCEcube2.2017.08\synpbase\bin\m_generic.exe|io:i|time:1553706821|size:17853440|exec:1
+file:C:\lscc\iCEcube2.2017.08\synpbase\bin64\m_generic.exe|io:i|time:1553706823|size:32355840|exec:1

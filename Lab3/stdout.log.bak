@@ -1,0 +1,46 @@
+Running in Lattice mode
+
+
+Starting:    C:\lscc\iCEcube2.2017.08\synpbase\bin64\mbin\synbatch.exe
+Install:     C:\lscc\iCEcube2.2017.08\synpbase
+Hostname:    WIN-CQGD04421IJ
+Date:        Mon May 20 23:08:53 2019
+Version:     L-2016.09L+ice40
+
+Arguments:   -product synplify_pro -batch Lab3_syn.prj
+ProductType: synplify_pro
+
+
+
+
+
+log file: "D:\PhotonUser\Lab32\Lab3\Lab3_Implmnt\Lab3.srr"
+Running: Lab3_Implmnt in foreground
+
+Running Lab3_syn|Lab3_Implmnt
+
+Running: compile (Compile) on Lab3_syn|Lab3_Implmnt
+# Mon May 20 23:08:53 2019
+
+Running: compile_flow (Compile Process) on Lab3_syn|Lab3_Implmnt
+# Mon May 20 23:08:53 2019
+
+Running: compiler (Compile Input) on Lab3_syn|Lab3_Implmnt
+# Mon May 20 23:08:53 2019
+compiler exited with errors
+Job failed on: Lab3_syn|Lab3_Implmnt
+
+Job: "compiler" terminated with error status: 2
+See log file: "D:\PhotonUser\Lab32\Lab3\Lab3_Implmnt\synlog\Lab3_compiler.srr"
+# Mon May 20 23:08:53 2019
+
+Return Code: 2
+Run Time:00h:00m:00s
+Complete: Compile Process on Lab3_syn|Lab3_Implmnt
+Complete: Compile on Lab3_syn|Lab3_Implmnt
+Complete: Logic Synthesis on Lab3_syn|Lab3_Implmnt
+
+exit status=2
+
+exit status=2
+

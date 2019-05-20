@@ -1,0 +1,13 @@
+C:\lscc\iCEcube2.2017.08\synpbase\bin64\m_generic.exe  -prodtype  synplify_pro   -encrypt  -pro  -rundir  D:\PhotonUser\Lab32\f23\f23_Implmnt   -part iCE40HX1K  -package TQ144    -maxfan 10000 -RWCheckOnRam 0 -pipe -fixgatedclocks 1 -fixgeneratedclocks 1 -summaryfile D:\PhotonUser\Lab32\f23\f23_Implmnt\synlog\report\f23_premap.xml  -oedif  D:\PhotonUser\Lab32\f23\f23_Implmnt\f23.edf  -conchk_prepass  D:\PhotonUser\Lab32\f23\f23_Implmnt\f23_cck.rpt   -autoconstraint  -freq 1.000   D:\PhotonUser\Lab32\f23\f23_Implmnt\synwork\f23_mult.srs  -flow prepass  -gcc_prepass  -osrd  D:\PhotonUser\Lab32\f23\f23_Implmnt\synwork\f23_prem.srd  -qsap  D:\PhotonUser\Lab32\f23\f23_Implmnt\f23.sap  -devicelib  C:\lscc\iCEcube2.2017.08\synpbase\lib\generic\sb_ice40.v  -ologparam  D:\PhotonUser\Lab32\f23\f23_Implmnt\syntmp\f23.plg  -osyn  D:\PhotonUser\Lab32\f23\f23_Implmnt\synwork\f23_prem.srd  -prjdir  D:\PhotonUser\Lab32\f23\  -prjname  f23_syn  -log  D:\PhotonUser\Lab32\f23\f23_Implmnt\synlog\f23_premap.srr 
+rc:1 success:1 runtime:1
+file:D:\PhotonUser\Lab32\f23\f23_Implmnt\f23.edf|io:o|time:0|size:0|exec:0
+file:D:\PhotonUser\Lab32\f23\f23_Implmnt\f23_cck.rpt|io:o|time:1558305440|size:2842|exec:0
+file:D:\PhotonUser\Lab32\f23\f23_Implmnt\synwork\f23_mult.srs|io:i|time:1558305439|size:7141|exec:0
+file:D:\PhotonUser\Lab32\f23\f23_Implmnt\synwork\f23_prem.srd|io:o|time:1558305439|size:69392|exec:0
+file:D:\PhotonUser\Lab32\f23\f23_Implmnt\f23.sap|io:o|time:1558305440|size:3147|exec:0
+file:C:\lscc\iCEcube2.2017.08\synpbase\lib\generic\sb_ice40.v|io:i|time:1553706825|size:224837|exec:0
+file:D:\PhotonUser\Lab32\f23\f23_Implmnt\syntmp\f23.plg|io:o|time:1558305439|size:0|exec:0
+file:D:\PhotonUser\Lab32\f23\f23_Implmnt\synwork\f23_prem.srd|io:o|time:1558305439|size:69392|exec:0
+file:D:\PhotonUser\Lab32\f23\f23_Implmnt\synlog\f23_premap.srr|io:o|time:1558305440|size:6095|exec:0
+file:C:\lscc\iCEcube2.2017.08\synpbase\bin\m_generic.exe|io:i|time:1553706821|size:17853440|exec:1
+file:C:\lscc\iCEcube2.2017.08\synpbase\bin64\m_generic.exe|io:i|time:1553706823|size:32355840|exec:1

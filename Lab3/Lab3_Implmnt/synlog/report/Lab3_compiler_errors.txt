@@ -1,0 +1,2 @@
+@E: CG389 :"D:\PhotonUser\Lab32\latticehx1k.v":159:12:159:14|Reference to undefined module fake_pll
+

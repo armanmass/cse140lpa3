@@ -1,0 +1,10 @@
+@W: FX1039 :"d:\photonuser\lab32\buart.v":185:2:185:7|User-specified initial value defined for instance buart._rx.hh[1:0] is being ignored. 
+@W: MO129 :"d:\photonuser\lab32\dispstring.v":32:3:32:8|Sequential instance Lab_UT.dispString.dOut[7] is reduced to a combinational gate by constant propagation.
+@W: BN137 :|Found combinational loop during mapping at net Lab_UT.dictrl.alarmstate[0]
+@W: BN137 :|Found combinational loop during mapping at net Lab_UT.dictrl.alarmstate_1_sqmuxa_1_i
+@W: BN137 :|Found combinational loop during mapping at net Lab_UT.dictrl.alarmstate[1]
+@W: BN137 :|Found combinational loop during mapping at net Lab_UT.dictrl.alarmstate_0_sqmuxa_1
+@W: BN137 :|Found combinational loop during mapping at net Lab_UT.dictrl.alarmstate[0]
+@W: BN137 :|Found combinational loop during mapping at net Lab_UT.dispString.alarmstate_1_sqmuxa_1_i
+@W: BN137 :|Found combinational loop during mapping at net Lab_UT.dictrl.alarmstate[1]
+@W: MT420 |Found inferred clock latticehx1k|clk_in with period 15.89ns. Please declare a user-defined clock on object "p:clk_in"

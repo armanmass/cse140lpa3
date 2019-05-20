@@ -1,0 +1,87 @@
+#OPTIONS:"|-layerid|0|-orig_srs|D:\\PhotonUser\\Lab32\\vxzcv\\vxzcv_Implmnt\\synwork\\vxzcv_comp.srs|-prodtype|synplify_pro|-primux|-fixsmult|-infer_seqShift|-ice|-sdff_counter|-nram|-divnmod|-nostructver|-I|D:\\PhotonUser\\Lab32\\vxzcv\\|-I|C:\\lscc\\iCEcube2.2017.08\\synpbase\\lib|-v2001|-devicelib|C:\\lscc\\iCEcube2.2017.08\\synpbase\\lib\\generic\\sb_ice40.v|-encrypt|-pro|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work"
+#CUR:"C:\\lscc\\iCEcube2.2017.08\\synpbase\\bin64\\c_ver.exe":1553706822
+#CUR:"C:\\lscc\\iCEcube2.2017.08\\synpbase\\lib\\generic\\sb_ice40.v":1553706825
+#CUR:"C:\\lscc\\iCEcube2.2017.08\\synpbase\\lib\\vlog\\hypermods.v":1553706826
+#CUR:"C:\\lscc\\iCEcube2.2017.08\\synpbase\\lib\\vlog\\umr_capim.v":1553706826
+#CUR:"C:\\lscc\\iCEcube2.2017.08\\synpbase\\lib\\vlog\\scemi_objects.v":1553706826
+#CUR:"C:\\lscc\\iCEcube2.2017.08\\synpbase\\lib\\vlog\\scemi_pipes.svh":1553706826
+#CUR:"D:\\PhotonUser\\Lab32\\Half_Sec_Pulse_Every_Sec.v":1558249704
+#CUR:"D:\\PhotonUser\\Lab32\\Lab3_140L.v":1558251828
+#CUR:"D:\\PhotonUser\\Lab32\\NBitCounter.v":1558249704
+#CUR:"D:\\PhotonUser\\Lab32\\bcd2segment.v":1558249704
+#CUR:"D:\\PhotonUser\\Lab32\\buart.v":1558249704
+#CUR:"D:\\PhotonUser\\Lab32\\countrce.v":1558249704
+#CUR:"D:\\PhotonUser\\Lab32\\decodeKeys.v":1558249704
+#CUR:"D:\\PhotonUser\\Lab32\\dispString.v":1558249704
+#CUR:"D:\\PhotonUser\\Lab32\\fake_buart.v":1558249704
+#CUR:"D:\\PhotonUser\\Lab32\\fake_pll.v":1558249704
+#CUR:"D:\\PhotonUser\\Lab32\\latticehx1k.v":1558249704
+#CUR:"D:\\PhotonUser\\Lab32\\regrce.v":1558249704
+#CUR:"D:\\PhotonUser\\Lab32\\vbuf.v":1558249704
+#numinternalfiles:5
+#defaultlanguage:verilog
+0			"D:\PhotonUser\Lab32\Half_Sec_Pulse_Every_Sec.v" verilog
+1			"D:\PhotonUser\Lab32\Lab3_140L.v" verilog
+2			"D:\PhotonUser\Lab32\NBitCounter.v" verilog
+3			"D:\PhotonUser\Lab32\bcd2segment.v" verilog
+4			"D:\PhotonUser\Lab32\buart.v" verilog
+5			"D:\PhotonUser\Lab32\countrce.v" verilog
+6			"D:\PhotonUser\Lab32\decodeKeys.v" verilog
+7			"D:\PhotonUser\Lab32\dispString.v" verilog
+8			"D:\PhotonUser\Lab32\fake_buart.v" verilog
+9			"D:\PhotonUser\Lab32\fake_pll.v" verilog
+10			"D:\PhotonUser\Lab32\latticehx1k.v" verilog
+11			"D:\PhotonUser\Lab32\regrce.v" verilog
+12			"D:\PhotonUser\Lab32\vbuf.v" verilog
+#Dependency Lists(Uses List)
+0 2
+1 3 7 5 11
+2 -1
+3 -1
+4 -1
+5 -1
+6 -1
+7 -1
+8 -1
+9 -1
+10 0 4 1 12 2
+11 -1
+12 2
+#Dependency Lists(Users Of)
+0 10
+1 10
+2 0 10 12
+3 1
+4 10
+5 1
+6 -1
+7 1
+8 -1
+9 -1
+10 -1
+11 1
+12 10
+#Design Unit to File Association
+module work N_bit_counter 2
+module work Half_Sec_Pulse_Per_Sec 0
+module work bcd2segment 3
+module work dispString 7
+module work dictrl 1
+module work didp 1
+module work Lab3_140L 1
+module work countrce 5
+module work regrce 11
+module work baudgen 4
+module work baudgen2 4
+module work uart 4
+module work rxuart 4
+module work buart 4
+module work decodeKeys 6
+module work fake_buart 8
+module work fake_pll 9
+module work inpin 10
+module work resetGen 10
+module work latticehx1k_pll 10
+module work vbuf 12
+module work latticehx1k 10
+module work latticeDulPortRam512x8 12

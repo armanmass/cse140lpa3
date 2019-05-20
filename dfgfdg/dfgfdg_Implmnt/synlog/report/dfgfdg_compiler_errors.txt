@@ -1,0 +1,2 @@
+@E: CS168 :"D:\PhotonUser\Lab32\top_sft.v":32:17:32:17|Port tb_sim_rst does not exist
+

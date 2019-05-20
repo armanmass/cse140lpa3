@@ -1,0 +1,23 @@
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+@N: MO111 :"d:\photonuser\lab32\lab3_140l.v":115:19:115:24|Tristate driver L3_led_1 (in view: work.didp(verilog)) on net L3_led_1 (in view: work.didp(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\photonuser\lab32\lab3_140l.v":115:19:115:24|Tristate driver L3_led_2 (in view: work.didp(verilog)) on net L3_led_2 (in view: work.didp(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\photonuser\lab32\lab3_140l.v":115:19:115:24|Tristate driver L3_led_3 (in view: work.didp(verilog)) on net L3_led_3 (in view: work.didp(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\photonuser\lab32\lab3_140l.v":115:19:115:24|Tristate driver L3_led_4 (in view: work.didp(verilog)) on net L3_led_4 (in view: work.didp(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\photonuser\lab32\lab3_140l.v":115:19:115:24|Tristate driver L3_led_5 (in view: work.didp(verilog)) on net L3_led_5 (in view: work.didp(verilog)) has its enable tied to GND.
+@N: BN362 :"d:\photonuser\lab32\regrce.v":47:3:47:8|Removing sequential instance q[0] (in view: work.regrce_3(verilog)) of type view:PrimLib.sdffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\photonuser\lab32\regrce.v":47:3:47:8|Removing sequential instance q[0] (in view: work.regrce_2(verilog)) of type view:PrimLib.sdffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\photonuser\lab32\regrce.v":47:3:47:8|Removing sequential instance q[0] (in view: work.regrce_1(verilog)) of type view:PrimLib.sdffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\photonuser\lab32\regrce.v":47:3:47:8|Removing sequential instance q[0] (in view: work.regrce_0(verilog)) of type view:PrimLib.sdffre(prim) because it does not drive other instances.
+@N: BN115 :"d:\photonuser\lab32\lab3_140l.v":186:10:186:16|Removing instance regrce4 (in view: work.didp(verilog)) of type view:work.regrce_0(verilog) because it does not drive other instances.
+@N: BN115 :"d:\photonuser\lab32\lab3_140l.v":185:10:185:16|Removing instance regrce3 (in view: work.didp(verilog)) of type view:work.regrce_1(verilog) because it does not drive other instances.
+@N: BN115 :"d:\photonuser\lab32\lab3_140l.v":184:10:184:16|Removing instance regrce2 (in view: work.didp(verilog)) of type view:work.regrce_2(verilog) because it does not drive other instances.
+@N: BN115 :"d:\photonuser\lab32\lab3_140l.v":183:10:183:16|Removing instance regrce1 (in view: work.didp(verilog)) of type view:work.regrce_3(verilog) because it does not drive other instances.
+@N: MO111 :|Tristate driver led_t[0] (in view: work.latticehx1k(verilog)) on net led[0] (in view: work.latticehx1k(verilog)) has its enable tied to GND.
+@N: MO111 :|Tristate driver led_t[1] (in view: work.latticehx1k(verilog)) on net led[1] (in view: work.latticehx1k(verilog)) has its enable tied to GND.
+@N: MO111 :|Tristate driver led_t[2] (in view: work.latticehx1k(verilog)) on net led[2] (in view: work.latticehx1k(verilog)) has its enable tied to GND.
+@N: MO111 :|Tristate driver led_t[3] (in view: work.latticehx1k(verilog)) on net led[3] (in view: work.latticehx1k(verilog)) has its enable tied to GND.
+@N: MO111 :|Tristate driver led_t[4] (in view: work.latticehx1k(verilog)) on net led[4] (in view: work.latticehx1k(verilog)) has its enable tied to GND.
+@N: BN225 |Writing default property annotation file D:\PhotonUser\Lab32\vxzcv\vxzcv_Implmnt\vxzcv.sap.
+@N: BN362 :"d:\photonuser\lab32\vbuf.v":456:0:456:5|Removing sequential instance vram_wr_tap_4_user[1] (in view: work.vbuf_Z1(verilog)) of type view:PrimLib.sdffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\photonuser\lab32\vbuf.v":456:0:456:5|Removing sequential instance vram_wr_tap_4_user[0] (in view: work.vbuf_Z1(verilog)) of type view:PrimLib.sdffr(prim) because it does not drive other instances.

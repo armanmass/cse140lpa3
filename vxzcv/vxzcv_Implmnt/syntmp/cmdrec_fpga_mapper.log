@@ -1,0 +1,14 @@
+C:\lscc\iCEcube2.2017.08\synpbase\bin64\m_generic.exe  -prodtype  synplify_pro   -encrypt  -pro  -rundir  D:\PhotonUser\Lab32\vxzcv\vxzcv_Implmnt   -part iCE40HX1K  -package TQ144    -maxfan 10000 -RWCheckOnRam 0 -pipe -fixgatedclocks 1 -fixgeneratedclocks 1 -summaryfile D:\PhotonUser\Lab32\vxzcv\vxzcv_Implmnt\synlog\report\vxzcv_fpga_mapper.xml  -flow mapping  -multisrs  -oedif  D:\PhotonUser\Lab32\vxzcv\vxzcv_Implmnt\vxzcv.edf   -autoconstraint  -freq 1.000   D:\PhotonUser\Lab32\vxzcv\vxzcv_Implmnt\synwork\vxzcv_prem.srd  -sap  D:\PhotonUser\Lab32\vxzcv\vxzcv_Implmnt\vxzcv.sap  -otap  D:\PhotonUser\Lab32\vxzcv\vxzcv_Implmnt\vxzcv.tap  -omap  D:\PhotonUser\Lab32\vxzcv\vxzcv_Implmnt\vxzcv.map  -devicelib  C:\lscc\iCEcube2.2017.08\synpbase\lib\generic\sb_ice40.v  -sap  D:\PhotonUser\Lab32\vxzcv\vxzcv_Implmnt\vxzcv.sap  -ologparam  D:\PhotonUser\Lab32\vxzcv\vxzcv_Implmnt\syntmp\vxzcv.plg  -osyn  D:\PhotonUser\Lab32\vxzcv\vxzcv_Implmnt\vxzcv.srm  -prjdir  D:\PhotonUser\Lab32\vxzcv\  -prjname  vxzcv_syn  -log  D:\PhotonUser\Lab32\vxzcv\vxzcv_Implmnt\synlog\vxzcv_fpga_mapper.srr 
+rc:1 success:1 runtime:5
+file:D:\PhotonUser\Lab32\vxzcv\vxzcv_Implmnt\vxzcv.edf|io:o|time:1558251843|size:519056|exec:0
+file:D:\PhotonUser\Lab32\vxzcv\vxzcv_Implmnt\synwork\vxzcv_prem.srd|io:i|time:1558251838|size:68000|exec:0
+file:D:\PhotonUser\Lab32\vxzcv\vxzcv_Implmnt\vxzcv.sap|io:o|time:1558251838|size:3104|exec:0
+file:D:\PhotonUser\Lab32\vxzcv\vxzcv_Implmnt\vxzcv.tap|io:o|time:0|size:0|exec:0
+file:D:\PhotonUser\Lab32\vxzcv\vxzcv_Implmnt\vxzcv.map|io:o|time:1558251843|size:28|exec:0
+file:C:\lscc\iCEcube2.2017.08\synpbase\lib\generic\sb_ice40.v|io:i|time:1553706825|size:224837|exec:0
+file:D:\PhotonUser\Lab32\vxzcv\vxzcv_Implmnt\vxzcv.sap|io:o|time:1558251838|size:3104|exec:0
+file:D:\PhotonUser\Lab32\vxzcv\vxzcv_Implmnt\syntmp\vxzcv.plg|io:o|time:1558251843|size:760|exec:0
+file:D:\PhotonUser\Lab32\vxzcv\vxzcv_Implmnt\vxzcv.srm|io:o|time:1558251843|size:14725|exec:0
+file:D:\PhotonUser\Lab32\vxzcv\vxzcv_Implmnt\synlog\vxzcv_fpga_mapper.srr|io:o|time:1558251843|size:39405|exec:0
+file:C:\lscc\iCEcube2.2017.08\synpbase\bin\m_generic.exe|io:i|time:1553706821|size:17853440|exec:1
+file:C:\lscc\iCEcube2.2017.08\synpbase\bin64\m_generic.exe|io:i|time:1553706823|size:32355840|exec:1

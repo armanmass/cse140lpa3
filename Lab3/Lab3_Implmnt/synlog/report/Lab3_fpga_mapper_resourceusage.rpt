@@ -1,0 +1,45 @@
+---------------------------------------
+Resource Usage Report for latticehx1k 
+
+Mapping to part: ice40hx1ktq144
+Cell usage:
+GND             32 uses
+SB_CARRY        13 uses
+SB_DFF          46 uses
+SB_DFFE         4 uses
+SB_DFFER        57 uses
+SB_DFFES        6 uses
+SB_DFFESR       39 uses
+SB_DFFESS       6 uses
+SB_DFFNE        8 uses
+SB_DFFNESR      4 uses
+SB_DFFNS        2 uses
+SB_DFFNSR       49 uses
+SB_DFFNSS       1 use
+SB_DFFR         18 uses
+SB_DFFS         6 uses
+SB_DFFSR        14 uses
+SB_DFFSS        4 uses
+SB_GB           5 uses
+SB_PLL40_CORE   1 use
+SB_RAM512x8     1 use
+VCC             32 uses
+SB_LUT4         670 uses
+
+I/O ports: 10
+I/O primitives: 10
+SB_IO          10 uses
+
+I/O Register bits:                  0
+Register bits not including I/Os:   264 (20%)
+
+RAM/ROM usage summary
+Block Rams : 1 of 16 (6%)
+
+
+@S |Mapping Summary:
+Total  LUTs: 670 (52%)
+
+Distribution of All Consumed LUTs = LUT4 
+Distribution of All Consumed Luts 670 = 670 
+

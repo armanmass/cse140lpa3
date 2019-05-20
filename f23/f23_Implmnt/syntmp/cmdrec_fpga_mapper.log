@@ -1,0 +1,14 @@
+C:\lscc\iCEcube2.2017.08\synpbase\bin64\m_generic.exe  -prodtype  synplify_pro   -encrypt  -pro  -rundir  D:\PhotonUser\Lab32\f23\f23_Implmnt   -part iCE40HX1K  -package TQ144    -maxfan 10000 -RWCheckOnRam 0 -pipe -fixgatedclocks 1 -fixgeneratedclocks 1 -summaryfile D:\PhotonUser\Lab32\f23\f23_Implmnt\synlog\report\f23_fpga_mapper.xml  -flow mapping  -multisrs  -oedif  D:\PhotonUser\Lab32\f23\f23_Implmnt\f23.edf   -autoconstraint  -freq 1.000   D:\PhotonUser\Lab32\f23\f23_Implmnt\synwork\f23_prem.srd  -sap  D:\PhotonUser\Lab32\f23\f23_Implmnt\f23.sap  -otap  D:\PhotonUser\Lab32\f23\f23_Implmnt\f23.tap  -omap  D:\PhotonUser\Lab32\f23\f23_Implmnt\f23.map  -devicelib  C:\lscc\iCEcube2.2017.08\synpbase\lib\generic\sb_ice40.v  -sap  D:\PhotonUser\Lab32\f23\f23_Implmnt\f23.sap  -ologparam  D:\PhotonUser\Lab32\f23\f23_Implmnt\syntmp\f23.plg  -osyn  D:\PhotonUser\Lab32\f23\f23_Implmnt\f23.srm  -prjdir  D:\PhotonUser\Lab32\f23\  -prjname  f23_syn  -log  D:\PhotonUser\Lab32\f23\f23_Implmnt\synlog\f23_fpga_mapper.srr 
+rc:1 success:1 runtime:6
+file:D:\PhotonUser\Lab32\f23\f23_Implmnt\f23.edf|io:o|time:1558305445|size:630006|exec:0
+file:D:\PhotonUser\Lab32\f23\f23_Implmnt\synwork\f23_prem.srd|io:i|time:1558305439|size:69392|exec:0
+file:D:\PhotonUser\Lab32\f23\f23_Implmnt\f23.sap|io:o|time:1558305440|size:3147|exec:0
+file:D:\PhotonUser\Lab32\f23\f23_Implmnt\f23.tap|io:o|time:0|size:0|exec:0
+file:D:\PhotonUser\Lab32\f23\f23_Implmnt\f23.map|io:o|time:1558305446|size:28|exec:0
+file:C:\lscc\iCEcube2.2017.08\synpbase\lib\generic\sb_ice40.v|io:i|time:1553706825|size:224837|exec:0
+file:D:\PhotonUser\Lab32\f23\f23_Implmnt\f23.sap|io:o|time:1558305440|size:3147|exec:0
+file:D:\PhotonUser\Lab32\f23\f23_Implmnt\syntmp\f23.plg|io:o|time:1558305446|size:760|exec:0
+file:D:\PhotonUser\Lab32\f23\f23_Implmnt\f23.srm|io:o|time:1558305445|size:14918|exec:0
+file:D:\PhotonUser\Lab32\f23\f23_Implmnt\synlog\f23_fpga_mapper.srr|io:o|time:1558305446|size:43741|exec:0
+file:C:\lscc\iCEcube2.2017.08\synpbase\bin\m_generic.exe|io:i|time:1553706821|size:17853440|exec:1
+file:C:\lscc\iCEcube2.2017.08\synpbase\bin64\m_generic.exe|io:i|time:1553706823|size:32355840|exec:1

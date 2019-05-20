@@ -1,0 +1,18 @@
+@P:  Worst Slack : -2.477
+@P:  latticehx1k|clk_in - Estimated Frequency : NA
+@P:  latticehx1k|clk_in - Requested Frequency : 65.4 MHz
+@P:  latticehx1k|clk_in - Estimated Period : NA
+@P:  latticehx1k|clk_in - Requested Period : 15.295
+@P:  latticehx1k|clk_in - Slack : NA
+@P:  System - Estimated Frequency : 60.6 MHz
+@P:  System - Requested Frequency : 71.2 MHz
+@P:  System - Estimated Period : 16.514
+@P:  System - Requested Period : 14.037
+@P:  System - Slack : -2.477
+@P: latticehx1k Part : ice40hx1ktq144
+@P: latticehx1k I/O primitives : 10
+@P: latticehx1k I/O Register bits : 0
+@P: latticehx1k Register bits (Non I/O) : 228 (17%)
+@P: latticehx1k Block Rams : 1 of 16 (6%)
+@P: latticehx1k Total Luts : 498 (38%)
+@P:  CPU Time : 0h:00m:05s

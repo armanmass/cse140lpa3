@@ -1,0 +1,635 @@
+<html><body><samp><pre>
+<!@TC:1558252143>
+#Build: Synplify Pro L-2016.09L+ice40, Build 077R, Dec  2 2016
+#install: C:\lscc\iCEcube2.2017.08\synpbase
+#OS: Windows 8 6.2
+#Hostname: WIN-L8CDESF9QDT
+
+# Sun May 19 07:49:03 2019
+
+#Implementation: dfgfdg_Implmnt
+
+<a name=compilerReport1></a>Synopsys HDL Compiler, version comp2016q3p1, Build 141R, built Dec  5 2016</a>
+@N: : <!@TM:1558252143> | Running in 64-bit mode 
+Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
+
+<a name=compilerReport2></a>Synopsys Verilog Compiler, version comp2016q3p1, Build 141R, built Dec  5 2016</a>
+@N: : <!@TM:1558252143> | Running in 64-bit mode 
+Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
+
+@I::"C:\lscc\iCEcube2.2017.08\synpbase\lib\generic\sb_ice40.v" (library work)
+@I::"C:\lscc\iCEcube2.2017.08\synpbase\lib\vlog\hypermods.v" (library __hyper__lib__)
+@I::"C:\lscc\iCEcube2.2017.08\synpbase\lib\vlog\umr_capim.v" (library snps_haps)
+@I::"C:\lscc\iCEcube2.2017.08\synpbase\lib\vlog\scemi_objects.v" (library snps_haps)
+@I::"C:\lscc\iCEcube2.2017.08\synpbase\lib\vlog\scemi_pipes.svh" (library snps_haps)
+@I::"D:\PhotonUser\Lab32\Half_Sec_Pulse_Every_Sec.v" (library work)
+@I::"D:\PhotonUser\Lab32\Lab3_140L.v" (library work)
+@I::"D:\PhotonUser\Lab32\NBitCounter.v" (library work)
+@I::"D:\PhotonUser\Lab32\bcd2segment.v" (library work)
+@I::"D:\PhotonUser\Lab32\buart.v" (library work)
+@I::"D:\PhotonUser\Lab32\countrce.v" (library work)
+@I::"D:\PhotonUser\Lab32\decodeKeys.v" (library work)
+@I::"D:\PhotonUser\Lab32\dispString.v" (library work)
+@I::"D:\PhotonUser\Lab32\fake_buart.v" (library work)
+@I::"D:\PhotonUser\Lab32\fake_pll.v" (library work)
+@I::"D:\PhotonUser\Lab32\latticehx1k.v" (library work)
+@I::"D:\PhotonUser\Lab32\regrce.v" (library work)
+@I::"D:\PhotonUser\Lab32\tb_sft.v" (library work)
+@I::"D:\PhotonUser\Lab32\top_sft.v" (library work)
+@I::"D:\PhotonUser\Lab32\vbuf.v" (library work)
+Verilog syntax check successful!
+Selecting top level module top_sft
+<font color=#A52A2A>@W:<a href="@W:CG730:@XP_HELP">CG730</a> : <a href="D:\PhotonUser\Lab32\top_sft.v:1:7:1:14:@W:CG730:@XP_MSG">top_sft.v(1)</a><!@TM:1558252143> | Top-level module top_sft has no ports</font>
+
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="C:\lscc\iCEcube2.2017.08\synpbase\lib\generic\sb_ice40.v:698:7:698:20:@N:CG364:@XP_MSG">sb_ice40.v(698)</a><!@TM:1558252143> | Synthesizing module SB_PLL40_CORE in library work.
+
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="D:\PhotonUser\Lab32\latticehx1k.v:355:7:355:22:@N:CG364:@XP_MSG">latticehx1k.v(355)</a><!@TM:1558252143> | Synthesizing module latticehx1k_pll in library work.
+
+<font color=#A52A2A>@W:<a href="@W:CG781:@XP_HELP">CG781</a> : <a href="D:\PhotonUser\Lab32\latticehx1k.v:368:47:368:48:@W:CG781:@XP_MSG">latticehx1k.v(368)</a><!@TM:1558252143> | Input EXTFEEDBACK on instance latticehx1k_pll_inst is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. </font>
+<font color=#A52A2A>@W:<a href="@W:CG781:@XP_HELP">CG781</a> : <a href="D:\PhotonUser\Lab32\latticehx1k.v:369:48:369:49:@W:CG781:@XP_MSG">latticehx1k.v(369)</a><!@TM:1558252143> | Input DYNAMICDELAY on instance latticehx1k_pll_inst is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. </font>
+<font color=#A52A2A>@W:<a href="@W:CG781:@XP_HELP">CG781</a> : <a href="D:\PhotonUser\Lab32\latticehx1k.v:372:51:372:52:@W:CG781:@XP_MSG">latticehx1k.v(372)</a><!@TM:1558252143> | Input LATCHINPUTVALUE on instance latticehx1k_pll_inst is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. </font>
+<font color=#A52A2A>@W:<a href="@W:CG781:@XP_HELP">CG781</a> : <a href="D:\PhotonUser\Lab32\latticehx1k.v:374:39:374:40:@W:CG781:@XP_MSG">latticehx1k.v(374)</a><!@TM:1558252143> | Input SDI on instance latticehx1k_pll_inst is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. </font>
+<font color=#A52A2A>@W:<a href="@W:CG781:@XP_HELP">CG781</a> : <a href="D:\PhotonUser\Lab32\latticehx1k.v:376:40:376:41:@W:CG781:@XP_MSG">latticehx1k.v(376)</a><!@TM:1558252143> | Input SCLK on instance latticehx1k_pll_inst is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. </font>
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="D:\PhotonUser\Lab32\NBitCounter.v:31:7:31:20:@N:CG364:@XP_MSG">NBitCounter.v(31)</a><!@TM:1558252143> | Synthesizing module N_bit_counter in library work.
+
+	N=32'b00000000000000000000000000000100
+	N_1=32'b00000000000000000000000000000011
+   Generated name = N_bit_counter_4s_3s
+
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="D:\PhotonUser\Lab32\NBitCounter.v:31:7:31:20:@N:CG364:@XP_MSG">NBitCounter.v(31)</a><!@TM:1558252143> | Synthesizing module N_bit_counter in library work.
+
+	N=32'b00000000000000000000000000010011
+	N_1=32'b00000000000000000000000000010010
+   Generated name = N_bit_counter_19s_18s
+
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="D:\PhotonUser\Lab32\Half_Sec_Pulse_Every_Sec.v:44:7:44:29:@N:CG364:@XP_MSG">Half_Sec_Pulse_Every_Sec.v(44)</a><!@TM:1558252143> | Synthesizing module Half_Sec_Pulse_Per_Sec in library work.
+
+	CLK_FREQ=32'b00000000101101110001101100000000
+	CLK_CYCLES_PER_HALF_SEC=32'b00000000010110111000110110000000
+	COUNTER_WIDTH=32'b00000000000000000000000000010111
+   Generated name = Half_Sec_Pulse_Per_Sec_12000000s_6000000s_23s
+
+@N:<a href="@N:CG179:@XP_HELP">CG179</a> : <a href="D:\PhotonUser\Lab32\Half_Sec_Pulse_Every_Sec.v:116:44:116:51:@N:CG179:@XP_MSG">Half_Sec_Pulse_Every_Sec.v(116)</a><!@TM:1558252143> | Removing redundant assignment.
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="C:\lscc\iCEcube2.2017.08\synpbase\lib\generic\sb_ice40.v:501:7:501:12:@N:CG364:@XP_MSG">sb_ice40.v(501)</a><!@TM:1558252143> | Synthesizing module SB_IO in library work.
+
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="D:\PhotonUser\Lab32\latticehx1k.v:43:7:43:12:@N:CG364:@XP_MSG">latticehx1k.v(43)</a><!@TM:1558252143> | Synthesizing module inpin in library work.
+
+<font color=#A52A2A>@W:<a href="@W:CG781:@XP_HELP">CG781</a> : <a href="D:\PhotonUser\Lab32\latticehx1k.v:48:33:48:36:@W:CG781:@XP_MSG">latticehx1k.v(48)</a><!@TM:1558252143> | Input LATCH_INPUT_VALUE on instance _io is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. </font>
+<font color=#A52A2A>@W:<a href="@W:CG781:@XP_HELP">CG781</a> : <a href="D:\PhotonUser\Lab32\latticehx1k.v:48:33:48:36:@W:CG781:@XP_MSG">latticehx1k.v(48)</a><!@TM:1558252143> | Input CLOCK_ENABLE on instance _io is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. </font>
+<font color=#A52A2A>@W:<a href="@W:CG781:@XP_HELP">CG781</a> : <a href="D:\PhotonUser\Lab32\latticehx1k.v:48:33:48:36:@W:CG781:@XP_MSG">latticehx1k.v(48)</a><!@TM:1558252143> | Input OUTPUT_CLK on instance _io is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. </font>
+<font color=#A52A2A>@W:<a href="@W:CG781:@XP_HELP">CG781</a> : <a href="D:\PhotonUser\Lab32\latticehx1k.v:48:33:48:36:@W:CG781:@XP_MSG">latticehx1k.v(48)</a><!@TM:1558252143> | Input OUTPUT_ENABLE on instance _io is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. </font>
+<font color=#A52A2A>@W:<a href="@W:CG781:@XP_HELP">CG781</a> : <a href="D:\PhotonUser\Lab32\latticehx1k.v:48:33:48:36:@W:CG781:@XP_MSG">latticehx1k.v(48)</a><!@TM:1558252143> | Input D_OUT_1 on instance _io is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. </font>
+<font color=#A52A2A>@W:<a href="@W:CG781:@XP_HELP">CG781</a> : <a href="D:\PhotonUser\Lab32\latticehx1k.v:48:33:48:36:@W:CG781:@XP_MSG">latticehx1k.v(48)</a><!@TM:1558252143> | Input D_OUT_0 on instance _io is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. </font>
+<font color=#A52A2A>@W:<a href="@W:CG1273:@XP_HELP">CG1273</a> : <a href="D:\PhotonUser\Lab32\latticehx1k.v:49:21:49:24:@W:CG1273:@XP_MSG">latticehx1k.v(49)</a><!@TM:1558252143> | An input port (port pin) is the target of an assignment - please check if this is intentional</font>
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="D:\PhotonUser\Lab32\buart.v:62:7:62:15:@N:CG364:@XP_MSG">buart.v(62)</a><!@TM:1558252143> | Synthesizing module baudgen2 in library work.
+
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="D:\PhotonUser\Lab32\buart.v:132:7:132:13:@N:CG364:@XP_MSG">buart.v(132)</a><!@TM:1558252143> | Synthesizing module rxuart in library work.
+
+<font color=#A52A2A>@W:<a href="@W:CL265:@XP_HELP">CL265</a> : <a href="D:\PhotonUser\Lab32\buart.v:185:2:185:8:@W:CL265:@XP_MSG">buart.v(185)</a><!@TM:1558252143> | Removing unused bit 2 of hh[2:0]. Either assign all bits or reduce the width of the signal.</font>
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="D:\PhotonUser\Lab32\buart.v:42:7:42:14:@N:CG364:@XP_MSG">buart.v(42)</a><!@TM:1558252143> | Synthesizing module baudgen in library work.
+
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="D:\PhotonUser\Lab32\buart.v:91:7:91:11:@N:CG364:@XP_MSG">buart.v(91)</a><!@TM:1558252143> | Synthesizing module uart in library work.
+
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="D:\PhotonUser\Lab32\buart.v:199:7:199:12:@N:CG364:@XP_MSG">buart.v(199)</a><!@TM:1558252143> | Synthesizing module buart in library work.
+
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="D:\PhotonUser\Lab32\NBitCounter.v:31:7:31:20:@N:CG364:@XP_MSG">NBitCounter.v(31)</a><!@TM:1558252143> | Synthesizing module N_bit_counter in library work.
+
+	N=32'b00000000000000000000000000000101
+	N_1=32'b00000000000000000000000000000100
+   Generated name = N_bit_counter_5s_4s
+
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="D:\PhotonUser\Lab32\latticehx1k.v:64:7:64:15:@N:CG364:@XP_MSG">latticehx1k.v(64)</a><!@TM:1558252143> | Synthesizing module resetGen in library work.
+
+@N:<a href="@N:CG179:@XP_HELP">CG179</a> : <a href="D:\PhotonUser\Lab32\latticehx1k.v:87:32:87:43:@N:CG179:@XP_MSG">latticehx1k.v(87)</a><!@TM:1558252143> | Removing redundant assignment.
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="D:\PhotonUser\Lab32\bcd2segment.v:49:7:49:18:@N:CG364:@XP_MSG">bcd2segment.v(49)</a><!@TM:1558252143> | Synthesizing module bcd2segment in library work.
+
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="D:\PhotonUser\Lab32\dispString.v:39:7:39:17:@N:CG364:@XP_MSG">dispString.v(39)</a><!@TM:1558252143> | Synthesizing module dispString in library work.
+
+@N:<a href="@N:CG179:@XP_HELP">CG179</a> : <a href="D:\PhotonUser\Lab32\dispString.v:63:11:63:14:@N:CG179:@XP_MSG">dispString.v(63)</a><!@TM:1558252143> | Removing redundant assignment.
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="D:\PhotonUser\Lab32\Lab3_140L.v:198:7:198:13:@N:CG364:@XP_MSG">Lab3_140L.v(198)</a><!@TM:1558252143> | Synthesizing module dictrl in library work.
+
+<font color=#A52A2A>@W:<a href="@W:CG296:@XP_HELP">CG296</a> : <a href="D:\PhotonUser\Lab32\Lab3_140L.v:269:11:269:30:@W:CG296:@XP_MSG">Lab3_140L.v(269)</a><!@TM:1558252143> | Incomplete sensitivity list; assuming completeness. Make sure all referenced variables in message CG290 are included in the sensitivity list.</font>
+<font color=#A52A2A>@W:<a href="@W:CG290:@XP_HELP">CG290</a> : <a href="D:\PhotonUser\Lab32\Lab3_140L.v:280:14:280:28:@W:CG290:@XP_MSG">Lab3_140L.v(280)</a><!@TM:1558252143> | Referenced variable did_alarmMatch is not in sensitivity list.</font>
+<font color=#A52A2A>@W:<a href="@W:CG133:@XP_HELP">CG133</a> : <a href="D:\PhotonUser\Lab32\Lab3_140L.v:200:19:200:29:@W:CG133:@XP_MSG">Lab3_140L.v(200)</a><!@TM:1558252143> | Object dicLdMones is declared but not assigned. Either assign a value or remove the declaration.</font>
+<font color=#A52A2A>@W:<a href="@W:CG133:@XP_HELP">CG133</a> : <a href="D:\PhotonUser\Lab32\Lab3_140L.v:201:19:201:29:@W:CG133:@XP_MSG">Lab3_140L.v(201)</a><!@TM:1558252143> | Object dicLdStens is declared but not assigned. Either assign a value or remove the declaration.</font>
+<font color=#A52A2A>@W:<a href="@W:CG133:@XP_HELP">CG133</a> : <a href="D:\PhotonUser\Lab32\Lab3_140L.v:202:19:202:29:@W:CG133:@XP_MSG">Lab3_140L.v(202)</a><!@TM:1558252143> | Object dicLdSones is declared but not assigned. Either assign a value or remove the declaration.</font>
+<font color=#A52A2A>@W:<a href="@W:CG133:@XP_HELP">CG133</a> : <a href="D:\PhotonUser\Lab32\Lab3_140L.v:203:19:203:30:@W:CG133:@XP_MSG">Lab3_140L.v(203)</a><!@TM:1558252143> | Object dicLdAMtens is declared but not assigned. Either assign a value or remove the declaration.</font>
+<font color=#A52A2A>@W:<a href="@W:CG133:@XP_HELP">CG133</a> : <a href="D:\PhotonUser\Lab32\Lab3_140L.v:204:19:204:30:@W:CG133:@XP_MSG">Lab3_140L.v(204)</a><!@TM:1558252143> | Object dicLdAMones is declared but not assigned. Either assign a value or remove the declaration.</font>
+<font color=#A52A2A>@W:<a href="@W:CG133:@XP_HELP">CG133</a> : <a href="D:\PhotonUser\Lab32\Lab3_140L.v:205:19:205:30:@W:CG133:@XP_MSG">Lab3_140L.v(205)</a><!@TM:1558252143> | Object dicLdAStens is declared but not assigned. Either assign a value or remove the declaration.</font>
+<font color=#A52A2A>@W:<a href="@W:CG133:@XP_HELP">CG133</a> : <a href="D:\PhotonUser\Lab32\Lab3_140L.v:206:19:206:30:@W:CG133:@XP_MSG">Lab3_140L.v(206)</a><!@TM:1558252143> | Object dicLdASones is declared but not assigned. Either assign a value or remove the declaration.</font>
+<font color=#A52A2A>@W:<a href="@W:CL118:@XP_HELP">CL118</a> : <a href="D:\PhotonUser\Lab32\Lab3_140L.v:295:3:295:7:@W:CL118:@XP_MSG">Lab3_140L.v(295)</a><!@TM:1558252143> | Latch generated from always block for signal next_state[3:0]; possible missing assignment in an if or case statement.</font>
+<font color=#A52A2A>@W:<a href="@W:CL118:@XP_HELP">CL118</a> : <a href="D:\PhotonUser\Lab32\Lab3_140L.v:270:3:270:7:@W:CL118:@XP_MSG">Lab3_140L.v(270)</a><!@TM:1558252143> | Latch generated from always block for signal next_alarmstate[3:0]; possible missing assignment in an if or case statement.</font>
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="D:\PhotonUser\Lab32\countrce.v:33:7:33:15:@N:CG364:@XP_MSG">countrce.v(33)</a><!@TM:1558252143> | Synthesizing module countrce in library work.
+
+@N:<a href="@N:CG179:@XP_HELP">CG179</a> : <a href="D:\PhotonUser\Lab32\countrce.v:59:9:59:10:@N:CG179:@XP_MSG">countrce.v(59)</a><!@TM:1558252143> | Removing redundant assignment.
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="D:\PhotonUser\Lab32\regrce.v:39:7:39:13:@N:CG364:@XP_MSG">regrce.v(39)</a><!@TM:1558252143> | Synthesizing module regrce in library work.
+
+@N:<a href="@N:CG179:@XP_HELP">CG179</a> : <a href="D:\PhotonUser\Lab32\regrce.v:54:9:54:10:@N:CG179:@XP_MSG">regrce.v(54)</a><!@TM:1558252143> | Removing redundant assignment.
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="D:\PhotonUser\Lab32\Lab3_140L.v:102:7:102:11:@N:CG364:@XP_MSG">Lab3_140L.v(102)</a><!@TM:1558252143> | Synthesizing module didp in library work.
+
+<font color=#A52A2A>@W:<a href="@W:CS263:@XP_HELP">CS263</a> : <a href="D:\PhotonUser\Lab32\Lab3_140L.v:183:38:183:54:@W:CS263:@XP_MSG">Lab3_140L.v(183)</a><!@TM:1558252143> | Port-width mismatch for port d. The port definition is 1 bits, but the actual port connection bit width is 4. Adjust either the definition or the instantiation of this port.</font>
+<font color=#A52A2A>@W:<a href="@W:CS263:@XP_HELP">CS263</a> : <a href="D:\PhotonUser\Lab32\Lab3_140L.v:183:21:183:33:@W:CS263:@XP_MSG">Lab3_140L.v(183)</a><!@TM:1558252143> | Port-width mismatch for port q. The port definition is 1 bits, but the actual port connection bit width is 4. Adjust either the definition or the instantiation of this port.</font>
+<font color=#A52A2A>@W:<a href="@W:CS263:@XP_HELP">CS263</a> : <a href="D:\PhotonUser\Lab32\Lab3_140L.v:184:38:184:54:@W:CS263:@XP_MSG">Lab3_140L.v(184)</a><!@TM:1558252143> | Port-width mismatch for port d. The port definition is 1 bits, but the actual port connection bit width is 4. Adjust either the definition or the instantiation of this port.</font>
+<font color=#A52A2A>@W:<a href="@W:CS263:@XP_HELP">CS263</a> : <a href="D:\PhotonUser\Lab32\Lab3_140L.v:184:21:184:33:@W:CS263:@XP_MSG">Lab3_140L.v(184)</a><!@TM:1558252143> | Port-width mismatch for port q. The port definition is 1 bits, but the actual port connection bit width is 4. Adjust either the definition or the instantiation of this port.</font>
+<font color=#A52A2A>@W:<a href="@W:CS263:@XP_HELP">CS263</a> : <a href="D:\PhotonUser\Lab32\Lab3_140L.v:185:38:185:54:@W:CS263:@XP_MSG">Lab3_140L.v(185)</a><!@TM:1558252143> | Port-width mismatch for port d. The port definition is 1 bits, but the actual port connection bit width is 4. Adjust either the definition or the instantiation of this port.</font>
+<font color=#A52A2A>@W:<a href="@W:CS263:@XP_HELP">CS263</a> : <a href="D:\PhotonUser\Lab32\Lab3_140L.v:185:21:185:33:@W:CS263:@XP_MSG">Lab3_140L.v(185)</a><!@TM:1558252143> | Port-width mismatch for port q. The port definition is 1 bits, but the actual port connection bit width is 4. Adjust either the definition or the instantiation of this port.</font>
+<font color=#A52A2A>@W:<a href="@W:CS263:@XP_HELP">CS263</a> : <a href="D:\PhotonUser\Lab32\Lab3_140L.v:186:38:186:54:@W:CS263:@XP_MSG">Lab3_140L.v(186)</a><!@TM:1558252143> | Port-width mismatch for port d. The port definition is 1 bits, but the actual port connection bit width is 4. Adjust either the definition or the instantiation of this port.</font>
+<font color=#A52A2A>@W:<a href="@W:CS263:@XP_HELP">CS263</a> : <a href="D:\PhotonUser\Lab32\Lab3_140L.v:186:21:186:33:@W:CS263:@XP_MSG">Lab3_140L.v(186)</a><!@TM:1558252143> | Port-width mismatch for port q. The port definition is 1 bits, but the actual port connection bit width is 4. Adjust either the definition or the instantiation of this port.</font>
+<font color=#A52A2A>@W:<a href="@W:CG360:@XP_HELP">CG360</a> : <a href="D:\PhotonUser\Lab32\Lab3_140L.v:115:19:115:25:@W:CG360:@XP_MSG">Lab3_140L.v(115)</a><!@TM:1558252143> | Removing wire L3_led, as there is no assignment to it.</font>
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="D:\PhotonUser\Lab32\Lab3_140L.v:26:7:26:16:@N:CG364:@XP_MSG">Lab3_140L.v(26)</a><!@TM:1558252143> | Synthesizing module Lab3_140L in library work.
+
+<font color=#A52A2A>@W:<a href="@W:CS263:@XP_HELP">CS263</a> : <a href="D:\PhotonUser\Lab32\Lab3_140L.v:80:70:80:78:@W:CS263:@XP_MSG">Lab3_140L.v(80)</a><!@TM:1558252143> | Port-width mismatch for port b0. The port definition is 8 bits, but the actual port connection bit width is 4. Adjust either the definition or the instantiation of this port.</font>
+<font color=#A52A2A>@W:<a href="@W:CS263:@XP_HELP">CS263</a> : <a href="D:\PhotonUser\Lab32\Lab3_140L.v:80:85:80:93:@W:CS263:@XP_MSG">Lab3_140L.v(80)</a><!@TM:1558252143> | Port-width mismatch for port b1. The port definition is 8 bits, but the actual port connection bit width is 4. Adjust either the definition or the instantiation of this port.</font>
+<font color=#A52A2A>@W:<a href="@W:CS263:@XP_HELP">CS263</a> : <a href="D:\PhotonUser\Lab32\Lab3_140L.v:81:14:81:22:@W:CS263:@XP_MSG">Lab3_140L.v(81)</a><!@TM:1558252143> | Port-width mismatch for port b3. The port definition is 8 bits, but the actual port connection bit width is 4. Adjust either the definition or the instantiation of this port.</font>
+<font color=#A52A2A>@W:<a href="@W:CS263:@XP_HELP">CS263</a> : <a href="D:\PhotonUser\Lab32\Lab3_140L.v:81:29:81:37:@W:CS263:@XP_MSG">Lab3_140L.v(81)</a><!@TM:1558252143> | Port-width mismatch for port b4. The port definition is 8 bits, but the actual port connection bit width is 4. Adjust either the definition or the instantiation of this port.</font>
+<font color=#A52A2A>@W:<a href="@W:CS263:@XP_HELP">CS263</a> : <a href="D:\PhotonUser\Lab32\Lab3_140L.v:81:96:81:97:@W:CS263:@XP_MSG">Lab3_140L.v(81)</a><!@TM:1558252143> | Port-width mismatch for port go. The port definition is 1 bits, but the actual port connection bit width is 32. Adjust either the definition or the instantiation of this port.</font>
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\Lab3_140L.v:64:3:64:9:@N:CL189:@XP_MSG">Lab3_140L.v(64)</a><!@TM:1558252143> | Register bit alarmchar[7] is always 0.
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="D:\PhotonUser\Lab32\NBitCounter.v:31:7:31:20:@N:CG364:@XP_MSG">NBitCounter.v(31)</a><!@TM:1558252143> | Synthesizing module N_bit_counter in library work.
+
+	N=32'b00000000000000000000000000001010
+	N_1=32'b00000000000000000000000000001001
+   Generated name = N_bit_counter_10s_9s
+
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="D:\PhotonUser\Lab32\NBitCounter.v:31:7:31:20:@N:CG364:@XP_MSG">NBitCounter.v(31)</a><!@TM:1558252143> | Synthesizing module N_bit_counter in library work.
+
+	N=32'b00000000000000000000000000001001
+	N_1=32'b00000000000000000000000000001000
+   Generated name = N_bit_counter_9s_8s
+
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="C:\lscc\iCEcube2.2017.08\synpbase\lib\generic\sb_ice40.v:1124:7:1124:18:@N:CG364:@XP_MSG">sb_ice40.v(1124)</a><!@TM:1558252143> | Synthesizing module SB_RAM512x8 in library work.
+
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:634:7:634:29:@N:CG364:@XP_MSG">vbuf.v(634)</a><!@TM:1558252143> | Synthesizing module latticeDulPortRam512x8 in library work.
+
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:66:7:66:11:@N:CG364:@XP_MSG">vbuf.v(66)</a><!@TM:1558252143> | Synthesizing module vbuf in library work.
+
+	CLKFREQ=32'b00000000101101110001101100000000
+	BAUD=32'b00000000000000011100001000000000
+	CYCLES_PER_BYTE=32'b00000000000000000000010001001100
+	CYCLES_PER_4_BITS=32'b00000000000000000000001000100110
+	COUNT_WIDTH=32'b00000000000000000000000000001010
+	BYTES_PER_RAW=32'b00000000000000000000000000100000
+	RAWS_4_USER=32'b00000000000000000000000000000010
+	RAWS_4_CLK=32'b00000000000000000000000000001110
+	LAST_BYTES_4_USER=32'b00000000000000000000000000111111
+	LAST_BYTES_4_CLK=32'b00000000000000000000000111111111
+	rd_clk_init=32'b00000000000000000000000000000001
+	PRE_COUNTER_WIDTH=32'b00000000000000000000000000000100
+	PRE_COUNTER_MAX_NUMBER=32'b00000000000000000000000000001111
+	SECOND_COUNTER_WIDTH=32'b00000000000000000000000000000110
+	l_count_reset=32'b00000000000000000000001000010111
+	l_count_reset_l_n=32'b00000000000000000000000000000110
+	l_count_trig_rd=32'b00000000000000000000000000000111
+	l_count_init=32'b00000000000000000000000100010100
+	l_count_rise_rdy=32'b00000000000000000000000000000111
+   Generated name = vbuf_Z1
+
+@N:<a href="@N:CG179:@XP_HELP">CG179</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:199:27:199:38:@N:CG179:@XP_MSG">vbuf.v(199)</a><!@TM:1558252143> | Removing redundant assignment.
+@N:<a href="@N:CG179:@XP_HELP">CG179</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:501:77:501:94:@N:CG179:@XP_MSG">vbuf.v(501)</a><!@TM:1558252143> | Removing redundant assignment.
+<font color=#A52A2A>@W:<a href="@W:CL169:@XP_HELP">CL169</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:186:0:186:6:@W:CL169:@XP_MSG">vbuf.v(186)</a><!@TM:1558252143> | Pruning unused register l_count_15. Make sure that there are no unused intermediate registers.</font>
+@A:<a href="@A:CL282:@XP_HELP">CL282</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:217:0:217:6:@A:CL282:@XP_MSG">vbuf.v(217)</a><!@TM:1558252143> | Feedback mux created for signal r_data_reg[7:0]. It is possible a set/reset assignment for this is signal missing. To improve timing and area, specify a set/reset value.
+@A:<a href="@A:CL282:@XP_HELP">CL282</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:186:0:186:6:@A:CL282:@XP_MSG">vbuf.v(186)</a><!@TM:1558252143> | Feedback mux created for signal r_data_rdy. It is possible a set/reset assignment for this is signal missing. To improve timing and area, specify a set/reset value.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[0] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[1] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[2] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[3] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[4] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[5] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[6] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[7] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[8] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[9] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[10] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[11] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[12] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[13] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[14] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[15] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[16] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[17] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[18] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[19] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[20] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[21] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[22] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[23] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[24] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[25] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[26] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[27] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[28] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[29] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[30] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[31] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[32] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[33] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[38] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[39] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[44] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[45] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[46] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[47] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[48] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[49] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[50] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[51] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[56] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[57] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[62] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[63] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[64] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[65] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[67] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[68] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[70] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[71] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[73] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[74] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[76] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[77] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[78] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[79] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[80] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[81] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[82] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[83] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[85] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[86] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[88] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[89] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[91] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[92] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[94] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[95] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[96] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[97] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[99] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[100] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[102] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[103] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[105] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[106] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[108] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[109] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[110] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[113] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[114] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[115] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[117] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[118] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[120] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[121] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[123] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[124] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[126] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[127] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[128] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[129] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[131] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[132] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[134] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[135] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[137] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[138] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[140] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[141] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[142] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[145] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[146] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[147] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[149] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[150] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[152] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[153] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[155] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[156] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[158] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[159] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[160] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[161] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[166] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[167] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[172] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[173] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[174] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[175] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[176] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[177] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[178] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[179] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[184] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[185] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[190] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[191] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[192] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[193] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[195] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[196] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[198] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[199] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[201] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[202] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[204] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[205] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[206] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[209] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[210] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[211] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[213] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[214] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[216] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[217] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[219] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[220] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[222] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[223] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[224] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[225] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[227] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[228] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[230] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[231] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[233] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[234] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[236] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[237] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[238] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[241] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[242] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[243] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[245] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[246] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[248] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[249] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[251] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[252] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[254] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[255] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[256] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[257] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[259] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[260] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[262] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[263] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[265] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[266] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[268] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[269] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[270] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[271] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[272] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[273] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[274] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[275] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[277] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[278] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[280] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[281] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[283] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[284] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[286] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[287] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[288] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[289] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[294] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[295] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[300] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[301] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[302] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[303] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[304] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[305] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[306] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[307] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[312] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[313] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[318] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[319] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[320] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[321] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[322] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[323] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[324] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[325] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[326] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[327] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[328] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[329] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[330] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[331] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[332] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[333] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[334] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[335] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[336] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[337] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[338] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[339] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[340] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[341] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[342] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[343] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[344] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[345] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[346] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[347] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[348] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[349] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[350] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[351] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[352] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[353] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[354] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[355] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[356] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[357] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[358] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[359] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[360] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[361] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[362] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[363] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[364] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[365] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[366] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[367] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[368] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[369] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[370] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[371] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[372] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[373] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[374] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[375] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[376] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[377] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[378] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[379] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[380] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[381] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[382] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[383] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[384] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[385] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[386] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[387] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[388] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[389] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[390] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[391] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[392] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[393] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[394] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[395] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[396] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[397] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[398] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[399] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[400] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[401] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[402] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[403] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[404] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[405] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[406] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[407] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[408] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[409] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[410] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[411] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[412] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[413] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[414] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[415] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[416] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[417] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[418] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[419] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[420] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[421] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[422] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[423] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[424] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[425] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[426] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[427] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[428] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[429] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[430] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[431] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[432] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[433] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[434] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[435] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[436] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[437] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[438] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[439] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[440] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[441] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[442] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[443] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[444] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[445] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[446] is always 0.
+@N:<a href="@N:CL189:@XP_HELP">CL189</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@N:CL189:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Register bit bitmap[447] is always 0.
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 447 to 318 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 313 to 312 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 307 to 300 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 295 to 294 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 289 to 286 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 284 to 283 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 281 to 280 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 278 to 277 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 275 to 268 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 266 to 265 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 263 to 262 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 260 to 259 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 257 to 254 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 252 to 251 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 249 to 248 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 246 to 245 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 243 to 241 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 238 to 236 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 234 to 233 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 231 to 230 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 228 to 227 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 225 to 222 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 220 to 219 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 217 to 216 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 214 to 213 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 211 to 209 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 206 to 204 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 202 to 201 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 199 to 198 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 196 to 195 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 193 to 190 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 185 to 184 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 179 to 172 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 167 to 166 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 161 to 158 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 156 to 155 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 153 to 152 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 150 to 149 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 147 to 145 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 142 to 140 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 138 to 137 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 135 to 134 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 132 to 131 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 129 to 126 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 124 to 123 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 121 to 120 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 118 to 117 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 115 to 113 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 110 to 108 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 106 to 105 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 103 to 102 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 100 to 99 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 97 to 94 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 92 to 91 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 89 to 88 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 86 to 85 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 83 to 76 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 74 to 73 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 71 to 70 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 68 to 67 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 65 to 62 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 57 to 56 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 51 to 44 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 39 to 38 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="D:\PhotonUser\Lab32\vbuf.v:456:0:456:6:@W:CL279:@XP_MSG">vbuf.v(456)</a><!@TM:1558252143> | Pruning register bits 33 to 0 of bitmap[447:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.</font>
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="D:\PhotonUser\Lab32\latticehx1k.v:95:7:95:18:@N:CG364:@XP_MSG">latticehx1k.v(95)</a><!@TM:1558252143> | Synthesizing module latticehx1k in library work.
+
+<font color=#A52A2A>@W:<a href="@W:CG360:@XP_HELP">CG360</a> : <a href="D:\PhotonUser\Lab32\latticehx1k.v:173:20:173:30:@W:CG360:@XP_MSG">latticehx1k.v(173)</a><!@TM:1558252143> | Removing wire bu_tx_busy, as there is no assignment to it.</font>
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="D:\PhotonUser\Lab32\tb_sft.v:35:7:35:13:@N:CG364:@XP_MSG">tb_sft.v(35)</a><!@TM:1558252143> | Synthesizing module tb_sft in library work.
+
+<font color=#A52A2A>@W:<a href="@W:CG532:@XP_HELP">CG532</a> : <a href="D:\PhotonUser\Lab32\tb_sft.v:266:3:266:10:@W:CG532:@XP_MSG">tb_sft.v(266)</a><!@TM:1558252143> | Within an initial block, only Verilog force statements and memory $readmemh/$readmemb initialization statements are recognized, and all other content is ignored.</font>
+<font color=#A52A2A>@W:<a href="@W:CG532:@XP_HELP">CG532</a> : <a href="D:\PhotonUser\Lab32\tb_sft.v:323:3:323:10:@W:CG532:@XP_MSG">tb_sft.v(323)</a><!@TM:1558252143> | Within an initial block, only Verilog force statements and memory $readmemh/$readmemb initialization statements are recognized, and all other content is ignored.</font>
+@N:<a href="@N:CG793:@XP_HELP">CG793</a> : <a href="D:\PhotonUser\Lab32\tb_sft.v:360:4:360:12:@N:CG793:@XP_MSG">tb_sft.v(360)</a><!@TM:1558252143> | Ignoring system task $display
+@N:<a href="@N:CG793:@XP_HELP">CG793</a> : <a href="D:\PhotonUser\Lab32\tb_sft.v:369:3:369:11:@N:CG793:@XP_MSG">tb_sft.v(369)</a><!@TM:1558252143> | Ignoring system task $display
+<font color=#A52A2A>@W:<a href="@W:CG296:@XP_HELP">CG296</a> : <a href="D:\PhotonUser\Lab32\tb_sft.v:342:12:342:55:@W:CG296:@XP_MSG">tb_sft.v(342)</a><!@TM:1558252143> | Incomplete sensitivity list; assuming completeness. Make sure all referenced variables in message CG290 are included in the sensitivity list.</font>
+<font color=#A52A2A>@W:<a href="@W:CG290:@XP_HELP">CG290</a> : <a href="D:\PhotonUser\Lab32\tb_sft.v:343:9:343:11:@W:CG290:@XP_MSG">tb_sft.v(343)</a><!@TM:1558252143> | Referenced variable go is not in sensitivity list.</font>
+<font color=#A52A2A>@W:<a href="@W:CG290:@XP_HELP">CG290</a> : <a href="D:\PhotonUser\Lab32\tb_sft.v:350:16:350:23:@W:CG290:@XP_MSG">tb_sft.v(350)</a><!@TM:1558252143> | Referenced variable exSones is not in sensitivity list.</font>
+<font color=#A52A2A>@W:<a href="@W:CG290:@XP_HELP">CG290</a> : <a href="D:\PhotonUser\Lab32\tb_sft.v:352:16:352:23:@W:CG290:@XP_MSG">tb_sft.v(352)</a><!@TM:1558252143> | Referenced variable exStens is not in sensitivity list.</font>
+<font color=#A52A2A>@W:<a href="@W:CG290:@XP_HELP">CG290</a> : <a href="D:\PhotonUser\Lab32\tb_sft.v:354:16:354:23:@W:CG290:@XP_MSG">tb_sft.v(354)</a><!@TM:1558252143> | Referenced variable exMones is not in sensitivity list.</font>
+<font color=#A52A2A>@W:<a href="@W:CG290:@XP_HELP">CG290</a> : <a href="D:\PhotonUser\Lab32\tb_sft.v:356:16:356:23:@W:CG290:@XP_MSG">tb_sft.v(356)</a><!@TM:1558252143> | Referenced variable exMtens is not in sensitivity list.</font>
+<font color=#A52A2A>@W:<a href="@W:CG532:@XP_HELP">CG532</a> : <a href="D:\PhotonUser\Lab32\tb_sft.v:422:3:422:10:@W:CG532:@XP_MSG">tb_sft.v(422)</a><!@TM:1558252143> | Within an initial block, only Verilog force statements and memory $readmemh/$readmemb initialization statements are recognized, and all other content is ignored.</font>
+<font color=#A52A2A>@W:<a href="@W:CG133:@XP_HELP">CG133</a> : <a href="D:\PhotonUser\Lab32\tb_sft.v:36:20:36:30:@W:CG133:@XP_MSG">tb_sft.v(36)</a><!@TM:1558252143> | Object tb_sim_rst is declared but not assigned. Either assign a value or remove the declaration.</font>
+<font color=#A52A2A>@W:<a href="@W:CG133:@XP_HELP">CG133</a> : <a href="D:\PhotonUser\Lab32\tb_sft.v:41:24:41:34:@W:CG133:@XP_MSG">tb_sft.v(41)</a><!@TM:1558252143> | Object tb_rx_data is declared but not assigned. Either assign a value or remove the declaration.</font>
+<font color=#A52A2A>@W:<a href="@W:CG133:@XP_HELP">CG133</a> : <a href="D:\PhotonUser\Lab32\tb_sft.v:42:20:42:34:@W:CG133:@XP_MSG">tb_sft.v(42)</a><!@TM:1558252143> | Object tb_rx_data_rdy is declared but not assigned. Either assign a value or remove the declaration.</font>
+<font color=#A52A2A>@W:<a href="@W:CG133:@XP_HELP">CG133</a> : <a href="D:\PhotonUser\Lab32\tb_sft.v:263:7:263:9:@W:CG133:@XP_MSG">tb_sft.v(263)</a><!@TM:1558252143> | Object go is declared but not assigned. Either assign a value or remove the declaration.</font>
+<font color=#A52A2A>@W:<a href="@W:CG133:@XP_HELP">CG133</a> : <a href="D:\PhotonUser\Lab32\tb_sft.v:321:7:321:20:@W:CG133:@XP_MSG">tb_sft.v(321)</a><!@TM:1558252143> | Object firstMismatch is declared but not assigned. Either assign a value or remove the declaration.</font>
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="D:\PhotonUser\Lab32\top_sft.v:1:7:1:14:@N:CG364:@XP_MSG">top_sft.v(1)</a><!@TM:1558252143> | Synthesizing module top_sft in library work.
+
+<font color=#A52A2A>@W:<a href="@W:CG781:@XP_HELP">CG781</a> : <a href="D:\PhotonUser\Lab32\top_sft.v:27:14:27:15:@W:CG781:@XP_MSG">top_sft.v(27)</a><!@TM:1558252143> | Input from_pc on instance latticehx1k is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. </font>
+<a name=error3></a><font color=red>@E:<a href="@E:CS168:@XP_HELP">CS168</a> : <a href="D:\PhotonUser\Lab32\top_sft.v:32:17:32:18:@E:CS168:@XP_MSG">top_sft.v(32)</a><!@TM:1558252143> | Port tb_sim_rst does not exist</font>
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sun May 19 07:49:03 2019
+
+###########################################################]
+@END
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sun May 19 07:49:03 2019
+
+###########################################################]
+
+</pre></samp></body></html>

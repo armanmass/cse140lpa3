@@ -1,0 +1,78 @@
+Running in Lattice mode
+
+
+Starting:    C:\lscc\iCEcube2.2017.08\synpbase\bin64\mbin\synbatch.exe
+Install:     C:\lscc\iCEcube2.2017.08\synpbase
+Hostname:    WIN-L8CDESF9QDT
+Date:        Sun May 19 07:33:34 2019
+Version:     L-2016.09L+ice40
+
+Arguments:   -product synplify_pro -batch vxzcv_syn.prj
+ProductType: synplify_pro
+
+
+
+
+
+log file: "D:\PhotonUser\Lab32\vxzcv\vxzcv_Implmnt\vxzcv.srr"
+Running: vxzcv_Implmnt in foreground
+
+Running vxzcv_syn|vxzcv_Implmnt
+
+Running: compile (Compile) on vxzcv_syn|vxzcv_Implmnt
+# Sun May 19 07:33:34 2019
+
+Running: compile_flow (Compile Process) on vxzcv_syn|vxzcv_Implmnt
+# Sun May 19 07:33:34 2019
+
+Running: compiler (Compile Input) on vxzcv_syn|vxzcv_Implmnt
+# Sun May 19 07:33:34 2019
+Copied D:\PhotonUser\Lab32\vxzcv\vxzcv_Implmnt\synwork\vxzcv_comp.srs to D:\PhotonUser\Lab32\vxzcv\vxzcv_Implmnt\vxzcv.srs
+
+compiler completed
+# Sun May 19 07:33:36 2019
+
+Return Code: 0
+Run Time:00h:00m:02s
+
+Running: multi_srs_gen (Multi-srs Generator) on vxzcv_syn|vxzcv_Implmnt
+# Sun May 19 07:33:36 2019
+
+multi_srs_gen completed
+# Sun May 19 07:33:36 2019
+
+Return Code: 0
+Run Time:00h:00m:00s
+Copied D:\PhotonUser\Lab32\vxzcv\vxzcv_Implmnt\synwork\vxzcv_mult.srs to D:\PhotonUser\Lab32\vxzcv\vxzcv_Implmnt\vxzcv.srs
+Complete: Compile Process on vxzcv_syn|vxzcv_Implmnt
+
+Running: premap (Pre-mapping) on vxzcv_syn|vxzcv_Implmnt
+# Sun May 19 07:33:36 2019
+
+premap completed with warnings
+# Sun May 19 07:33:37 2019
+
+Return Code: 1
+Run Time:00h:00m:01s
+Complete: Compile on vxzcv_syn|vxzcv_Implmnt
+
+Running: map (Map) on vxzcv_syn|vxzcv_Implmnt
+# Sun May 19 07:33:37 2019
+License granted for 4 parallel jobs
+
+Running: fpga_mapper (Map & Optimize) on vxzcv_syn|vxzcv_Implmnt
+# Sun May 19 07:33:37 2019
+Copied D:\PhotonUser\Lab32\vxzcv\vxzcv_Implmnt\synwork\vxzcv_m.srm to D:\PhotonUser\Lab32\vxzcv\vxzcv_Implmnt\vxzcv.srm
+
+fpga_mapper completed with warnings
+# Sun May 19 07:33:42 2019
+
+Return Code: 1
+Run Time:00h:00m:05s
+Complete: Map on vxzcv_syn|vxzcv_Implmnt
+Complete: Logic Synthesis on vxzcv_syn|vxzcv_Implmnt
+
+exit status=0
+
+exit status=0
+
