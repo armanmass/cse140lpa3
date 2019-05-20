@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Users/Arman/Desktop/Lab3/simulation/modelsim
 vbaudgen
-Z1 !s110 1558387679
+Z1 !s110 1558392845
 !i10b 1
 !s100 FhhgdY?Y49@cCa=m4chVK3
 I@jb3ic8^5FUf8Q]@i;nQE1
@@ -23,7 +23,7 @@ Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1558387679.000000
+Z7 !s108 1558392845.000000
 Z8 !s107 C:/Users/Arman/Desktop/Lab3/buart.v|
 Z9 !s90 -reportprogress|300|-work|work|C:/Users/Arman/Desktop/Lab3/buart.v|
 !i113 1
@@ -136,13 +136,13 @@ R10
 R11
 ndecode@keys
 vdictrl
-Z12 !s110 1558390966
+Z12 !s110 1558393162
 !i10b 1
-!s100 ;:jccPkzc7l@kV<3S^W5E2
-I^23`DAzIM:cd8[02]f6lE2
+!s100 ^SI=kmmSTR0d11a;ED98M1
+I1CLTUIdHTdZ>HDF9iC>BN2
 R2
 R0
-Z13 w1558390943
+Z13 w1558393141
 Z14 8C:/Users/Arman/Desktop/Lab3/Lab3_140L.v
 Z15 FC:/Users/Arman/Desktop/Lab3/Lab3_140L.v
 L0 262
@@ -150,7 +150,7 @@ R6
 r1
 !s85 0
 31
-Z16 !s108 1558390966.000000
+Z16 !s108 1558393162.000000
 Z17 !s107 C:/Users/Arman/Desktop/Lab3/Lab3_140L.v|
 Z18 !s90 -reportprogress|300|-work|work|C:/Users/Arman/Desktop/Lab3/Lab3_140L.v|
 !i113 1
@@ -200,7 +200,7 @@ R10
 R11
 ndisp@string
 vfake_buart
-Z19 !s110 1558387680
+R1
 !i10b 1
 !s100 [XcIme8A<;c_TfCkh[d3>0
 ImbJSBDLIcG`?D`Jhd@EUQ0
@@ -221,7 +221,7 @@ R7
 R10
 R11
 vfake_pll
-R19
+R1
 !i10b 1
 !s100 UJM@AVG8MHT;MFBGo`^kb0
 ILkVYKfE8]NJQc2;1^@aEe1
@@ -230,19 +230,19 @@ R0
 R3
 8C:/Users/Arman/Desktop/Lab3/fake_pll.v
 FC:/Users/Arman/Desktop/Lab3/fake_pll.v
-Z20 L0 26
+Z19 L0 26
 R6
 r1
 !s85 0
 31
-Z21 !s108 1558387680.000000
+R7
 !s107 C:/Users/Arman/Desktop/Lab3/fake_pll.v|
 !s90 -reportprogress|300|-work|work|C:/Users/Arman/Desktop/Lab3/fake_pll.v|
 !i113 1
 R10
 R11
 vHalf_Sec_Pulse_Per_Sec
-R19
+R1
 !i10b 1
 !s100 mMaKMY8B=mzW05zB?7`O^1
 IH0D4AHFb4Q<;9@C3Gn>FM0
@@ -256,24 +256,45 @@ R6
 r1
 !s85 0
 31
-R21
+R7
 !s107 C:/Users/Arman/Desktop/Lab3/Half_Sec_Pulse_Every_Sec.v|
 !s90 -reportprogress|300|-work|work|C:/Users/Arman/Desktop/Lab3/Half_Sec_Pulse_Every_Sec.v|
 !i113 1
 R10
 R11
 n@half_@sec_@pulse_@per_@sec
+vinpin
+Z20 !s110 1558392846
+!i10b 1
+!s100 m@XKlCTX@jc;IF1cz2EbO0
+IOXBz0Jm77Bno1j@3chGXz1
+R2
+R0
+Z21 w1558391016
+Z22 8C:/Users/Arman/Desktop/Lab3/latticehx1k.v
+Z23 FC:/Users/Arman/Desktop/Lab3/latticehx1k.v
+L0 43
+R6
+r1
+!s85 0
+31
+Z24 !s108 1558392846.000000
+Z25 !s107 C:/Users/Arman/Desktop/Lab3/latticehx1k.v|
+Z26 !s90 -reportprogress|30|-work|work|C:/Users/Arman/Desktop/Lab3/latticehx1k.v|
+!i113 1
+R10
+R11
 vLab3_140L
 R12
 !i10b 1
-!s100 VNfLkY_TGl?5P9ICzM2F20
-IGkPXJX@c?f=6^iXRBa@jO3
+!s100 H^>UdV1cNL]cZz?WmPb;^3
+IE1d0d^@U_LKBcTCCiIo7^1
 R2
 R0
 R13
 R14
 R15
-R20
+R19
 R6
 r1
 !s85 0
@@ -286,50 +307,71 @@ R10
 R11
 n@lab3_140@l
 vlatticeDulPortRam512x8
-Z22 !s110 1558387681
+R20
 !i10b 1
 !s100 NZCXzQeb72L2^CGDdejhc0
 IIo?BPJ;JjWPl6KFlekAID3
 R2
 R0
 R3
-Z23 8C:/Users/Arman/Desktop/Lab3/vbuf.v
-Z24 FC:/Users/Arman/Desktop/Lab3/vbuf.v
+Z27 8C:/Users/Arman/Desktop/Lab3/vbuf.v
+Z28 FC:/Users/Arman/Desktop/Lab3/vbuf.v
 L0 634
 R6
 r1
 !s85 0
 31
-R21
-Z25 !s107 C:/Users/Arman/Desktop/Lab3/vbuf.v|
-Z26 !s90 -reportprogress|30|-work|work|C:/Users/Arman/Desktop/Lab3/vbuf.v|
+R24
+Z29 !s107 C:/Users/Arman/Desktop/Lab3/vbuf.v|
+Z30 !s90 -reportprogress|30|-work|work|C:/Users/Arman/Desktop/Lab3/vbuf.v|
 !i113 1
 R10
 R11
 nlattice@dul@port@ram512x8
 vlatticehx1k
-R19
+Z31 !s110 1558392873
 !i10b 1
 !s100 ;ZKfGeVD7OKio<hQTAQ0J2
 I5P>ePJJ8e`V2bG[hn0?OP0
 R2
 R0
-Z27 w1558338788
-Z28 8C:/Users/Arman/Desktop/Lab3/latticehx1k.v
-Z29 FC:/Users/Arman/Desktop/Lab3/latticehx1k.v
+Z32 w1558392863
+R22
+R23
 L0 95
 R6
 r1
 !s85 0
 31
+Z33 !s108 1558392873.000000
+R25
+Z34 !s90 -reportprogress|300|-work|work|C:/Users/Arman/Desktop/Lab3/latticehx1k.v|
+!i113 1
+R10
+R11
+vlatticehx1k_pll
+R20
+!i10b 1
+!s100 6fha^<UaXQiEIHAJ:T7>20
+I=>lSao2_0:WK:zPa:ed9>3
+R2
+R0
 R21
-Z30 !s107 C:/Users/Arman/Desktop/Lab3/latticehx1k.v|
-Z31 !s90 -reportprogress|30|-work|work|C:/Users/Arman/Desktop/Lab3/latticehx1k.v|
+R22
+R23
+L0 355
+R6
+r1
+!s85 0
+31
+R24
+R25
+R26
 !i113 1
 R10
 R11
 vN_bit_counter
-R19
+R20
 !i10b 1
 !s100 2FHKTaHhk8QEhJUk?RIIP1
 I9_h>PX]G?6@KV6YR=FiE91
@@ -343,7 +385,7 @@ R6
 r1
 !s85 0
 31
-R21
+R24
 !s107 C:/Users/Arman/Desktop/Lab3/NBitCounter.v|
 !s90 -reportprogress|30|-work|work|C:/Users/Arman/Desktop/Lab3/NBitCounter.v|
 !i113 1
@@ -351,7 +393,7 @@ R10
 R11
 n@n_bit_counter
 vregrce
-R19
+R20
 !i10b 1
 !s100 PFhm[]5iMWfn=^]LkDZ9J1
 I0fZ5l08Kg_YE=B9_oQH1N2
@@ -365,30 +407,30 @@ R6
 r1
 !s85 0
 31
-R21
+R24
 !s107 C:/Users/Arman/Desktop/Lab3/regrce.v|
 !s90 -reportprogress|30|-work|work|C:/Users/Arman/Desktop/Lab3/regrce.v|
 !i113 1
 R10
 R11
 vresetGen
-R19
+R31
 !i10b 1
 !s100 U4L<<_nE>P7j9`K2m`O9f2
 IloJzNBSgRMVoLl25fnOgO2
 R2
 R0
-R27
-R28
-R29
+R32
+R22
+R23
 L0 64
 R6
 r1
 !s85 0
 31
-R21
-R30
-R31
+R33
+R25
+R34
 !i113 1
 R10
 R11
@@ -415,7 +457,7 @@ R9
 R10
 R11
 vtb_sft
-R19
+R20
 !i10b 1
 !s100 U2[BkaEGjMa_efL<J8Kod0
 IJf>Y>UNVSSAQ=9oH;GA913
@@ -429,14 +471,14 @@ R6
 r1
 !s85 0
 31
-R21
+R24
 !s107 C:/Users/Arman/Desktop/Lab3/tb_sft.v|
 !s90 -reportprogress|30|-work|work|C:/Users/Arman/Desktop/Lab3/tb_sft.v|
 !i113 1
 R10
 R11
 vtop_sft
-R19
+R20
 !i10b 1
 !s100 3=BFe2<4BL1;GQ^K@G:Vg3
 I6DmJ`3X[NIgZ=:1YTk=T?0
@@ -450,7 +492,7 @@ R6
 r1
 !s85 0
 31
-R21
+R24
 !s107 C:/Users/Arman/Desktop/Lab3/top_sft.v|
 !s90 -reportprogress|30|-work|work|C:/Users/Arman/Desktop/Lab3/top_sft.v|
 !i113 1
@@ -478,23 +520,23 @@ R9
 R10
 R11
 vvbuf
-R22
+R20
 !i10b 1
 !s100 YWiU;4VNjb7YgJ8kH5O=d3
 IY4;@C_=[=PMT1M3W69?n53
 R2
 R0
 R3
-R23
-R24
+R27
+R28
 L0 66
 R6
 r1
 !s85 0
 31
-R21
-R25
-R26
+R24
+R29
+R30
 !i113 1
 R10
 R11

@@ -126,7 +126,7 @@ module Lab3_140L (
 			dictrl dictrl(.dicLdMtens(LdMtens), .dicLdMones(LdMones), .dicLdStens(LdStens), .dicLdSones(LdSones), 
 			.dicLdAMtens(LdAMtens), .dicLdAMones(LdAMones), .dicLdAStens(LdAStens), .dicLdASones(LdASones), .dicRun(Run),
 			.dicAlarmIdle(idle), .dicAlarmArmed(armed), .dicAlarmTrig(trig), .oneSecStrb(oneSecStrb), .did_alarmMatch(alarmMatch), 
-			.bu_rx_data_rdy(bu_rx_data_rdy), .bu_rx_data(bu_rx_data), .loadalarm(loadalarm), .rst(rst), .clk(clk));
+			.bu_rx_data_rdy(bu_rx_data_rdy), .dataIn(bu_rx_data), .loadalarm(loadalarm), .rst(rst), .clk(clk));
 
 			//datapath
 			didp didp(.di_Mtens(di_Mtens), .di_Mones(di_Mones), .di_Stens(di_Stens), .di_Sones(di_Sones),
@@ -278,7 +278,7 @@ module dictrl(
 	      input       did_alarmMatch, // raw alarm match
 
               input 	  bu_rx_data_rdy, // new data from uart rdy
-              input [7:0] bu_rx_data, // new data from uart
+              input [7:0] dataIn, // new data from uart
               input 	  rst,
 	      input 	  clk
 	      );
@@ -306,15 +306,6 @@ module dictrl(
 		  assign dicAlarmIdle = alarm1;
 		  assign dicAlarmArmed = alarm2;
 		  assign dicAlarmTrig = alarm3;
-
-		  reg [7:0] dataIn;
-
-		  always @(bu_rx_data_rdy, did_alarmMatch) begin
-		  if(bu_rx_data_rdy)
-		  	dataIn <= bu_rx_data;
-			else
-			dataIn <= 8'b00000000;
-		  end
 
 		//update fsm
 		always @(posedge clk) begin
@@ -361,7 +352,7 @@ module dictrl(
 						alarmstate <= alarmArm;
 				end
 				alarmTrig:begin
-					if(dataIn == at)
+					if((dataIn == at) &&bu_rx_data_rdy)
 						alarmstate <= alarmOff;
 					else
 						alarmstate <= alarmTrig;
