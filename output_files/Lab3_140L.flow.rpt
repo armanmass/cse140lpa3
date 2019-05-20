@@ -1,5 +1,5 @@
 Flow report for Lab3_140L
-Sun May 19 22:06:22 2019
+Sun May 19 23:31:24 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,14 +40,14 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------+
 ; Flow Summary                                                        ;
 +-----------------------+---------------------------------------------+
-; Flow Status           ; Successful - Sun May 19 22:06:22 2019       ;
+; Flow Status           ; Successful - Sun May 19 23:31:24 2019       ;
 ; Quartus Prime Version ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name         ; Lab3_140L                                   ;
 ; Top-level Entity Name ; Lab3_140L                                   ;
 ; Family                ; MAX V                                       ;
 ; Device                ; 5M2210ZF324I5                               ;
 ; Timing Models         ; Final                                       ;
-; Total logic elements  ; 242                                         ;
+; Total logic elements  ; 236                                         ;
 ; Total pins            ; 86                                          ;
 ; Total virtual pins    ; 0                                           ;
 ; UFM blocks            ; 0 / 1 ( 0 % )                               ;
@@ -59,7 +59,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/19/2019 22:06:13 ;
+; Start date & time ; 05/19/2019 23:31:15 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Lab3_140L           ;
 +-------------------+---------------------+
@@ -70,7 +70,7 @@ refer to the applicable agreement for further details.
 +--------------------------+---------------------------------+---------------+-------------+----------------+
 ; Assignment Name          ; Value                           ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID    ; 246562420201583.155832877308880 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID    ; 246562420201583.155833387506720 ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT   ; Verilog Hdl                     ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL      ; ModelSim-Altera (Verilog)       ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE           ; 1 ps                            ; --            ; --          ; eda_simulation ;
