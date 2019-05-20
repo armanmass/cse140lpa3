@@ -6,7 +6,7 @@
 
 * Build Date:         Sep 11 2017 17:12:22
 
-* File Generated:     May 20 2019 23:27:07
+* File Generated:     May 20 2019 23:35:46
 
 * Purpose:            
 
@@ -70,7 +70,7 @@ I2088: Phase 1, elapsed time : 0.0 (sec)
 
 
 Phase 2
-I2088: Phase 2, elapsed time : 0.1 (sec)
+I2088: Phase 2, elapsed time : 0.0 (sec)
 
 Phase 3
 Info-1404: Inferred PLL generated clock at latticehx1k_pll_inst.latticehx1k_pll_inst/PLLOUTCORE
@@ -117,7 +117,7 @@ Phase 5
 I2088: Phase 5, elapsed time : 1.8 (sec)
 
 Phase 6
-I2088: Phase 6, elapsed time : 25.8 (sec)
+I2088: Phase 6, elapsed time : 25.9 (sec)
 
 Final Design Statistics
     Number of LUTs      	:	652

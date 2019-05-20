@@ -47,10 +47,6 @@
 @W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 30 of justentered[31:0] assign 0, register removed by optimization.
 @W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":339:3:339:6|All reachable assignments to bit 31 of justentered[31:0] assign 0, register removed by optimization.
 @W: CG360 :"D:\PhotonUser\Lab32\Lab3_140L.v":159:19:159:24|Removing wire L3_led, as there is no assignment to it.
-@W: CG296 :"D:\PhotonUser\Lab32\Lab3_140L.v":101:12:101:21|Incomplete sensitivity list; assuming completeness. Make sure all referenced variables in message CG290 are included in the sensitivity list.
-@W: CG290 :"D:\PhotonUser\Lab32\Lab3_140L.v":102:7:102:10|Referenced variable idle is not in sensitivity list.
-@W: CG290 :"D:\PhotonUser\Lab32\Lab3_140L.v":104:12:104:16|Referenced variable armed is not in sensitivity list.
-@W: CG290 :"D:\PhotonUser\Lab32\Lab3_140L.v":106:12:106:15|Referenced variable trig is not in sensitivity list.
 @W: CS263 :"D:\PhotonUser\Lab32\Lab3_140L.v":113:34:113:37|Port-width mismatch for port num. The port definition is 4 bits, but the actual port connection bit width is 8. Adjust either the definition or the instantiation of this port.
 @W: CS263 :"D:\PhotonUser\Lab32\Lab3_140L.v":113:40:113:40|Port-width mismatch for port enable. The port definition is 1 bits, but the actual port connection bit width is 32. Adjust either the definition or the instantiation of this port.
 @W: CS263 :"D:\PhotonUser\Lab32\Lab3_140L.v":114:34:114:37|Port-width mismatch for port num. The port definition is 4 bits, but the actual port connection bit width is 8. Adjust either the definition or the instantiation of this port.
