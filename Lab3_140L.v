@@ -46,6 +46,7 @@ module Lab3_140L (
 		  output [3:0] 	    di_AStens,
 		  output [3:0] 	    di_ASones
 		  );
+		  	//declare variables
 		    wire LdMtens, LdMones, LdStens, LdSones, LdAMtens,
 	      		 LdAMones, LdAStens, LdASones, Run;
 			wire loadalarm;
@@ -57,6 +58,7 @@ module Lab3_140L (
 		    
 			wire [6:0] seg1, seg2, seg3, seg4;
 
+			//clock display
 			always @(*) begin
 				L3_segment1 = seg1;
 				L3_segment2 = seg2;
@@ -95,7 +97,7 @@ module Lab3_140L (
 				end
 			end
 
-
+			//update alarm trigger
 			always @(oneSecStrb) begin
 				if(idle)
 					alarmchar = 8'b00101110;
@@ -107,23 +109,26 @@ module Lab3_140L (
 					alarmchar = 8'b00101110;
 			end
 
+			//display clock
 			bcd2segment bcd2segment1(seg1, sec2, 1);
 			bcd2segment bcd2segment2(seg2, sec1, 1);
 			bcd2segment bcd2segment3(seg3, min2, 1);
 			bcd2segment bcd2segment4(seg4, min1, 1);
 
 
+			//display set alarm time
 			dispString dispString(.rdy(L3_tx_data_rdy), .dOut(L3_tx_data), .b0(disp1), .b1(disp2), .b2(8'b00111010), 
 								  .b3(disp3), .b4(disp4), .b5(8'b00100000), .b6(alarmchar), .b7(8'h0d), .go(oneSecStrb), 
 								  .rst(rst), .clk(clk));
 
 
-
+			//fsm
 			dictrl dictrl(.dicLdMtens(LdMtens), .dicLdMones(LdMones), .dicLdStens(LdStens), .dicLdSones(LdSones), 
 			.dicLdAMtens(LdAMtens), .dicLdAMones(LdAMones), .dicLdAStens(LdAStens), .dicLdASones(LdASones), .dicRun(Run),
 			.dicAlarmIdle(idle), .dicAlarmArmed(armed), .dicAlarmTrig(trig), .oneSecStrb(oneSecStrb), .did_alarmMatch(alarmMatch), 
-			.bu_rx_data_rdy(bu_rx_data_rdy), .dataIn(bu_rx_data), .loadalarm(loadalarm), .rst(rst), .clk(clk));
+			.bu_rx_data_rdy(bu_rx_data_rdy), .bu_rx_data(bu_rx_data), .loadalarm(loadalarm), .rst(rst), .clk(clk));
 
+			//datapath
 			didp didp(.di_Mtens(di_Mtens), .di_Mones(di_Mones), .di_Stens(di_Stens), .di_Sones(di_Sones),
 		 	.di_AMtens(di_AMtens), .di_AMones(di_AMones),.di_AStens(di_AStens), .di_ASones(di_ASones), 
 			.did_alarmMatch(alarmMatch), .L3_led(L3_led), .bu_rx_data(bu_rx_data), 
@@ -170,12 +175,13 @@ module didp (
 	     input 	  clk 	  
 	     );
 
+		//declare variables
 		 reg [3:0] reset;
 		 reg [3:0] ce;
 		 wire [3:0] Mtens, Mones, Stens, Sones,
 		 			AMtens, AMones, AStens, ASones;
 		 
-
+		//assign time
 		 always @(*) begin
 		 	di_Mtens = Mtens;
 		  	di_Mones = Mones;
@@ -188,6 +194,7 @@ module didp (
 		  	di_ASones = ASones;
 		 end
 
+		//enable/reset clock
 		 always @(posedge clk) begin
 		 	
 			if(rst) begin
@@ -227,13 +234,16 @@ module didp (
 			end
 		end
 
-		 assign did_alarmMatch = ((Mtens == AMtens) && (Mones == AMones) && (Stens == AStens) && (Stens == ASones));
+		//trigger alarm
+		 assign did_alarmMatch = ((Mtens == AMtens) && (Mones == AMones) && (Stens == AStens) && (Sones == ASones));
 
+		//count/store clock
 	     countrce countrce1(.q(Sones[3:0]), .d(bu_rx_data[3:0]), .ld(dicLdSones), .ce(ce[0] || dicLdSones), .rst(reset[0]), .clk(clk));
 		 countrce countrce2(.q(Stens[3:0]), .d(bu_rx_data[3:0]), .ld(dicLdStens), .ce(ce[1] || dicLdStens), .rst(reset[1]), .clk(clk));
 		 countrce countrce3(.q(Mones[3:0]), .d(bu_rx_data[3:0]), .ld(dicLdMones), .ce(ce[2] || dicLdMones), .rst(reset[2]), .clk(clk));
 		 countrce countrce4(.q(Mtens[3:0]), .d(bu_rx_data[3:0]), .ld(dicLdMtens), .ce(ce[3] || dicLdMtens), .rst(reset[3]), .clk(clk));
 
+		//store alarm
 		 regrce regrce1(.q(ASones[3:0]), .d(bu_rx_data[3:0]), .ce(dicLdASones), .rst(rst), .clk(clk));
 		 regrce regrce2(.q(AStens[3:0]), .d(bu_rx_data[3:0]), .ce(dicLdAStens), .rst(rst), .clk(clk));
 		 regrce regrce3(.q(AMones[3:0]), .d(bu_rx_data[3:0]), .ce(dicLdAMones), .rst(rst), .clk(clk));
@@ -268,18 +278,19 @@ module dictrl(
 	      input       did_alarmMatch, // raw alarm match
 
               input 	  bu_rx_data_rdy, // new data from uart rdy
-              input [7:0] dataIn, // new data from uart
+              input [7:0] bu_rx_data, // new data from uart
               input 	  rst,
 	      input 	  clk
 	      );
-
+		//fsm variables
 		  parameter [3:0] s0 = 4'b0000, s1 = 4'b0001, s2 = 4'b0010, s3 = 4'b0011, s4 = 4'b0100, 
 		  s5 = 4'b0101, s6 = 4'b0110, s7 = 4'b0111, s8 = 4'b1000, s9 = 4'b1001, s10 = 4'b1010;
 		  reg [3:0] next_state, state;
 
 		  parameter [1:0] alarmOff = 2'b00, alarmArm = 2'b01, alarmTrig = 2'b10;
 		  reg [1:0]	next_alarmstate, alarmstate;
-
+		
+		//comparison variables
 		  parameter [7:0] zero =  8'b00110000,
 		  				  five =  8'b00110101,
 		  				  nine =  8'b00111001,
@@ -288,6 +299,7 @@ module dictrl(
 		  				  l =     8'b01101100,
 						  at =    8'b01000000;
 
+		//idle armed triggered
 		  reg alarm1, alarm2, alarm3;
 
 		  assign loadalarm = ((state == s1) || (state == s2) || (state == s3) || (state == s4));
@@ -295,15 +307,24 @@ module dictrl(
 		  assign dicAlarmArmed = alarm2;
 		  assign dicAlarmTrig = alarm3;
 
+		  reg [7:0] dataIn;
+
+		  always @(bu_rx_data_rdy, did_alarmMatch) begin
+		  if(bu_rx_data_rdy)
+		  	dataIn <= bu_rx_data;
+			else
+			dataIn <= 8'b00000000;
+		  end
+
+		//update fsm
 		always @(posedge clk) begin
-			if(rst) begin
+			if(rst)
 				state <= s0;
-			end
-			else if (bu_rx_data_rdy) begin
-				state <= next_state;	
-			end
+			else if (bu_rx_data_rdy) 
+				state <= next_state;
 		end
 
+		//set dicLd depending on fsm state
 		always @(*) begin
 			dicRun = (state == s0);
 			dicLdMtens = (state == s6);
@@ -320,7 +341,8 @@ module dictrl(
 			alarm3 = (alarmstate == alarmTrig);
 		end
 
-		always @(rst, did_alarmMatch, bu_rx_data_rdy) begin
+		//alarm state FSM
+		always @(rst, did_alarmMatch, dataIn) begin
 			if(rst)
 				alarmstate <= alarmOff;
 			case (alarmstate)
@@ -347,6 +369,11 @@ module dictrl(
 			endcase
 		end
 
+		always @(did_alarmMatch) begin
+
+		end
+
+		//clock input fsm
 		always @(state, dataIn) begin
 			case (state)
 				s0: begin

@@ -432,19 +432,22 @@ module tb_sft(
       sendByte("l");    // load time
       waitN(1);
       sendByte("5");
-      sendByte("9");
-      sendByte("1");
+      sendByte("8");
+      sendByte("0");
       sendByte("0");
       sendByte(8'h0d);
+	  waitN(1);
       sendByte("a");    // load alarm
       sendByte("5");
       sendByte("9");
       sendByte("2");
       sendByte("0");
       sendByte(8'h0d);
-	  waitN(5);
+	  waitN(1);
 	  sendByte("@");
-      waitN(10000);
+      waitN(100);
+	  sendByte("@");
+	  waitN(10);
 `endif      
       //
       //      $display("]}");

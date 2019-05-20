@@ -30,7 +30,7 @@
 //
 // uncomment this define if you want to target hardware
 // otherwise, this file will be configured for the simulator
-//
+
 `define HW
 
 //

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab3_140L
-Sun May 19 23:54:52 2019
+Mon May 20 15:22:35 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -13,8 +13,8 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |Lab3_140L|dictrl:dictrl|alarmstate
-  9. State Machine - |Lab3_140L|dictrl:dictrl|state
+  8. State Machine - |Lab3_140L|dictrl:dictrl|state
+  9. Logic Cells Representing Combinational Loops
  10. Registers Removed During Synthesis
  11. General Register Statistics
  12. Multiplexer Restructuring Statistics (Restructuring Performed)
@@ -58,12 +58,12 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Sun May 19 23:54:52 2019       ;
+; Analysis & Synthesis Status ; Successful - Mon May 20 15:22:35 2019       ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; Lab3_140L                                   ;
 ; Top-level Entity Name       ; Lab3_140L                                   ;
 ; Family                      ; MAX V                                       ;
-; Total logic elements        ; 237                                         ;
+; Total logic elements        ; 229                                         ;
 ; Total pins                  ; 86                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
@@ -175,32 +175,32 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Total logic elements                        ; 237   ;
-;     -- Combinational with no register       ; 171   ;
+; Total logic elements                        ; 229   ;
+;     -- Combinational with no register       ; 167   ;
 ;     -- Register only                        ; 16    ;
-;     -- Combinational with a register        ; 50    ;
+;     -- Combinational with a register        ; 46    ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
 ;     -- 4 input functions                    ; 129   ;
 ;     -- 3 input functions                    ; 51    ;
-;     -- 2 input functions                    ; 40    ;
+;     -- 2 input functions                    ; 32    ;
 ;     -- 1 input functions                    ; 1     ;
 ;     -- 0 input functions                    ; 0     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 237   ;
+;     -- normal mode                          ; 229   ;
 ;     -- arithmetic mode                      ; 0     ;
 ;     -- qfbk mode                            ; 0     ;
 ;     -- register cascade mode                ; 0     ;
-;     -- synchronous clear/load mode          ; 15    ;
+;     -- synchronous clear/load mode          ; 12    ;
 ;     -- asynchronous clear/load mode         ; 0     ;
 ;                                             ;       ;
-; Total registers                             ; 66    ;
+; Total registers                             ; 62    ;
 ; I/O pins                                    ; 86    ;
 ; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 66    ;
-; Total fan-out                               ; 949   ;
-; Average fan-out                             ; 2.94  ;
+; Maximum fan-out                             ; 62    ;
+; Total fan-out                               ; 936   ;
+; Average fan-out                             ; 2.97  ;
 +---------------------------------------------+-------+
 
 
@@ -209,13 +209,13 @@ refer to the applicable agreement for further details.
 +-------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------+-------------+--------------+
 ; Compilation Hierarchy Node    ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                     ; Entity Name ; Library Name ;
 +-------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------+-------------+--------------+
-; |Lab3_140L                    ; 237 (16)    ; 66           ; 0          ; 86   ; 0            ; 171 (16)     ; 16 (0)            ; 50 (0)           ; 0 (0)           ; 0 (0)      ; |Lab3_140L                              ; Lab3_140L   ; work         ;
+; |Lab3_140L                    ; 229 (16)    ; 62           ; 0          ; 86   ; 0            ; 167 (16)     ; 16 (0)            ; 46 (0)           ; 0 (0)           ; 0 (0)      ; |Lab3_140L                              ; Lab3_140L   ; work         ;
 ;    |bcd2segment:bcd2segment1| ; 16 (16)     ; 0            ; 0          ; 0    ; 0            ; 16 (16)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Lab3_140L|bcd2segment:bcd2segment1     ; bcd2segment ; work         ;
 ;    |bcd2segment:bcd2segment2| ; 16 (16)     ; 0            ; 0          ; 0    ; 0            ; 16 (16)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Lab3_140L|bcd2segment:bcd2segment2     ; bcd2segment ; work         ;
 ;    |bcd2segment:bcd2segment3| ; 16 (16)     ; 0            ; 0          ; 0    ; 0            ; 16 (16)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Lab3_140L|bcd2segment:bcd2segment3     ; bcd2segment ; work         ;
 ;    |bcd2segment:bcd2segment4| ; 16 (16)     ; 0            ; 0          ; 0    ; 0            ; 16 (16)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Lab3_140L|bcd2segment:bcd2segment4     ; bcd2segment ; work         ;
-;    |dictrl:dictrl|            ; 41 (41)     ; 14           ; 0          ; 0    ; 0            ; 27 (27)      ; 0 (0)             ; 14 (14)          ; 0 (0)           ; 0 (0)      ; |Lab3_140L|dictrl:dictrl                ; dictrl      ; work         ;
-;    |didp:didp|                ; 81 (25)     ; 41           ; 0          ; 0    ; 0            ; 40 (16)      ; 16 (0)            ; 25 (9)           ; 0 (0)           ; 0 (0)      ; |Lab3_140L|didp:didp                    ; didp        ; work         ;
+;    |dictrl:dictrl|            ; 34 (34)     ; 11           ; 0          ; 0    ; 0            ; 23 (23)      ; 0 (0)             ; 11 (11)          ; 0 (0)           ; 0 (0)      ; |Lab3_140L|dictrl:dictrl                ; dictrl      ; work         ;
+;    |didp:didp|                ; 80 (24)     ; 40           ; 0          ; 0    ; 0            ; 40 (16)      ; 16 (0)            ; 24 (8)           ; 0 (0)           ; 0 (0)      ; |Lab3_140L|didp:didp                    ; didp        ; work         ;
 ;       |countrce:countrce1|    ; 8 (8)       ; 4            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |Lab3_140L|didp:didp|countrce:countrce1 ; countrce    ; work         ;
 ;       |countrce:countrce2|    ; 8 (8)       ; 4            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |Lab3_140L|didp:didp|countrce:countrce2 ; countrce    ; work         ;
 ;       |countrce:countrce3|    ; 8 (8)       ; 4            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |Lab3_140L|didp:didp|countrce:countrce3 ; countrce    ; work         ;
@@ -227,18 +227,6 @@ refer to the applicable agreement for further details.
 ;    |dispString:dispString|    ; 35 (35)     ; 11           ; 0          ; 0    ; 0            ; 24 (24)      ; 0 (0)             ; 11 (11)          ; 0 (0)           ; 0 (0)      ; |Lab3_140L|dispString:dispString        ; dispString  ; work         ;
 +-------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-Encoding Type:  One-Hot
-+-----------------------------------------------------------------------------------------+
-; State Machine - |Lab3_140L|dictrl:dictrl|alarmstate                                     ;
-+----------------------+---------------------+----------------------+---------------------+
-; Name                 ; alarmstate.alarmOff ; alarmstate.alarmTrig ; alarmstate.alarmArm ;
-+----------------------+---------------------+----------------------+---------------------+
-; alarmstate.alarmOff  ; 0                   ; 0                    ; 0                   ;
-; alarmstate.alarmArm  ; 1                   ; 0                    ; 1                   ;
-; alarmstate.alarmTrig ; 1                   ; 1                    ; 0                   ;
-+----------------------+---------------------+----------------------+---------------------+
 
 
 Encoding Type:  One-Hot
@@ -261,6 +249,19 @@ Encoding Type:  One-Hot
 +-----------+-----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+
 
 
++------------------------------------------------------------+
+; Logic Cells Representing Combinational Loops               ;
++--------------------------------------------------------+---+
+; Logic Cell Name                                        ;   ;
++--------------------------------------------------------+---+
+; dictrl:dictrl|dicAlarmArmed                            ;   ;
+; dictrl:dictrl|dicAlarmIdle                             ;   ;
+; dictrl:dictrl|dicAlarmTrig                             ;   ;
+; Number of logic cells representing combinational loops ; 3 ;
++--------------------------------------------------------+---+
+Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
 +--------------------------------------------------------------------------------+
 ; Registers Removed During Synthesis                                             ;
 +---------------------------------------+----------------------------------------+
@@ -280,12 +281,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 66    ;
-; Number of registers using Synchronous Clear  ; 15    ;
+; Total registers                              ; 62    ;
+; Number of registers using Synchronous Clear  ; 12    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 34    ;
+; Number of registers using Clock Enable       ; 44    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -295,19 +296,19 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Lab3_140L|didp:didp|regrce:regrce4|q[3]     ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Lab3_140L|didp:didp|regrce:regrce4|q[0]     ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Lab3_140L|didp:didp|regrce:regrce3|q[0]     ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Lab3_140L|didp:didp|regrce:regrce2|q[3]     ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Lab3_140L|didp:didp|regrce:regrce2|q[0]     ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Lab3_140L|didp:didp|regrce:regrce1|q[0]     ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |Lab3_140L|didp:didp|reset[3]                ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Lab3_140L|dispString:dispString|cnt[0]      ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Lab3_140L|dispString:dispString|cnt[2]      ;
 ; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |Lab3_140L|dispString:dispString|dOut[0]     ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Lab3_140L|didp:didp|countrce:countrce1|q[0] ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Lab3_140L|didp:didp|countrce:countrce2|q[0] ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Lab3_140L|didp:didp|countrce:countrce3|q[2] ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Lab3_140L|didp:didp|countrce:countrce4|q[2] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Lab3_140L|didp:didp|countrce:countrce2|q[2] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Lab3_140L|didp:didp|countrce:countrce3|q[0] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Lab3_140L|didp:didp|countrce:countrce4|q[1] ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Lab3_140L|dispString:dispString|dOut[3]     ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |Lab3_140L|dictrl:dictrl|state               ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |Lab3_140L|dictrl:dictrl|state               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
 
 
@@ -502,7 +503,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun May 19 23:54:43 2019
+    Info: Processing started: Mon May 20 15:22:26 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab3_140L -c Lab3_140L
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -523,8 +524,8 @@ Info (12021): Found 2 design units, including 2 entities, in source file lattice
     Info (12023): Found entity 2: latticehx1k File: C:/Users/Arman/Desktop/Lab3/latticehx1k.v Line: 95
 Info (12021): Found 3 design units, including 3 entities, in source file lab3_140l.v
     Info (12023): Found entity 1: Lab3_140L File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 26
-    Info (12023): Found entity 2: didp File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 141
-    Info (12023): Found entity 3: dictrl File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 256
+    Info (12023): Found entity 2: didp File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 146
+    Info (12023): Found entity 3: dictrl File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 262
 Info (12021): Found 1 design units, including 1 entities, in source file half_sec_pulse_every_sec.v
     Info (12023): Found entity 1: Half_Sec_Pulse_Per_Sec File: C:/Users/Arman/Desktop/Lab3/Half_Sec_Pulse_Every_Sec.v Line: 44
 Info (12021): Found 1 design units, including 1 entities, in source file fake_pll.v
@@ -546,15 +547,19 @@ Info (12021): Found 5 design units, including 5 entities, in source file buart.v
 Info (12021): Found 1 design units, including 1 entities, in source file bcd2segment.v
     Info (12023): Found entity 1: bcd2segment File: C:/Users/Arman/Desktop/Lab3/bcd2segment.v Line: 49
 Info (12127): Elaborating entity "Lab3_140L" for the top level hierarchy
-Info (12128): Elaborating entity "bcd2segment" for hierarchy "bcd2segment:bcd2segment1" File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 110
-Info (12128): Elaborating entity "dispString" for hierarchy "dispString:dispString" File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 118
+Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(102): variable "idle" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 102
+Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(104): variable "armed" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 104
+Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(106): variable "trig" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 106
+Info (12128): Elaborating entity "bcd2segment" for hierarchy "bcd2segment:bcd2segment1" File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 113
+Info (12128): Elaborating entity "dispString" for hierarchy "dispString:dispString" File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 122
 Warning (10230): Verilog HDL assignment warning at dispString.v(37): truncated value with size 32 to match size of target (3) File: C:/Users/Arman/Desktop/Lab3/dispString.v Line: 37
-Info (12128): Elaborating entity "dictrl" for hierarchy "dictrl:dictrl" File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 125
-Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(330): variable "alarmstate" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 330
-Info (12128): Elaborating entity "didp" for hierarchy "didp:didp" File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 132
-Warning (10034): Output port "L3_led" at Lab3_140L.v(154) has no driver File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 154
-Info (12128): Elaborating entity "countrce" for hierarchy "didp:didp|countrce:countrce1" File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 236
-Info (12128): Elaborating entity "regrce" for hierarchy "didp:didp|regrce:regrce1" File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 241
+Info (12128): Elaborating entity "dictrl" for hierarchy "dictrl:dictrl" File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 129
+Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(314): variable "bu_rx_data" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 314
+Warning (10235): Verilog HDL Always Construct warning at Lab3_140L.v(348): variable "alarmstate" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 348
+Info (12128): Elaborating entity "didp" for hierarchy "didp:didp" File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 137
+Warning (10034): Output port "L3_led" at Lab3_140L.v(159) has no driver File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 159
+Info (12128): Elaborating entity "countrce" for hierarchy "didp:didp|countrce:countrce1" File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 241
+Info (12128): Elaborating entity "regrce" for hierarchy "didp:didp|regrce:regrce1" File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 247
 Warning (12241): 5 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "L3_tx_data[7]" is stuck at GND File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 33
@@ -564,13 +569,13 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "L3_led[3]" is stuck at GND File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 34
     Warning (13410): Pin "L3_led[4]" is stuck at GND File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 34
 Info (17049): 4 registers lost all their fanouts during netlist optimizations.
-Info (21057): Implemented 323 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 315 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 12 input pins
     Info (21059): Implemented 74 output pins
-    Info (21061): Implemented 237 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 13 warnings
-    Info: Peak virtual memory: 565 megabytes
-    Info: Processing ended: Sun May 19 23:54:52 2019
+    Info (21061): Implemented 229 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 17 warnings
+    Info: Peak virtual memory: 566 megabytes
+    Info: Processing ended: Mon May 20 15:22:35 2019
     Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:20
 
