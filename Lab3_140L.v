@@ -267,14 +267,16 @@ module dictrl(
 		  assign dicAlarmTrig = alarm3;
 
 		always @(posedge clk) begin
-			if(rst) begin
+			if(rst)
 				state <= s0;
-				alarmstate <= alarmOff;
-			end
-			else if (bu_rx_data_rdy) begin
+			else if (bu_rx_data_rdy)
 				state <= next_state;
-			end
-			if(oneSecStrb)
+		end
+
+		always @(posedge clk) begin
+			if(rst)
+				alarmstate <= alarmOff;
+			else if (bu_rx_data_rdy)
 				alarmstate <= next_alarmstate;
 		end
 
@@ -294,7 +296,7 @@ module dictrl(
 			alarm3 = (alarmstate == alarmTrig);
 		end
 
-		always @(alarmstate, did_alarmMatch, dataIn) begin
+		always @(did_alarmMatch, dataIn) begin
 			case (alarmstate)
 				alarmOff:begin
 					if(dataIn == at)
