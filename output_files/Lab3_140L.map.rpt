@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab3_140L
-Sun May 19 21:16:56 2019
+Sun May 19 21:23:50 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -29,12 +29,13 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  21. Parameter Settings for User Entity Instance: didp:didp|regrce:regrce2
  22. Parameter Settings for User Entity Instance: didp:didp|regrce:regrce3
  23. Parameter Settings for User Entity Instance: didp:didp|regrce:regrce4
- 24. Port Connectivity Checks: "dispString:dispString"
- 25. Port Connectivity Checks: "bcd2segment:bcd2segment4"
- 26. Port Connectivity Checks: "bcd2segment:bcd2segment3"
- 27. Port Connectivity Checks: "bcd2segment:bcd2segment2"
- 28. Port Connectivity Checks: "bcd2segment:bcd2segment1"
- 29. Analysis & Synthesis Messages
+ 24. Port Connectivity Checks: "dictrl:dictrl"
+ 25. Port Connectivity Checks: "dispString:dispString"
+ 26. Port Connectivity Checks: "bcd2segment:bcd2segment4"
+ 27. Port Connectivity Checks: "bcd2segment:bcd2segment3"
+ 28. Port Connectivity Checks: "bcd2segment:bcd2segment2"
+ 29. Port Connectivity Checks: "bcd2segment:bcd2segment1"
+ 30. Analysis & Synthesis Messages
 
 
 
@@ -60,12 +61,12 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Sun May 19 21:16:56 2019       ;
+; Analysis & Synthesis Status ; Successful - Sun May 19 21:23:50 2019       ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; Lab3_140L                                   ;
 ; Top-level Entity Name       ; Lab3_140L                                   ;
 ; Family                      ; MAX V                                       ;
-; Total logic elements        ; 197                                         ;
+; Total logic elements        ; 190                                         ;
 ; Total pins                  ; 86                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
@@ -177,32 +178,32 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Total logic elements                        ; 197   ;
-;     -- Combinational with no register       ; 124   ;
+; Total logic elements                        ; 190   ;
+;     -- Combinational with no register       ; 117   ;
 ;     -- Register only                        ; 19    ;
 ;     -- Combinational with a register        ; 54    ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 114   ;
-;     -- 3 input functions                    ; 30    ;
-;     -- 2 input functions                    ; 32    ;
-;     -- 1 input functions                    ; 2     ;
+;     -- 4 input functions                    ; 105   ;
+;     -- 3 input functions                    ; 24    ;
+;     -- 2 input functions                    ; 41    ;
+;     -- 1 input functions                    ; 1     ;
 ;     -- 0 input functions                    ; 0     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 197   ;
+;     -- normal mode                          ; 190   ;
 ;     -- arithmetic mode                      ; 0     ;
 ;     -- qfbk mode                            ; 0     ;
 ;     -- register cascade mode                ; 0     ;
-;     -- synchronous clear/load mode          ; 18    ;
+;     -- synchronous clear/load mode          ; 12    ;
 ;     -- asynchronous clear/load mode         ; 0     ;
 ;                                             ;       ;
 ; Total registers                             ; 73    ;
 ; I/O pins                                    ; 86    ;
 ; Maximum fan-out node                        ; clk   ;
 ; Maximum fan-out                             ; 73    ;
-; Total fan-out                               ; 828   ;
-; Average fan-out                             ; 2.93  ;
+; Total fan-out                               ; 781   ;
+; Average fan-out                             ; 2.83  ;
 +---------------------------------------------+-------+
 
 
@@ -211,22 +212,22 @@ refer to the applicable agreement for further details.
 +-------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------+-------------+--------------+
 ; Compilation Hierarchy Node    ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                     ; Entity Name ; Library Name ;
 +-------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------+-------------+--------------+
-; |Lab3_140L                    ; 197 (4)     ; 73           ; 0          ; 86   ; 0            ; 124 (0)      ; 19 (2)            ; 54 (2)           ; 0 (0)           ; 0 (0)      ; |Lab3_140L                              ; Lab3_140L   ; work         ;
+; |Lab3_140L                    ; 190 (4)     ; 73           ; 0          ; 86   ; 0            ; 117 (0)      ; 19 (2)            ; 54 (2)           ; 0 (0)           ; 0 (0)      ; |Lab3_140L                              ; Lab3_140L   ; work         ;
 ;    |bcd2segment:bcd2segment1| ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Lab3_140L|bcd2segment:bcd2segment1     ; bcd2segment ; work         ;
 ;    |bcd2segment:bcd2segment2| ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Lab3_140L|bcd2segment:bcd2segment2     ; bcd2segment ; work         ;
 ;    |bcd2segment:bcd2segment3| ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Lab3_140L|bcd2segment:bcd2segment3     ; bcd2segment ; work         ;
 ;    |bcd2segment:bcd2segment4| ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Lab3_140L|bcd2segment:bcd2segment4     ; bcd2segment ; work         ;
-;    |dictrl:dictrl|            ; 41 (41)     ; 17           ; 0          ; 0    ; 0            ; 24 (24)      ; 0 (0)             ; 17 (17)          ; 0 (0)           ; 0 (0)      ; |Lab3_140L|dictrl:dictrl                ; dictrl      ; work         ;
+;    |dictrl:dictrl|            ; 40 (40)     ; 17           ; 0          ; 0    ; 0            ; 23 (23)      ; 0 (0)             ; 17 (17)          ; 0 (0)           ; 0 (0)      ; |Lab3_140L|dictrl:dictrl                ; dictrl      ; work         ;
 ;    |didp:didp|                ; 83 (27)     ; 41           ; 0          ; 0    ; 0            ; 42 (18)      ; 17 (1)            ; 24 (8)           ; 0 (0)           ; 0 (0)      ; |Lab3_140L|didp:didp                    ; didp        ; work         ;
 ;       |countrce:countrce1|    ; 8 (8)       ; 4            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |Lab3_140L|didp:didp|countrce:countrce1 ; countrce    ; work         ;
 ;       |countrce:countrce2|    ; 8 (8)       ; 4            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |Lab3_140L|didp:didp|countrce:countrce2 ; countrce    ; work         ;
 ;       |countrce:countrce3|    ; 8 (8)       ; 4            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |Lab3_140L|didp:didp|countrce:countrce3 ; countrce    ; work         ;
 ;       |countrce:countrce4|    ; 8 (8)       ; 4            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |Lab3_140L|didp:didp|countrce:countrce4 ; countrce    ; work         ;
-;       |regrce:regrce1|        ; 5 (5)       ; 4            ; 0          ; 0    ; 0            ; 1 (1)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Lab3_140L|didp:didp|regrce:regrce1     ; regrce      ; work         ;
+;       |regrce:regrce1|        ; 9 (9)       ; 4            ; 0          ; 0    ; 0            ; 5 (5)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Lab3_140L|didp:didp|regrce:regrce1     ; regrce      ; work         ;
 ;       |regrce:regrce2|        ; 5 (5)       ; 4            ; 0          ; 0    ; 0            ; 1 (1)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Lab3_140L|didp:didp|regrce:regrce2     ; regrce      ; work         ;
 ;       |regrce:regrce3|        ; 5 (5)       ; 4            ; 0          ; 0    ; 0            ; 1 (1)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Lab3_140L|didp:didp|regrce:regrce3     ; regrce      ; work         ;
-;       |regrce:regrce4|        ; 9 (9)       ; 4            ; 0          ; 0    ; 0            ; 5 (5)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Lab3_140L|didp:didp|regrce:regrce4     ; regrce      ; work         ;
-;    |dispString:dispString|    ; 41 (41)     ; 11           ; 0          ; 0    ; 0            ; 30 (30)      ; 0 (0)             ; 11 (11)          ; 0 (0)           ; 0 (0)      ; |Lab3_140L|dispString:dispString        ; dispString  ; work         ;
+;       |regrce:regrce4|        ; 5 (5)       ; 4            ; 0          ; 0    ; 0            ; 1 (1)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Lab3_140L|didp:didp|regrce:regrce4     ; regrce      ; work         ;
+;    |dispString:dispString|    ; 35 (35)     ; 11           ; 0          ; 0    ; 0            ; 24 (24)      ; 0 (0)             ; 11 (11)          ; 0 (0)           ; 0 (0)      ; |Lab3_140L|dispString:dispString        ; dispString  ; work         ;
 +-------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -282,13 +283,13 @@ Encoding Type:  One-Hot
 +---------------------------------------+----------------------------------------+
 ; alarmchar[7]                          ; Stuck at GND due to stuck port data_in ;
 ; dispString:dispString|dOut[7]         ; Stuck at GND due to stuck port data_in ;
-; alarmchar[3]                          ; Merged with alarmchar[1]               ;
+; alarmchar[1]                          ; Merged with alarmchar[3]               ;
 ; alarmchar[2]                          ; Merged with alarmchar[0]               ;
 ; dictrl:dictrl|state~9                 ; Lost fanout                            ;
 ; dictrl:dictrl|state~10                ; Lost fanout                            ;
 ; dictrl:dictrl|state~11                ; Lost fanout                            ;
 ; dictrl:dictrl|state~12                ; Lost fanout                            ;
-; alarmchar[6]                          ; Merged with alarmchar[1]               ;
+; alarmchar[6]                          ; Merged with alarmchar[3]               ;
 ; Total Number of Removed Registers = 9 ;                                        ;
 +---------------------------------------+----------------------------------------+
 
@@ -309,8 +310,8 @@ Encoding Type:  One-Hot
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 73    ;
-; Number of registers using Synchronous Clear  ; 14    ;
-; Number of registers using Synchronous Load   ; 4     ;
+; Number of registers using Synchronous Clear  ; 12    ;
+; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 34    ;
@@ -323,20 +324,19 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Lab3_140L|alarmchar[4]                      ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Lab3_140L|alarmchar[5]                      ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Lab3_140L|didp:didp|regrce:regrce4|q[3]     ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Lab3_140L|didp:didp|regrce:regrce3|q[0]     ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Lab3_140L|didp:didp|regrce:regrce2|q[3]     ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Lab3_140L|didp:didp|regrce:regrce1|q[3]     ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |Lab3_140L|didp:didp|reset[3]                ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Lab3_140L|dispString:dispString|cnt[2]      ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Lab3_140L|didp:didp|countrce:countrce4|q[3] ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Lab3_140L|didp:didp|countrce:countrce3|q[0] ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Lab3_140L|didp:didp|countrce:countrce2|q[3] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Lab3_140L|didp:didp|regrce:regrce2|q[0]     ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Lab3_140L|didp:didp|regrce:regrce1|q[0]     ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |Lab3_140L|didp:didp|ce[0]                   ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Lab3_140L|dispString:dispString|cnt[0]      ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; Yes        ; |Lab3_140L|dispString:dispString|dOut[2]     ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Lab3_140L|didp:didp|countrce:countrce4|q[1] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Lab3_140L|didp:didp|countrce:countrce3|q[1] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Lab3_140L|didp:didp|countrce:countrce2|q[0] ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Lab3_140L|didp:didp|countrce:countrce1|q[0] ;
-; 11:1               ; 2 bits    ; 14 LEs        ; 12 LEs               ; 2 LEs                  ; Yes        ; |Lab3_140L|dispString:dispString|dOut[2]     ;
-; 10:1               ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |Lab3_140L|dispString:dispString|dOut[1]     ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Lab3_140L|dictrl:dictrl|alarmstate          ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Lab3_140L|dispString:dispString|dOut[1]     ;
 ; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |Lab3_140L|dictrl:dictrl|state               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
 
@@ -451,24 +451,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "dictrl:dictrl"                                                                           ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; loadalarm ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "dispString:dispString"                                                                                                                          ;
 +----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port     ; Type  ; Severity ; Details                                                                                                                                      ;
 +----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; b0[5..4] ; Input ; Info     ; Stuck at VCC                                                                                                                                 ;
-; b0[7..6] ; Input ; Info     ; Stuck at GND                                                                                                                                 ;
-; b1[5..4] ; Input ; Info     ; Stuck at VCC                                                                                                                                 ;
-; b1[7..6] ; Input ; Info     ; Stuck at GND                                                                                                                                 ;
 ; b2[5..3] ; Input ; Info     ; Stuck at VCC                                                                                                                                 ;
 ; b2[7..6] ; Input ; Info     ; Stuck at GND                                                                                                                                 ;
 ; b2[2]    ; Input ; Info     ; Stuck at GND                                                                                                                                 ;
 ; b2[1]    ; Input ; Info     ; Stuck at VCC                                                                                                                                 ;
 ; b2[0]    ; Input ; Info     ; Stuck at GND                                                                                                                                 ;
-; b3[5..4] ; Input ; Info     ; Stuck at VCC                                                                                                                                 ;
-; b3[7..6] ; Input ; Info     ; Stuck at GND                                                                                                                                 ;
-; b4[5..4] ; Input ; Info     ; Stuck at VCC                                                                                                                                 ;
-; b4[7..6] ; Input ; Info     ; Stuck at GND                                                                                                                                 ;
 ; b5[7..6] ; Input ; Info     ; Stuck at GND                                                                                                                                 ;
 ; b5[4..0] ; Input ; Info     ; Stuck at GND                                                                                                                                 ;
 ; b5[5]    ; Input ; Info     ; Stuck at VCC                                                                                                                                 ;
@@ -531,7 +532,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun May 19 21:16:46 2019
+    Info: Processing started: Sun May 19 21:23:41 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab3_140L -c Lab3_140L
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -577,6 +578,10 @@ Info (12021): Found 5 design units, including 5 entities, in source file buart.v
 Info (12021): Found 1 design units, including 1 entities, in source file bcd2segment.v
     Info (12023): Found entity 1: bcd2segment File: C:/Users/Arman/Desktop/Lab3/bcd2segment.v Line: 49
 Info (12127): Elaborating entity "Lab3_140L" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at Lab3_140L.v(55): object "min1" assigned a value but never read File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 55
+Warning (10036): Verilog HDL or VHDL warning at Lab3_140L.v(55): object "min2" assigned a value but never read File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 55
+Warning (10036): Verilog HDL or VHDL warning at Lab3_140L.v(55): object "sec1" assigned a value but never read File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 55
+Warning (10036): Verilog HDL or VHDL warning at Lab3_140L.v(55): object "sec2" assigned a value but never read File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 55
 Info (12128): Elaborating entity "bcd2segment" for hierarchy "bcd2segment:bcd2segment1" File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 110
 Info (12128): Elaborating entity "dispString" for hierarchy "dispString:dispString" File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 118
 Warning (10230): Verilog HDL assignment warning at dispString.v(37): truncated value with size 32 to match size of target (3) File: C:/Users/Arman/Desktop/Lab3/dispString.v Line: 37
@@ -594,14 +599,14 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "L3_led[3]" is stuck at GND File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 34
     Warning (13410): Pin "L3_led[4]" is stuck at GND File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 34
 Info (17049): 4 registers lost all their fanouts during netlist optimizations.
-Info (21057): Implemented 283 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 276 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 12 input pins
     Info (21059): Implemented 74 output pins
-    Info (21061): Implemented 197 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 565 megabytes
-    Info: Processing ended: Sun May 19 21:16:56 2019
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:24
+    Info (21061): Implemented 190 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 16 warnings
+    Info: Peak virtual memory: 566 megabytes
+    Info: Processing ended: Sun May 19 21:23:50 2019
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:22
 
 

@@ -107,14 +107,14 @@ module Lab3_140L (
 					alarmchar = 8'b00101110;
 			end
 
-			bcd2segment bcd2segment1(seg1, disp1, 1);
-			bcd2segment bcd2segment2(seg2, disp2, 1);
-			bcd2segment bcd2segment3(seg3, disp3, 1);
-			bcd2segment bcd2segment4(seg4, disp4, 1);
+			bcd2segment bcd2segment1(seg1, disp4, 1);
+			bcd2segment bcd2segment2(seg2, disp3, 1);
+			bcd2segment bcd2segment3(seg3, disp2, 1);
+			bcd2segment bcd2segment4(seg4, disp1, 1);
 
 
-			dispString dispString(.rdy(L3_tx_data_rdy), .dOut(L3_tx_data), .b0(min1), .b1(min2), .b2(8'b00111010), 
-								  .b3(sec1), .b4(sec2), .b5(8'b00100000), .b6(alarmchar), .b7(8'h0d), .go(oneSecStrb), 
+			dispString dispString(.rdy(L3_tx_data_rdy), .dOut(L3_tx_data), .b0(disp1), .b1(disp2), .b2(8'b00111010), 
+								  .b3(disp3), .b4(disp4), .b5(8'b00100000), .b6(alarmchar), .b7(8'h0d), .go(oneSecStrb), 
 								  .rst(rst), .clk(clk));
 
 
@@ -305,7 +305,7 @@ module dictrl(
 		always @(posedge clk) begin
 			if(rst)
 				alarmstate <= alarmOff;
-			else if (oneSecStrb)
+			else
 				alarmstate <= next_alarmstate;
 		end
 
