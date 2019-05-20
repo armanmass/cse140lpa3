@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab3_140L
-Sun May 19 21:23:50 2019
+Sun May 19 21:40:06 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -61,7 +61,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Sun May 19 21:23:50 2019       ;
+; Analysis & Synthesis Status ; Successful - Sun May 19 21:40:06 2019       ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; Lab3_140L                                   ;
 ; Top-level Entity Name       ; Lab3_140L                                   ;
@@ -184,9 +184,9 @@ refer to the applicable agreement for further details.
 ;     -- Combinational with a register        ; 54    ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 105   ;
-;     -- 3 input functions                    ; 24    ;
-;     -- 2 input functions                    ; 41    ;
+;     -- 4 input functions                    ; 104   ;
+;     -- 3 input functions                    ; 27    ;
+;     -- 2 input functions                    ; 39    ;
 ;     -- 1 input functions                    ; 1     ;
 ;     -- 0 input functions                    ; 0     ;
 ;                                             ;       ;
@@ -195,15 +195,15 @@ refer to the applicable agreement for further details.
 ;     -- arithmetic mode                      ; 0     ;
 ;     -- qfbk mode                            ; 0     ;
 ;     -- register cascade mode                ; 0     ;
-;     -- synchronous clear/load mode          ; 12    ;
+;     -- synchronous clear/load mode          ; 13    ;
 ;     -- asynchronous clear/load mode         ; 0     ;
 ;                                             ;       ;
 ; Total registers                             ; 73    ;
 ; I/O pins                                    ; 86    ;
 ; Maximum fan-out node                        ; clk   ;
 ; Maximum fan-out                             ; 73    ;
-; Total fan-out                               ; 781   ;
-; Average fan-out                             ; 2.83  ;
+; Total fan-out                               ; 787   ;
+; Average fan-out                             ; 2.85  ;
 +---------------------------------------------+-------+
 
 
@@ -310,11 +310,11 @@ Encoding Type:  One-Hot
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 73    ;
-; Number of registers using Synchronous Clear  ; 12    ;
+; Number of registers using Synchronous Clear  ; 13    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 34    ;
+; Number of registers using Clock Enable       ; 38    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -336,8 +336,8 @@ Encoding Type:  One-Hot
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Lab3_140L|didp:didp|countrce:countrce3|q[1] ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Lab3_140L|didp:didp|countrce:countrce2|q[0] ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Lab3_140L|didp:didp|countrce:countrce1|q[0] ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Lab3_140L|dispString:dispString|dOut[1]     ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |Lab3_140L|dictrl:dictrl|state               ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Lab3_140L|dispString:dispString|dOut[3]     ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |Lab3_140L|dictrl:dictrl|alarmstate          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
 
 
@@ -532,7 +532,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun May 19 21:23:41 2019
+    Info: Processing started: Sun May 19 21:39:56 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab3_140L -c Lab3_140L
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -548,11 +548,9 @@ Info (12021): Found 1 design units, including 1 entities, in source file regrce.
     Info (12023): Found entity 1: regrce File: C:/Users/Arman/Desktop/Lab3/regrce.v Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file nbitcounter.v
     Info (12023): Found entity 1: N_bit_counter File: C:/Users/Arman/Desktop/Lab3/NBitCounter.v Line: 31
-Info (12021): Found 4 design units, including 4 entities, in source file latticehx1k.v
-    Info (12023): Found entity 1: inpin File: C:/Users/Arman/Desktop/Lab3/latticehx1k.v Line: 43
-    Info (12023): Found entity 2: resetGen File: C:/Users/Arman/Desktop/Lab3/latticehx1k.v Line: 64
-    Info (12023): Found entity 3: latticehx1k File: C:/Users/Arman/Desktop/Lab3/latticehx1k.v Line: 95
-    Info (12023): Found entity 4: latticehx1k_pll File: C:/Users/Arman/Desktop/Lab3/latticehx1k.v Line: 355
+Info (12021): Found 2 design units, including 2 entities, in source file latticehx1k.v
+    Info (12023): Found entity 1: resetGen File: C:/Users/Arman/Desktop/Lab3/latticehx1k.v Line: 64
+    Info (12023): Found entity 2: latticehx1k File: C:/Users/Arman/Desktop/Lab3/latticehx1k.v Line: 95
 Info (12021): Found 3 design units, including 3 entities, in source file lab3_140l.v
     Info (12023): Found entity 1: Lab3_140L File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 26
     Info (12023): Found entity 2: didp File: C:/Users/Arman/Desktop/Lab3/Lab3_140L.v Line: 141
@@ -604,9 +602,9 @@ Info (21057): Implemented 276 device resources after synthesis - the final resou
     Info (21059): Implemented 74 output pins
     Info (21061): Implemented 190 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 16 warnings
-    Info: Peak virtual memory: 566 megabytes
-    Info: Processing ended: Sun May 19 21:23:50 2019
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:22
+    Info: Peak virtual memory: 565 megabytes
+    Info: Processing ended: Sun May 19 21:40:06 2019
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:24
 
 

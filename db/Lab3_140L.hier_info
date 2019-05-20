@@ -549,6 +549,9 @@ bu_rx_data_rdy => state.OUTPUTSELECT
 bu_rx_data_rdy => state.OUTPUTSELECT
 bu_rx_data_rdy => state.OUTPUTSELECT
 bu_rx_data_rdy => state.OUTPUTSELECT
+bu_rx_data_rdy => alarmstate.OUTPUTSELECT
+bu_rx_data_rdy => alarmstate.OUTPUTSELECT
+bu_rx_data_rdy => alarmstate.OUTPUTSELECT
 dataIn[0] => LessThan0.IN16
 dataIn[0] => LessThan1.IN16
 dataIn[0] => LessThan2.IN16
@@ -620,7 +623,7 @@ rst => alarmstate.OUTPUTSELECT
 rst => alarmstate.OUTPUTSELECT
 rst => alarmstate.OUTPUTSELECT
 clk => next_alarmstate~1.DATAIN
-clk => alarmstate~4.DATAIN
+clk => alarmstate~7.DATAIN
 clk => state~8.DATAIN
 
 
