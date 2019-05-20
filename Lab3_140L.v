@@ -121,12 +121,12 @@ module Lab3_140L (
 
 			dictrl dictrl(.dicLdMtens(LdMtens), .dicLdMones(LdMones), .dicLdStens(LdStens), .dicLdSones(LdSones), 
 			.dicLdAMtens(LdAMtens), .dicLdAMones(LdAMones), .dicLdAStens(LdAStens), .dicLdASones(LdASones), .dicRun(Run),
-			.dicAlarmIdle(idle), .dicAlarmArmed(armed), .oneSecStrb(oneSecStrb), .did_alarmMatch(trig), 
+			.dicAlarmIdle(idle), .dicAlarmArmed(armed), .dicAlarmTrig(trig), .oneSecStrb(oneSecStrb), .did_alarmMatch(alarmMatch), 
 			.bu_rx_data_rdy(bu_rx_data_rdy), .dataIn(bu_rx_data), .loadalarm(loadalarm), .rst(rst), .clk(clk));
 
 			didp didp(.di_Mtens(di_Mtens), .di_Mones(di_Mones), .di_Stens(di_Stens), .di_Sones(di_Sones),
 		 	.di_AMtens(di_AMtens), .di_AMones(di_AMones),.di_AStens(di_AStens), .di_ASones(di_ASones), 
-			.did_alarmMatch(trig), .L3_led(L3_led), .bu_rx_data(bu_rx_data), 
+			.did_alarmMatch(alarmMatch), .L3_led(L3_led), .bu_rx_data(bu_rx_data), 
 			.dicLdMtens(LdMtens), .dicLdMones(LdMones), .dicLdStens(LdStens), .dicLdSones(LdSones), 
 			.dicLdAMtens(LdAMtens), .dicLdAMones(LdAMones), .dicAlarmArmed(armed), .dicLdAStens(LdAStens), .dicLdASones(LdASones), 
 			.dicRun(Run), .oneSecStrb(oneSecStrb), .rst(rst), .clk(clk));
@@ -215,8 +215,6 @@ module didp (
 		 		reset[2] = ((Mones == 4'b1001) && reset[1]) ? 1'b1 : 1'b0;
 		 		reset[3] = ((Mtens == 4'b0101) && reset[2]) ? 1'b1 : 1'b0;
 
-			if(~alarmmatching && dicAlarmArmed)
-				alarmmatching = ((Mtens == AMtens) && (Mones == AMones) && (Stens == AStens) && (Stens == ASones)) ? 1'b1 : 1'b0;
 		 	end
 			else begin
 				ce[0] = 1'b0;
@@ -231,7 +229,7 @@ module didp (
 			end
 		end
 
-		 assign did_alarmMatch = alarmmatching;
+		 assign did_alarmMatch = ((Mtens == AMtens) && (Mones == AMones) && (Stens == AStens) && (Stens == ASones)) ? 1'b1 : 1'b0;
 
 	     countrce countrce1(.q(Sones[3:0]), .d(bu_rx_data[3:0]), .ld(dicLdSones), .ce(ce[0] || dicLdSones), .rst(reset[0]), .clk(clk));
 		 countrce countrce2(.q(Stens[3:0]), .d(bu_rx_data[3:0]), .ld(dicLdStens), .ce(ce[1] || dicLdStens), .rst(reset[1]), .clk(clk));

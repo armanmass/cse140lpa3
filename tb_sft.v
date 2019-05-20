@@ -436,15 +436,15 @@ module tb_sft(
       sendByte("1");
       sendByte("0");
       sendByte(8'h0d);
-      waitN(5);
       sendByte("a");    // load alarm
       sendByte("5");
       sendByte("9");
-      sendByte("5");
-      sendByte("9");
+      sendByte("2");
+      sendByte("0");
       sendByte(8'h0d);
+	  waitN(5);
 	  sendByte("@");
-      waitN(100);
+      waitN(10000);
 `endif      
       //
       //      $display("]}");
