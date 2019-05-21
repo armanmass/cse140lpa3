@@ -6,7 +6,7 @@
 
 * Build Date:         Sep 11 2017 17:12:22
 
-* File Generated:     May 21 2019 00:06:46
+* File Generated:     May 21 2019 00:11:37
 
 * Purpose:            
 
@@ -123,7 +123,7 @@ Phase 5
 I2088: Phase 5, elapsed time : 1.4 (sec)
 
 Phase 6
-I2088: Phase 6, elapsed time : 24.4 (sec)
+I2088: Phase 6, elapsed time : 25.2 (sec)
 
 Final Design Statistics
     Number of LUTs      	:	641
@@ -140,7 +140,7 @@ Final Design Statistics
 
 Device Utilization Summary
     LogicCells                  :	644/1280
-    PLBs                        :	106/160
+    PLBs                        :	108/160
     BRAMs                       :	1/16
     IOs and GBIOs               :	10/96
     PLLs                        :	1/1
@@ -159,7 +159,7 @@ analysis after routing.
                      Clock Summary 
 =====================================================================
 Number of clocks: 3
-Clock: latticehx1k_pll_inst.latticehx1k_pll_inst/PLLOUTCORE | Frequency: 52.46 MHz | Target: 64.27 MHz
+Clock: latticehx1k_pll_inst.latticehx1k_pll_inst/PLLOUTCORE | Frequency: 53.31 MHz | Target: 64.27 MHz
 Clock: latticehx1k_pll_inst.latticehx1k_pll_inst/PLLOUTGLOBAL | Frequency: N/A | Target: 64.27 MHz
 Clock: latticehx1k|clk_in | Frequency: N/A | Target: 64.27 MHz
 
@@ -169,5 +169,5 @@ Clock: latticehx1k|clk_in | Frequency: N/A | Target: 64.27 MHz
 
 I2054: Placement of design completed successfully
 
-I2076: Placer run-time: 27.5 sec.
+I2076: Placer run-time: 28.3 sec.
 

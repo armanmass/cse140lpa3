@@ -23,6 +23,7 @@ Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys softwa
 @I::"D:\PhotonUser\Lab32\latticehx1k.v" (library work)
 @I::"D:\PhotonUser\Lab32\regrce.v" (library work)
 Verilog syntax check successful!
+File D:\PhotonUser\Lab32\Lab3_140L.v changed - recompiling
 Selecting top level module latticehx1k
 @N: CG364 :"C:\lscc\iCEcube2.2017.08\synpbase\lib\generic\sb_ice40.v":698:7:698:19|Synthesizing module SB_PLL40_CORE in library work.
 
@@ -107,8 +108,6 @@ Selecting top level module latticehx1k
 @W: CG360 :"D:\PhotonUser\Lab32\Lab3_140L.v":171:19:171:24|Removing wire L3_led, as there is no assignment to it.
 @N: CG364 :"D:\PhotonUser\Lab32\Lab3_140L.v":26:7:26:15|Synthesizing module Lab3_140L in library work.
 
-@W: CG296 :"D:\PhotonUser\Lab32\Lab3_140L.v":108:12:108:29|Incomplete sensitivity list; assuming completeness. Make sure all referenced variables in message CG290 are included in the sensitivity list.
-@W: CG290 :"D:\PhotonUser\Lab32\Lab3_140L.v":109:7:109:9|Referenced variable rst is not in sensitivity list.
 @W: CS263 :"D:\PhotonUser\Lab32\Lab3_140L.v":125:34:125:37|Port-width mismatch for port num. The port definition is 4 bits, but the actual port connection bit width is 8. Adjust either the definition or the instantiation of this port.
 @W: CS263 :"D:\PhotonUser\Lab32\Lab3_140L.v":125:40:125:40|Port-width mismatch for port enable. The port definition is 1 bits, but the actual port connection bit width is 32. Adjust either the definition or the instantiation of this port.
 @W: CS263 :"D:\PhotonUser\Lab32\Lab3_140L.v":126:34:126:37|Port-width mismatch for port num. The port definition is 4 bits, but the actual port connection bit width is 8. Adjust either the definition or the instantiation of this port.
@@ -643,7 +642,7 @@ At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Tue May 21 00:05:41 2019
+# Tue May 21 00:10:58 2019
 
 ###########################################################]
 Synopsys Netlist Linker, version comp2016q3p1, Build 141R, built Dec  5 2016
@@ -656,7 +655,7 @@ At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Tue May 21 00:05:41 2019
+# Tue May 21 00:10:58 2019
 
 ###########################################################]
 @END
@@ -666,6 +665,6 @@ At c_hdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Tue May 21 00:05:41 2019
+# Tue May 21 00:10:58 2019
 
 ###########################################################]

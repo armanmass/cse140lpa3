@@ -6,7 +6,7 @@
 
 * Build Date:         Sep 11 2017 16:52:36
 
-* File Generated:     May 21 2019 00:07:16
+* File Generated:     May 21 2019 00:12:06
 
 * Purpose:            General info of design implementation
 
@@ -17,7 +17,7 @@
 Synthesis/Placement Summary:
 ----------------------------
     Status:  Successful
-    Runtime: 1 seconds
+    Runtime: 0 seconds
 
 Device Info:
 ------------
@@ -40,7 +40,7 @@ Logic Resource Utilization:
     Total Logic Cells: 644/1280
         Combinational Logic Cells: 389      out of   1280      30.3906%
         Sequential Logic Cells:    255      out of   1280      19.9219%
-        Logic Tiles:               106      out of   160       66.25%
+        Logic Tiles:               108      out of   160       67.5%
     Registers: 
         Logic Registers:           255      out of   1280      19.9219%
         IO Registers:              1        out of   560       0.178571
@@ -88,7 +88,7 @@ Detailed Global Buffer Info:
 ----------------------------
     Buffer Number  IO Bank  Driven By  Fanout  Signal Name           
     -------------  -------  ---------  ------  -----------           
-    4              0                   210     clk_g                 
+    4              0                   208     clk_g                 
     1              0                   24      buart.Z_rx.sample_g   
     3              3                   19      uu0.un11_l_count_i_g  
     6              3                   203     rst_g                 

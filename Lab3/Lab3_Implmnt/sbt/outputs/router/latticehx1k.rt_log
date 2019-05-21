@@ -6,7 +6,7 @@
 
 * Build Date:         Sep 11 2017 17:03:42
 
-* File Generated:     May 21 2019 00:07:16
+* File Generated:     May 21 2019 00:12:07
 
 * Purpose:            Router runtime info
 
@@ -19,30 +19,32 @@ I1203: Reading Design latticehx1k
 I1202: Reading Architecture of device iCE40HX1K
 Info-1404: Inferred PLL generated clock at latticehx1k_pll_inst.latticehx1k_pll_inst/PLLOUTCORE
 Info-1404: Inferred PLL generated clock at latticehx1k_pll_inst.latticehx1k_pll_inst/PLLOUTGLOBAL
-Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.alarmstate_1_0__m3_LC_5_10_2/in3" to pin "Lab_UT.dictrl.alarmstate_1_0__m3_LC_5_10_2/ltout" to break the combinatorial loop
-Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.alarmstate_1_0__m3_LC_5_10_2/in2" to pin "Lab_UT.dictrl.alarmstate_1_0__m3_LC_5_10_2/ltout" to break the combinatorial loop
-Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.alarmstate_1_sqmuxa_0_LC_6_9_1/in3" to pin "Lab_UT.dictrl.alarmstate_1_sqmuxa_0_LC_6_9_1/lcout" to break the combinatorial loop
-Warning-1035: Removing timing arc from pin "Lab_UT.alarmchar_latch_6_LC_5_10_7/in3" to pin "Lab_UT.alarmchar_latch_6_LC_5_10_7/lcout" to break the combinatorial loop
-Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.alarmstate_latch_0_LC_5_10_3/in3" to pin "Lab_UT.dictrl.alarmstate_latch_0_LC_5_10_3/lcout" to break the combinatorial loop
-Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.alarmstate_latch_1_LC_5_10_1/in3" to pin "Lab_UT.dictrl.alarmstate_latch_1_LC_5_10_1/lcout" to break the combinatorial loop
-Warning-1035: Removing timing arc from pin "Lab_UT.alarmchar_latch_1_LC_5_9_5/in1" to pin "Lab_UT.alarmchar_latch_1_LC_5_9_5/lcout" to break the combinatorial loop
-Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.alarmstate_latch_1_LC_5_10_1/in1" to pin "Lab_UT.dictrl.alarmstate_latch_1_LC_5_10_1/lcout" to break the combinatorial loop
-Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.alarmstate_latch_1_LC_5_10_1/in0" to pin "Lab_UT.dictrl.alarmstate_latch_1_LC_5_10_1/lcout" to break the combinatorial loop
-Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.alarmstate_latch_0_LC_5_10_3/in0" to pin "Lab_UT.dictrl.alarmstate_latch_0_LC_5_10_3/lcout" to break the combinatorial loop
-Warning-1035: Removing timing arc from pin "Lab_UT.alarmchar_latch_0_LC_5_9_1/in3" to pin "Lab_UT.alarmchar_latch_0_LC_5_9_1/lcout" to break the combinatorial loop
-Warning-1035: Removing timing arc from pin "Lab_UT.alarmchar_latch_4_LC_4_10_1/in2" to pin "Lab_UT.alarmchar_latch_4_LC_4_10_1/lcout" to break the combinatorial loop
-Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.un1_alarmstate_1_sqmuxa_1_0_i_LC_4_10_6/in0" to pin "Lab_UT.dictrl.un1_alarmstate_1_sqmuxa_1_0_i_LC_4_10_6/lcout" to break the combinatorial loop
-Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.un1_alarmstate_1_sqmuxa_1_0_i_LC_4_10_6/in3" to pin "Lab_UT.dictrl.un1_alarmstate_1_sqmuxa_1_0_i_LC_4_10_6/lcout" to break the combinatorial loop
-Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.justentered_latch_LC_4_10_3/in2" to pin "Lab_UT.dictrl.justentered_latch_LC_4_10_3/lcout" to break the combinatorial loop
-Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.un1_alarmstate_1_sqmuxa_1_LC_4_10_2/in3" to pin "Lab_UT.dictrl.un1_alarmstate_1_sqmuxa_1_LC_4_10_2/ltout" to break the combinatorial loop
-Warning-1035: Removing timing arc from pin "Lab_UT.alarmchar_latch_3_LC_4_9_0/in1" to pin "Lab_UT.alarmchar_latch_3_LC_4_9_0/lcout" to break the combinatorial loop
-Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.alarmstate_latch_0_LC_5_10_3/in1" to pin "Lab_UT.dictrl.alarmstate_latch_0_LC_5_10_3/lcout" to break the combinatorial loop
-Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.alarmstate_1_0__m3_LC_5_10_2/in1" to pin "Lab_UT.dictrl.alarmstate_1_0__m3_LC_5_10_2/ltout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.alarmchar_latch_1_LC_4_10_6/in1" to pin "Lab_UT.alarmchar_latch_1_LC_4_10_6/lcout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.alarmchar_latch_3_LC_4_9_3/in1" to pin "Lab_UT.alarmchar_latch_3_LC_4_9_3/lcout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.alarmstate_1_sqmuxa_LC_7_7_2/in2" to pin "Lab_UT.dictrl.alarmstate_1_sqmuxa_LC_7_7_2/lcout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.un1_alarmstate_1_sqmuxa_1_0_i_LC_5_10_6/in0" to pin "Lab_UT.dictrl.un1_alarmstate_1_sqmuxa_1_0_i_LC_5_10_6/lcout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.un1_alarmstate_1_sqmuxa_1_0_i_LC_5_10_6/in3" to pin "Lab_UT.dictrl.un1_alarmstate_1_sqmuxa_1_0_i_LC_5_10_6/lcout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.justentered_latch_LC_5_10_1/in2" to pin "Lab_UT.dictrl.justentered_latch_LC_5_10_1/lcout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.un1_alarmstate_1_sqmuxa_1_LC_5_10_0/in3" to pin "Lab_UT.dictrl.un1_alarmstate_1_sqmuxa_1_LC_5_10_0/ltout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.alarmchar_latch_4_LC_5_9_5/in2" to pin "Lab_UT.alarmchar_latch_4_LC_5_9_5/lcout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.alarmchar_latch_0_LC_5_9_3/in3" to pin "Lab_UT.alarmchar_latch_0_LC_5_9_3/lcout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.alarmstate_latch_0_LC_4_10_3/in1" to pin "Lab_UT.dictrl.alarmstate_latch_0_LC_4_10_3/lcout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.alarmstate_1_0__m3_LC_4_10_2/in1" to pin "Lab_UT.dictrl.alarmstate_1_0__m3_LC_4_10_2/ltout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.alarmstate_latch_1_LC_4_10_1/in0" to pin "Lab_UT.dictrl.alarmstate_latch_1_LC_4_10_1/ltout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.alarmstate_latch_1_LC_4_10_1/in1" to pin "Lab_UT.dictrl.alarmstate_latch_1_LC_4_10_1/ltout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.alarmstate_latch_1_LC_4_10_1/in1" to pin "Lab_UT.dictrl.alarmstate_latch_1_LC_4_10_1/lcout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.alarmstate_1_sqmuxa_1_i_LC_4_10_0/in1" to pin "Lab_UT.dictrl.alarmstate_1_sqmuxa_1_i_LC_4_10_0/ltout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.alarmstate_latch_0_LC_4_10_3/in0" to pin "Lab_UT.dictrl.alarmstate_latch_0_LC_4_10_3/lcout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.alarmstate_latch_0_LC_4_10_3/in3" to pin "Lab_UT.dictrl.alarmstate_latch_0_LC_4_10_3/lcout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.alarmstate_latch_1_LC_4_10_1/in3" to pin "Lab_UT.dictrl.alarmstate_latch_1_LC_4_10_1/ltout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.dictrl.alarmstate_latch_1_LC_4_10_1/in3" to pin "Lab_UT.dictrl.alarmstate_latch_1_LC_4_10_1/lcout" to break the combinatorial loop
+Warning-1035: Removing timing arc from pin "Lab_UT.alarmchar_latch_6_LC_4_9_0/in3" to pin "Lab_UT.alarmchar_latch_6_LC_4_9_0/lcout" to break the combinatorial loop
 I1209: Started routing
-I1223: Total Nets : 711 
-I1212: Iteration  1 :   147 unrouted : 1 seconds
-I1212: Iteration  2 :    12 unrouted : 1 seconds
-I1212: Iteration  3 :     0 unrouted : 0 seconds
+I1223: Total Nets : 706 
+I1212: Iteration  1 :   146 unrouted : 1 seconds
+I1212: Iteration  2 :    26 unrouted : 1 seconds
+I1212: Iteration  3 :     4 unrouted : 0 seconds
+I1212: Iteration  4 :     0 unrouted : 0 seconds
 I1215: Routing is successful
 I1206: Completed routing
 I1204: Writing Design latticehx1k

@@ -93,10 +93,10 @@ ble_pack Lab_UT.dictrl.alarmstate_latch[0]_LC_49 {Lab_UT.dictrl.alarmstate_latch
 ble_pack Lab_UT.dictrl.alarmstate_1_sqmuxa_1_i_LC_42 {Lab_UT.dictrl.alarmstate_1_sqmuxa_1_i}
 ble_pack Lab_UT.dictrl.alarmstate_latch[1]_LC_50 {Lab_UT.dictrl.alarmstate_latch[1]}
 ble_pack Lab_UT.dictrl.m59_LC_75 {Lab_UT.dictrl.m59}
-ble_pack Lab_UT.un1_idle_4_0_iclk_LC_304 {Lab_UT.un1_idle_4_0_iclk}
+ble_pack Lab_UT.un1_idle_5_0_iclk_LC_305 {Lab_UT.un1_idle_5_0_iclk}
 ble_pack Lab_UT.alarmchar_latch[6]_LC_4 {Lab_UT.alarmchar_latch[6]}
-ble_pack Lab_UT.un1_rst_0_iclk_LC_305 {Lab_UT.un1_rst_0_iclk}
-clb_pack PLB_11 {Lab_UT.dictrl.alarmstate_1_0_.m3_LC_36, Lab_UT.dictrl.alarmstate_latch[0]_LC_49, Lab_UT.dictrl.alarmstate_1_sqmuxa_1_i_LC_42, Lab_UT.dictrl.alarmstate_latch[1]_LC_50, Lab_UT.dictrl.m59_LC_75, Lab_UT.un1_idle_4_0_iclk_LC_304, Lab_UT.alarmchar_latch[6]_LC_4, Lab_UT.un1_rst_0_iclk_LC_305}
+ble_pack Lab_UT.un1_idle_1_0_iclk_LC_304 {Lab_UT.un1_idle_1_0_iclk}
+clb_pack PLB_11 {Lab_UT.dictrl.alarmstate_1_0_.m3_LC_36, Lab_UT.dictrl.alarmstate_latch[0]_LC_49, Lab_UT.dictrl.alarmstate_1_sqmuxa_1_i_LC_42, Lab_UT.dictrl.alarmstate_latch[1]_LC_50, Lab_UT.dictrl.m59_LC_75, Lab_UT.un1_idle_5_0_iclk_LC_305, Lab_UT.alarmchar_latch[6]_LC_4, Lab_UT.un1_idle_1_0_iclk_LC_304}
 ble_pack Lab_UT.dictrl.alarmstate_1_sqmuxa_LC_37 {Lab_UT.dictrl.alarmstate_1_sqmuxa}
 ble_pack Lab_UT.dictrl.alarmstate_1_sqmuxa_13_LC_41 {Lab_UT.dictrl.alarmstate_1_sqmuxa_13}
 ble_pack Lab_UT.dictrl.alarmstate_1_sqmuxa_1_LC_39 {Lab_UT.dictrl.alarmstate_1_sqmuxa_1}
