@@ -1,13 +1,13 @@
 C:\lscc\iCEcube2.2017.08\synpbase\bin64\m_generic.exe  -prodtype  synplify_pro   -encrypt  -pro  -rundir  D:\PhotonUser\Lab32\Lab3\Lab3_Implmnt   -part iCE40HX1K  -package TQ144    -maxfan 10000 -RWCheckOnRam 0 -pipe -fixgatedclocks 1 -fixgeneratedclocks 1 -summaryfile D:\PhotonUser\Lab32\Lab3\Lab3_Implmnt\synlog\report\Lab3_premap.xml  -oedif  D:\PhotonUser\Lab32\Lab3\Lab3_Implmnt\Lab3.edf  -conchk_prepass  D:\PhotonUser\Lab32\Lab3\Lab3_Implmnt\Lab3_cck.rpt   -autoconstraint  -freq 1.000   D:\PhotonUser\Lab32\Lab3\Lab3_Implmnt\synwork\Lab3_mult.srs  -flow prepass  -gcc_prepass  -osrd  D:\PhotonUser\Lab32\Lab3\Lab3_Implmnt\synwork\Lab3_prem.srd  -qsap  D:\PhotonUser\Lab32\Lab3\Lab3_Implmnt\Lab3.sap  -devicelib  C:\lscc\iCEcube2.2017.08\synpbase\lib\generic\sb_ice40.v  -ologparam  D:\PhotonUser\Lab32\Lab3\Lab3_Implmnt\syntmp\Lab3.plg  -osyn  D:\PhotonUser\Lab32\Lab3\Lab3_Implmnt\synwork\Lab3_prem.srd  -prjdir  D:\PhotonUser\Lab32\Lab3\  -prjname  Lab3_syn  -log  D:\PhotonUser\Lab32\Lab3\Lab3_Implmnt\synlog\Lab3_premap.srr 
-rc:1 success:1 runtime:0
+rc:1 success:1 runtime:1
 file:D:\PhotonUser\Lab32\Lab3\Lab3_Implmnt\Lab3.edf|io:o|time:0|size:0|exec:0
-file:D:\PhotonUser\Lab32\Lab3\Lab3_Implmnt\Lab3_cck.rpt|io:o|time:1558396140|size:3042|exec:0
-file:D:\PhotonUser\Lab32\Lab3\Lab3_Implmnt\synwork\Lab3_mult.srs|io:i|time:1558396140|size:7203|exec:0
-file:D:\PhotonUser\Lab32\Lab3\Lab3_Implmnt\synwork\Lab3_prem.srd|io:o|time:1558396140|size:69476|exec:0
-file:D:\PhotonUser\Lab32\Lab3\Lab3_Implmnt\Lab3.sap|io:o|time:1558396140|size:3332|exec:0
+file:D:\PhotonUser\Lab32\Lab3\Lab3_Implmnt\Lab3_cck.rpt|io:o|time:1558397143|size:3042|exec:0
+file:D:\PhotonUser\Lab32\Lab3\Lab3_Implmnt\synwork\Lab3_mult.srs|io:i|time:1558397142|size:7194|exec:0
+file:D:\PhotonUser\Lab32\Lab3\Lab3_Implmnt\synwork\Lab3_prem.srd|io:o|time:1558397142|size:69061|exec:0
+file:D:\PhotonUser\Lab32\Lab3\Lab3_Implmnt\Lab3.sap|io:o|time:1558397143|size:3342|exec:0
 file:C:\lscc\iCEcube2.2017.08\synpbase\lib\generic\sb_ice40.v|io:i|time:1553706825|size:224837|exec:0
-file:D:\PhotonUser\Lab32\Lab3\Lab3_Implmnt\syntmp\Lab3.plg|io:o|time:1558396140|size:0|exec:0
-file:D:\PhotonUser\Lab32\Lab3\Lab3_Implmnt\synwork\Lab3_prem.srd|io:o|time:1558396140|size:69476|exec:0
-file:D:\PhotonUser\Lab32\Lab3\Lab3_Implmnt\synlog\Lab3_premap.srr|io:o|time:1558396140|size:6577|exec:0
+file:D:\PhotonUser\Lab32\Lab3\Lab3_Implmnt\syntmp\Lab3.plg|io:o|time:1558397142|size:0|exec:0
+file:D:\PhotonUser\Lab32\Lab3\Lab3_Implmnt\synwork\Lab3_prem.srd|io:o|time:1558397142|size:69061|exec:0
+file:D:\PhotonUser\Lab32\Lab3\Lab3_Implmnt\synlog\Lab3_premap.srr|io:o|time:1558397143|size:6577|exec:0
 file:C:\lscc\iCEcube2.2017.08\synpbase\bin\m_generic.exe|io:i|time:1553706821|size:17853440|exec:1
 file:C:\lscc\iCEcube2.2017.08\synpbase\bin64\m_generic.exe|io:i|time:1553706823|size:32355840|exec:1

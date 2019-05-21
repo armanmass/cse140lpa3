@@ -4,21 +4,19 @@
 @W: BN137 :|Found combinational loop during mapping at net Lab_UT.dictrl.alarmstate_1_sqmuxa_1_i
 @W: BN137 :|Found combinational loop during mapping at net Lab_UT.dictrl.alarmstate[1]
 @W: BN137 :|Found combinational loop during mapping at net Lab_UT.alarmchar13
-@W: BN137 :|Found combinational loop during mapping at net Lab_UT.dictrl.alarmstate22
 @W: BN137 :|Found combinational loop during mapping at net Lab_UT.dictrl.justentered
 @W: BN137 :|Found combinational loop during mapping at net Lab_UT.alarmchar[6]
+@W: BN137 :|Found combinational loop during mapping at net Lab_UT.alarmchar[1]
 @W: BN137 :|Found combinational loop during mapping at net Lab_UT.alarmchar[0]
 @W: BN137 :|Found combinational loop during mapping at net Lab_UT.alarmchar[4]
-@W: BN137 :|Found combinational loop during mapping at net Lab_UT.alarmchar[1]
 @W: BN137 :|Found combinational loop during mapping at net Lab_UT.alarmchar[3]
 @W: BN137 :|Found combinational loop during mapping at net Lab_UT.dictrl.alarmstate[0]
 @W: BN137 :|Found combinational loop during mapping at net Lab_UT.dictrl.alarmstate_1_sqmuxa_1_i
 @W: BN137 :|Found combinational loop during mapping at net Lab_UT.dictrl.alarmstate[1]
-@W: BN137 :|Found combinational loop during mapping at net Lab_UT.dictrl.alarmstate22
 @W: BN137 :|Found combinational loop during mapping at net Lab_UT.dictrl.justentered
 @W: BN137 :|Found combinational loop during mapping at net Lab_UT.alarmchar[0]
 @W: BN137 :|Found combinational loop during mapping at net Lab_UT.alarmchar[3]
+@W: BN137 :|Found combinational loop during mapping at net Lab_UT.alarmchar[4]
 @W: BN137 :|Found combinational loop during mapping at net Lab_UT.alarmchar[1]
 @W: BN137 :|Found combinational loop during mapping at net Lab_UT.alarmchar[6]
-@W: BN137 :|Found combinational loop during mapping at net Lab_UT.alarmchar[4]
-@W: MT420 |Found inferred clock latticehx1k|clk_in with period 16.41ns. Please declare a user-defined clock on object "p:clk_in"
+@W: MT420 |Found inferred clock latticehx1k|clk_in with period 15.56ns. Please declare a user-defined clock on object "p:clk_in"

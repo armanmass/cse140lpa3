@@ -1,4 +1,4 @@
-# Mon May 20 23:49:00 2019
+# Tue May 21 00:05:42 2019
 
 Synopsys Lattice Technology Pre-mapping, Version maplat, Build 1612R, Built Dec  5 2016 10:31:39
 Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
@@ -23,13 +23,13 @@ Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00
 
 Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 103MB peak: 105MB)
 
-@W: BN132 :"d:\photonuser\lab32\lab3_140l.v":105:4:105:5|Removing sequential instance Lab_UT.alarmchar[2] because it is equivalent to instance Lab_UT.alarmchar[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"d:\photonuser\lab32\lab3_140l.v":105:4:105:5|Removing sequential instance Lab_UT.alarmchar[5] because it is equivalent to instance Lab_UT.alarmchar[4]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@N: MO111 :"d:\photonuser\lab32\lab3_140l.v":160:19:160:24|Tristate driver L3_led_1 (in view: work.didp(verilog)) on net L3_led_1 (in view: work.didp(verilog)) has its enable tied to GND.
-@N: MO111 :"d:\photonuser\lab32\lab3_140l.v":160:19:160:24|Tristate driver L3_led_2 (in view: work.didp(verilog)) on net L3_led_2 (in view: work.didp(verilog)) has its enable tied to GND.
-@N: MO111 :"d:\photonuser\lab32\lab3_140l.v":160:19:160:24|Tristate driver L3_led_3 (in view: work.didp(verilog)) on net L3_led_3 (in view: work.didp(verilog)) has its enable tied to GND.
-@N: MO111 :"d:\photonuser\lab32\lab3_140l.v":160:19:160:24|Tristate driver L3_led_4 (in view: work.didp(verilog)) on net L3_led_4 (in view: work.didp(verilog)) has its enable tied to GND.
-@N: MO111 :"d:\photonuser\lab32\lab3_140l.v":160:19:160:24|Tristate driver L3_led_5 (in view: work.didp(verilog)) on net L3_led_5 (in view: work.didp(verilog)) has its enable tied to GND.
+@W: BN132 :"d:\photonuser\lab32\lab3_140l.v":113:4:113:5|Removing sequential instance Lab_UT.alarmchar[2] because it is equivalent to instance Lab_UT.alarmchar[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\photonuser\lab32\lab3_140l.v":113:4:113:5|Removing sequential instance Lab_UT.alarmchar[5] because it is equivalent to instance Lab_UT.alarmchar[4]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@N: MO111 :"d:\photonuser\lab32\lab3_140l.v":171:19:171:24|Tristate driver L3_led_1 (in view: work.didp(verilog)) on net L3_led_1 (in view: work.didp(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\photonuser\lab32\lab3_140l.v":171:19:171:24|Tristate driver L3_led_2 (in view: work.didp(verilog)) on net L3_led_2 (in view: work.didp(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\photonuser\lab32\lab3_140l.v":171:19:171:24|Tristate driver L3_led_3 (in view: work.didp(verilog)) on net L3_led_3 (in view: work.didp(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\photonuser\lab32\lab3_140l.v":171:19:171:24|Tristate driver L3_led_4 (in view: work.didp(verilog)) on net L3_led_4 (in view: work.didp(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\photonuser\lab32\lab3_140l.v":171:19:171:24|Tristate driver L3_led_5 (in view: work.didp(verilog)) on net L3_led_5 (in view: work.didp(verilog)) has its enable tied to GND.
 ICG Latch Removal Summary:
 Number of ICG latches removed:	0
 Number of ICG latches not removed:	0
@@ -50,7 +50,7 @@ latticehx1k_pll|PLLOUTCORE_derived_clock     4.0 MHz       252.545       derived
 latticehx1k|clk_in                           4.0 MHz       252.545       inferred                              Autoconstr_clkgroup_0     0    
 ==============================================================================================================================================
 
-@W: MT531 :"d:\photonuser\lab32\lab3_140l.v":373:3:373:6|Found signal identified as System clock which controls 12 sequential elements including Lab_UT.dictrl.next_state[3:0].  Using this clock, which has no specified timing constraint, can prevent conversion of gated or generated clocks and can adversely impact design performance. 
+@W: MT531 :"d:\photonuser\lab32\lab3_140l.v":384:3:384:6|Found signal identified as System clock which controls 12 sequential elements including Lab_UT.dictrl.next_state[3:0].  Using this clock, which has no specified timing constraint, can prevent conversion of gated or generated clocks and can adversely impact design performance. 
 
 Finished Pre Mapping Phase.
 @N: MO111 :|Tristate driver led_t[0] (in view: work.latticehx1k(verilog)) on net led[0] (in view: work.latticehx1k(verilog)) has its enable tied to GND.
@@ -74,6 +74,6 @@ Pre-mapping successful!
 At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 49MB peak: 135MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Mon May 20 23:49:00 2019
+# Tue May 21 00:05:43 2019
 
 ###########################################################]

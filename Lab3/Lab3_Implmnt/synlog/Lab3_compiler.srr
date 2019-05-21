@@ -23,7 +23,6 @@ Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys softwa
 @I::"D:\PhotonUser\Lab32\latticehx1k.v" (library work)
 @I::"D:\PhotonUser\Lab32\regrce.v" (library work)
 Verilog syntax check successful!
-File D:\PhotonUser\Lab32\Lab3_140L.v changed - recompiling
 Selecting top level module latticehx1k
 @N: CG364 :"C:\lscc\iCEcube2.2017.08\synpbase\lib\generic\sb_ice40.v":698:7:698:19|Synthesizing module SB_PLL40_CORE in library work.
 
@@ -90,36 +89,38 @@ Selecting top level module latticehx1k
 @N: CG364 :"D:\PhotonUser\Lab32\dispString.v":13:7:13:16|Synthesizing module dispString in library work.
 
 @N: CG179 :"D:\PhotonUser\Lab32\dispString.v":39:11:39:13|Removing redundant assignment.
-@N: CG364 :"D:\PhotonUser\Lab32\Lab3_140L.v":263:7:263:12|Synthesizing module dictrl in library work.
+@N: CG364 :"D:\PhotonUser\Lab32\Lab3_140L.v":274:7:274:12|Synthesizing module dictrl in library work.
 
-@W: CG133 :"D:\PhotonUser\Lab32\Lab3_140L.v":292:14:292:28|Object next_alarmstate is declared but not assigned. Either assign a value or remove the declaration.
-@W: CL118 :"D:\PhotonUser\Lab32\Lab3_140L.v":373:3:373:6|Latch generated from always block for signal next_state[3:0]; possible missing assignment in an if or case statement.
-@A: CL110 :"D:\PhotonUser\Lab32\Lab3_140L.v":342:3:342:6|Too many clocks (> 8) for set/reset analysis of justentered, try moving enabling expressions outside always block
-@W: CL118 :"D:\PhotonUser\Lab32\Lab3_140L.v":342:3:342:6|Latch generated from always block for signal justentered; possible missing assignment in an if or case statement.
-@W: CL118 :"D:\PhotonUser\Lab32\Lab3_140L.v":342:3:342:6|Latch generated from always block for signal alarmstate[1:0]; possible missing assignment in an if or case statement.
+@W: CG133 :"D:\PhotonUser\Lab32\Lab3_140L.v":303:14:303:28|Object next_alarmstate is declared but not assigned. Either assign a value or remove the declaration.
+@W: CL118 :"D:\PhotonUser\Lab32\Lab3_140L.v":384:3:384:6|Latch generated from always block for signal next_state[3:0]; possible missing assignment in an if or case statement.
+@A: CL110 :"D:\PhotonUser\Lab32\Lab3_140L.v":353:3:353:6|Too many clocks (> 8) for set/reset analysis of justentered, try moving enabling expressions outside always block
+@W: CL118 :"D:\PhotonUser\Lab32\Lab3_140L.v":353:3:353:6|Latch generated from always block for signal justentered; possible missing assignment in an if or case statement.
+@W: CL118 :"D:\PhotonUser\Lab32\Lab3_140L.v":353:3:353:6|Latch generated from always block for signal alarmstate[1:0]; possible missing assignment in an if or case statement.
 @N: CG364 :"D:\PhotonUser\Lab32\countrce.v":33:7:33:14|Synthesizing module countrce in library work.
 
 @N: CG179 :"D:\PhotonUser\Lab32\countrce.v":59:9:59:9|Removing redundant assignment.
 @N: CG364 :"D:\PhotonUser\Lab32\regrce.v":39:7:39:12|Synthesizing module regrce in library work.
 
 @N: CG179 :"D:\PhotonUser\Lab32\regrce.v":54:9:54:9|Removing redundant assignment.
-@N: CG364 :"D:\PhotonUser\Lab32\Lab3_140L.v":147:7:147:10|Synthesizing module didp in library work.
+@N: CG364 :"D:\PhotonUser\Lab32\Lab3_140L.v":158:7:158:10|Synthesizing module didp in library work.
 
-@W: CG360 :"D:\PhotonUser\Lab32\Lab3_140L.v":160:19:160:24|Removing wire L3_led, as there is no assignment to it.
+@W: CG360 :"D:\PhotonUser\Lab32\Lab3_140L.v":171:19:171:24|Removing wire L3_led, as there is no assignment to it.
 @N: CG364 :"D:\PhotonUser\Lab32\Lab3_140L.v":26:7:26:15|Synthesizing module Lab3_140L in library work.
 
-@W: CS263 :"D:\PhotonUser\Lab32\Lab3_140L.v":114:34:114:37|Port-width mismatch for port num. The port definition is 4 bits, but the actual port connection bit width is 8. Adjust either the definition or the instantiation of this port.
-@W: CS263 :"D:\PhotonUser\Lab32\Lab3_140L.v":114:40:114:40|Port-width mismatch for port enable. The port definition is 1 bits, but the actual port connection bit width is 32. Adjust either the definition or the instantiation of this port.
-@W: CS263 :"D:\PhotonUser\Lab32\Lab3_140L.v":115:34:115:37|Port-width mismatch for port num. The port definition is 4 bits, but the actual port connection bit width is 8. Adjust either the definition or the instantiation of this port.
-@W: CS263 :"D:\PhotonUser\Lab32\Lab3_140L.v":115:40:115:40|Port-width mismatch for port enable. The port definition is 1 bits, but the actual port connection bit width is 32. Adjust either the definition or the instantiation of this port.
-@W: CS263 :"D:\PhotonUser\Lab32\Lab3_140L.v":116:34:116:37|Port-width mismatch for port num. The port definition is 4 bits, but the actual port connection bit width is 8. Adjust either the definition or the instantiation of this port.
-@W: CS263 :"D:\PhotonUser\Lab32\Lab3_140L.v":116:40:116:40|Port-width mismatch for port enable. The port definition is 1 bits, but the actual port connection bit width is 32. Adjust either the definition or the instantiation of this port.
-@W: CS263 :"D:\PhotonUser\Lab32\Lab3_140L.v":117:34:117:37|Port-width mismatch for port num. The port definition is 4 bits, but the actual port connection bit width is 8. Adjust either the definition or the instantiation of this port.
-@W: CS263 :"D:\PhotonUser\Lab32\Lab3_140L.v":117:40:117:40|Port-width mismatch for port enable. The port definition is 1 bits, but the actual port connection bit width is 32. Adjust either the definition or the instantiation of this port.
-@W: CG781 :"D:\PhotonUser\Lab32\Lab3_140L.v":121:14:121:23|Input dInP on instance dispString is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
-@W: CG781 :"D:\PhotonUser\Lab32\Lab3_140L.v":121:14:121:23|Input rdyInP on instance dispString is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
-@W: CL118 :"D:\PhotonUser\Lab32\Lab3_140L.v":105:4:105:5|Latch generated from always block for signal alarmchar[7:0]; possible missing assignment in an if or case statement.
-@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":105:4:105:5|All reachable assignments to bit 7 of alarmchar[7:0] assign 0, register removed by optimization.
+@W: CG296 :"D:\PhotonUser\Lab32\Lab3_140L.v":108:12:108:29|Incomplete sensitivity list; assuming completeness. Make sure all referenced variables in message CG290 are included in the sensitivity list.
+@W: CG290 :"D:\PhotonUser\Lab32\Lab3_140L.v":109:7:109:9|Referenced variable rst is not in sensitivity list.
+@W: CS263 :"D:\PhotonUser\Lab32\Lab3_140L.v":125:34:125:37|Port-width mismatch for port num. The port definition is 4 bits, but the actual port connection bit width is 8. Adjust either the definition or the instantiation of this port.
+@W: CS263 :"D:\PhotonUser\Lab32\Lab3_140L.v":125:40:125:40|Port-width mismatch for port enable. The port definition is 1 bits, but the actual port connection bit width is 32. Adjust either the definition or the instantiation of this port.
+@W: CS263 :"D:\PhotonUser\Lab32\Lab3_140L.v":126:34:126:37|Port-width mismatch for port num. The port definition is 4 bits, but the actual port connection bit width is 8. Adjust either the definition or the instantiation of this port.
+@W: CS263 :"D:\PhotonUser\Lab32\Lab3_140L.v":126:40:126:40|Port-width mismatch for port enable. The port definition is 1 bits, but the actual port connection bit width is 32. Adjust either the definition or the instantiation of this port.
+@W: CS263 :"D:\PhotonUser\Lab32\Lab3_140L.v":127:34:127:37|Port-width mismatch for port num. The port definition is 4 bits, but the actual port connection bit width is 8. Adjust either the definition or the instantiation of this port.
+@W: CS263 :"D:\PhotonUser\Lab32\Lab3_140L.v":127:40:127:40|Port-width mismatch for port enable. The port definition is 1 bits, but the actual port connection bit width is 32. Adjust either the definition or the instantiation of this port.
+@W: CS263 :"D:\PhotonUser\Lab32\Lab3_140L.v":128:34:128:37|Port-width mismatch for port num. The port definition is 4 bits, but the actual port connection bit width is 8. Adjust either the definition or the instantiation of this port.
+@W: CS263 :"D:\PhotonUser\Lab32\Lab3_140L.v":128:40:128:40|Port-width mismatch for port enable. The port definition is 1 bits, but the actual port connection bit width is 32. Adjust either the definition or the instantiation of this port.
+@W: CG781 :"D:\PhotonUser\Lab32\Lab3_140L.v":132:14:132:23|Input dInP on instance dispString is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\PhotonUser\Lab32\Lab3_140L.v":132:14:132:23|Input rdyInP on instance dispString is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CL118 :"D:\PhotonUser\Lab32\Lab3_140L.v":113:4:113:5|Latch generated from always block for signal alarmchar[7:0]; possible missing assignment in an if or case statement.
+@W: CL208 :"D:\PhotonUser\Lab32\Lab3_140L.v":113:4:113:5|All reachable assignments to bit 7 of alarmchar[7:0] assign 0, register removed by optimization.
 @N: CG364 :"D:\PhotonUser\Lab32\NBitCounter.v":31:7:31:19|Synthesizing module N_bit_counter in library work.
 
 	N=32'b00000000000000000000000000001010
@@ -630,10 +631,10 @@ Selecting top level module latticehx1k
 @N: CL159 :"D:\PhotonUser\Lab32\vbuf.v":79:18:79:25|Input alarm_on is unused.
 @N: CL159 :"D:\PhotonUser\Lab32\vbuf.v":81:12:81:30|Input enable_pulling_mode is unused.
 @N: CL159 :"D:\PhotonUser\Lab32\vbuf.v":82:12:82:25|Input data_sink_busy is unused.
-@W: CL246 :"D:\PhotonUser\Lab32\Lab3_140L.v":162:19:162:28|Input port bits 7 to 4 of bu_rx_data[7:0] are unused. Assign logic for all port bits or change the input port size.
-@W: CL157 :"D:\PhotonUser\Lab32\Lab3_140L.v":160:19:160:24|*Output L3_led has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the output.
-@N: CL159 :"D:\PhotonUser\Lab32\Lab3_140L.v":174:12:174:24|Input dicAlarmArmed is unused.
-@N: CL159 :"D:\PhotonUser\Lab32\Lab3_140L.v":278:10:278:19|Input oneSecStrb is unused.
+@W: CL246 :"D:\PhotonUser\Lab32\Lab3_140L.v":173:19:173:28|Input port bits 7 to 4 of bu_rx_data[7:0] are unused. Assign logic for all port bits or change the input port size.
+@W: CL157 :"D:\PhotonUser\Lab32\Lab3_140L.v":171:19:171:24|*Output L3_led has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the output.
+@N: CL159 :"D:\PhotonUser\Lab32\Lab3_140L.v":185:12:185:24|Input dicAlarmArmed is unused.
+@N: CL159 :"D:\PhotonUser\Lab32\Lab3_140L.v":289:10:289:19|Input oneSecStrb is unused.
 @N: CL159 :"D:\PhotonUser\Lab32\dispString.v":16:21:16:24|Input dInP is unused.
 @N: CL159 :"D:\PhotonUser\Lab32\dispString.v":17:19:17:24|Input rdyInP is unused.
 
@@ -642,7 +643,7 @@ At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Mon May 20 23:48:58 2019
+# Tue May 21 00:05:41 2019
 
 ###########################################################]
 Synopsys Netlist Linker, version comp2016q3p1, Build 141R, built Dec  5 2016
@@ -655,7 +656,7 @@ At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Mon May 20 23:48:58 2019
+# Tue May 21 00:05:41 2019
 
 ###########################################################]
 @END
@@ -665,6 +666,6 @@ At c_hdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Mon May 20 23:48:58 2019
+# Tue May 21 00:05:41 2019
 
 ###########################################################]
