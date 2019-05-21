@@ -58,6 +58,13 @@ module Lab3_140L (
 		    
 			wire [6:0] seg1, seg2, seg3, seg4;
 
+
+			always @(posedge clk) begin
+				if(rst) begin
+
+				end
+			end
+
 			//clock display
 			always @(*) begin
 				L3_segment1 = seg1;
@@ -98,16 +105,20 @@ module Lab3_140L (
 			end
 
 			//update alarm trigger
-			always @(idle, armed, trig, rst) begin
-				if(rst)
+			always @(idle, armed, trig) begin
+				if(rst) begin
 					alarmchar <= 8'b00101110;
-					
-				if(idle)
+				end
+			
+				if(idle) begin
 					alarmchar <= 8'b00101110;
-				else if(armed)
+				end
+				else if(armed) begin
 					alarmchar <= 8'b01100001;
-				else if(trig)
+				end
+				else if(trig) begin
 					alarmchar <= 8'b01010100;
+				end
 			end
 
 			//display clock
@@ -303,7 +314,7 @@ module dictrl(
 		//idle armed triggered
 		  reg alarm1, alarm2, alarm3;
 
-		  assign loadalarm = ((state == s1) || (state == s2) || (state == s3) || (state == s4));
+		  assign loadalarm = ((state == s1) || (state == s2) || (state == s3) || (state == s4) || (state == s5));
 		  assign dicAlarmIdle = alarm1;
 		  assign dicAlarmArmed = alarm2;
 		  assign dicAlarmTrig = alarm3;

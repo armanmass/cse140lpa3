@@ -622,7 +622,7 @@ rst => justentered.IN1
 rst => justentered.DATAB
 rst => justentered.IN1
 rst => Selector3.IN2
-clk => state~8.DATAIN
+clk => state~7.DATAIN
 
 
 |Lab3_140L|didp:didp
