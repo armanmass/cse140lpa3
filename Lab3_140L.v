@@ -105,7 +105,7 @@ module Lab3_140L (
 			end
 
 			//update alarm trigger
-			always @(idle, armed, trig) begin
+			always @(idle, armed, trig,rst) begin
 				if(rst) begin
 					alarmchar <= 8'b00101110;
 				end
